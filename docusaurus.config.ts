@@ -3,9 +3,8 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
+  title: 'Kyler Tsai‘s Blogs and Notes',
+  favicon: 'images/favicon.ico',
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
@@ -13,47 +12,42 @@ const config: Config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
 
+  headTags: [
+    /**
+     * 处理图片加载失败
+     */
+    {
+      tagName: 'meta',
+      attributes: {
+        name: 'referrer',
+        content: 'no-referrer',
+      },
+    },
+  ],
+
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'Kyler Tsai', // Usually your GitHub org/user name.
+  projectName: 'blog', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
-
   /**
    * 静态资源文件
    */
-  staticDirectories: ['assets'],
+  staticDirectories: ['static', 'assets'],
 
   presets: [
     [
       'classic',
       {
         docs: {
+          routeBasePath: '/', // Serve the docs at the site's root.
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/css/entry.css',
         },
       } satisfies Preset.Options,
     ],
@@ -63,33 +57,94 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Kyler Tsai',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'Kyler Tsai’s Logo',
+        src: 'images/logo.png',
       },
       items: [
         {
-          type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          type: 'dropdown',
           position: 'left',
-          label: 'Tutorial',
+          label: '学习笔记',
+          items: [
+            {
+              label: 'JavaScript',
+              type: 'docSidebar',
+              sidebarId: 'javascript',
+            },
+            {
+              label: 'JQuery',
+              type: 'docSidebar',
+              sidebarId: 'jquery',
+            },
+            {
+              label: 'TypeScript',
+              type: 'docSidebar',
+              sidebarId: 'typescript',
+            },
+            {
+              label: 'Node',
+              type: 'docSidebar',
+              sidebarId: 'node',
+            },
+            {
+              label: 'Angular',
+              type: 'docSidebar',
+              sidebarId: 'angular',
+            },
+            {
+              label: 'Webpack',
+              type: 'docSidebar',
+              sidebarId: 'webpack',
+            },
+            {
+              label: '网络工程',
+              type: 'docSidebar',
+              sidebarId: 'network',
+            },
+          ],
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
+        {
+          type: 'docSidebar',
+          sidebarId: 'blog',
+          label: '文章',
+          position: 'left',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'devops',
+          label: 'DevOps专题',
+          position: 'left',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'daily',
+          label: '日常记录',
+          position: 'left',
+        },
         {
           href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
+          className: 'header-github-link',
           position: 'right',
         },
       ],
+    },
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: true,
     },
     footer: {
       style: 'dark',
       copyright: `Copyright © ${new Date().getFullYear()} by Kyler Tsai, Inc. Built with Docusaurus.`,
     },
     prism: {
-      theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    announcementBar: {
+      content: '🚀 本网址如有侵权，请速联系我删除 ~ 联系方式QQ：523492108@qq.com',
+      textColor: '#091E42',
+      isCloseable: false,
     },
   } satisfies Preset.ThemeConfig,
 };
