@@ -15,15 +15,11 @@ export default function Home(): JSX.Element {
         />
         <link
           rel="stylesheet"
-          href="landing_page/css/fonts.css"
-        />
-        <link
-          rel="stylesheet"
           href="landing_page/css/style.css"
         />
         <script src="landing_page/js/preset.js"></script>
       </Head>
-      <main className="landing-page">
+      <main style={{ minHeight: 'auto' }} className="landing-page">
         <section className="hero">
           <div className="container">
             <div className="hero-inner">

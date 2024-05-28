@@ -3,9 +3,6 @@ title: Webpack
 description: Webpack
 sidebar_label: Webpack配置和使用
 hide_title: true
-last_update:
-  date: 2023-02-26
-  author: Chason
 ---
 
 ## 一、Webpack基础使用

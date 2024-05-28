@@ -15,7 +15,7 @@ module.exports = {
         node: true,
       },
       extends: ['eslint:recommended'],
-      files: ['.eslintrc.{js,cjs}', 'babel.config.js'],
+      files: ['.eslintrc.{js,cjs}', 'babel.config.js', '.prettierrc.js', '.commitlintrc.js'],
       parserOptions: {
         sourceType: 'script',
       },
