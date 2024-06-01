@@ -4,9 +4,6 @@ title: VMware
 description: VMware安装Linux系统
 sidebar_label: VMware安装Linux系统
 hide_title: true
-last_update:
-  date: 2023-01-02
-  author: Chason
 ---
 
 ## 一、环境准备阶段
@@ -81,7 +78,7 @@ last_update:
 
 ![1672662029676](https://gitee.com/caigh1012/assets/raw/main/blog/vmware/1672662029676.png)
 
-👋注意：<u>选择最小安装，系统中不带有ifconfig等命令。同时也是没有连接网络的情况下，ping命令无法使用</u>
+🔔注意：选择最小安装，系统中不带有 ifconfig 等命令。同时也是没有连接网络的情况下，ping命令无法使用
 
 ![1672662342481](https://gitee.com/caigh1012/assets/raw/main/blog/vmware/1672662342481.png)
 

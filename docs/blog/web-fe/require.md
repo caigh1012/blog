@@ -4,9 +4,6 @@ title: Node.js的模块require加载机制
 description: Node.js的模块require加载机制
 sidebar_label: Node.js的模块require加载机制
 hide_title: true
-last_update:
-  date: 2023-03-05
-  author: Chason
 ---
 
 ## 一、模块类型和加载顺序

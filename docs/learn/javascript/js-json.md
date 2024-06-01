@@ -4,9 +4,6 @@ title: JSON
 description: JSON与对象结构的区别
 sidebar_label: JSON与对象结构的区别
 hide_title: true
-last_update:
-  date: 2022-12-28
-  author: Chason
 ---
 
 ## 一、JSON
@@ -55,7 +52,7 @@ JSON以键值的形式：
 }
 ```
 
-👋注意：<u>json文件中不带有注释</u>
+🔔注意：json文件中不带有注释
 
 ## 二、JavaScript对象
 

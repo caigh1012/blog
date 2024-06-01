@@ -1,17 +1,21 @@
 ---
 title: Webpack
 description: Webpack
-sidebar_label: Webpack配置和使用
+sidebar_label: Webpack@5快速入门
 hide_title: true
 ---
 
-## 一、Webpack基础使用
+## 一、Webpack 基础使用
 
-> webpack是一个静态资源打包工具，它会以一个或多个文件作为打包的入口，将我们整个项目所有文件编译组合成一个或多个文件输出出去，输出的文件就是编译好的文件，就可以在浏览器运行了
+:::info[信息]
+
+webpack是一个静态资源打包工具，它会以一个或多个文件作为打包的入口，将我们整个项目所有文件编译组合成一个或多个文件输出出去，输出的文件就是编译好的文件，就可以在浏览器运行了
+
+:::
 
 ### 1.1、项目初始化
 
-执行命令：
+执行命令
 
 ```bash
 npm init -y
@@ -19,86 +23,84 @@ npm init -y
 
 ### 1.2、下载相关依赖
 
-使用npm下载相关依赖：
+使用 npm 下载相关依赖：
 
 ```bash
 npm i webpack webpack-cli -D
 ```
 
-相关目录结构：
+相关目录结构如下：
 
 ![1663490396858](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368590-bf378a.png)
 
-### 1.3、启用webpack
+### 1.3、启用 Webpack
 
-- 开发模式：仅能编译JS中的ES Module 语法
+开发模式：仅能编译JS中的 ES Module 语法
 
-  ```bash
-  npx webpack ./src/main.js --mode=development
-  ```
+```bash
+npx webpack ./src/main.js --mode=development
+```
 
-- 生产模式：能编译JS中的ES Module语法，还能压缩JS代码
+生产模式：能编译JS中的 ES Module 语法，还能压缩JS代码
 
-  ```bash
-  npx webpack ./src/main.js --mode=production
-  ```
+```bash
+npx webpack ./src/main.js --mode=production
+```
 
-## 二、Webpack核心概念
+## 二、Webpack 核心概念
 
 ### 2.1、基本配置
 
 1. entry（入口）
 
-   指示Webpack从那个文件开始打包
+   指示 Webpack 从那个文件开始打包
 
 2. output（输出）
 
-   指示Webpack打包完的文件输出到哪里去，如何命名等
+   指示 Webpack 打包完的文件输出到哪里去，如何命名等
 
 3. loader（加载器）
 
-   Webpack本身只能处理js、json等资源，其他资源需要借助loader，Webpack才能解析
+   Webpack 本身只能处理 js、json 等资源，其他资源需要借助 loader，Webpack 才能解析
 
 4. plugins（插件）
 
-   扩展Webpack的功能
+   扩展 Webpack 的功能
 
-5. mode（模式）
+5. mode（模式）主要由两种模式
 
-   主要由两种模式：
+   开发模式：development
 
-   (1)、开发模式：development
+   生产模式：production
 
-   (2)、生产模式：production
-
-### 2.2、webpack配置文件
+### 2.2、Webpack 配置文件
 
 在项目根目录新建文件：webpack.config.js
 
 ![1663491734075](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368595-5a2114.png)
 
-## 三、Webpack基础
+## 三、Webpack 基础
 
 ### 3.1、开发服务器搭建
 
 #### 3.1.1、开发服务器和自动化
 
-安装相关依赖：
+安装相关依赖
 
 ```bash
 npm i webpack-dev-server -D
 ```
 
-webpack.config.js配置devServer
+webpack.config.js 配置 devServer
 
 ```js
- // 开发服务器
-  devServer: {
-    host: 'localhost',
-    port: 3000,
-    open: true,
-    static: './dist',
-  }
+// 开发服务器
+devServer: {
+  host: 'localhost',
+  port: 3000,
+  open: true,
+  static: './dist',
+}
 ```
 
 展示效果：
@@ -107,97 +109,101 @@ webpack.config.js配置devServer
 
 #### 3.1.2、处理html资源
 
-> 处理html资源使用插件 `html-webpack-plugin`
->
-> 作用：
->
-> - 自动引入打包后的js文件
-> - 不同js可以配置不同的html文件
+:::tip[提示]
 
-下载相关依赖包：
+处理html资源使用插件 html-webpack-plugin
+
+作用：
+
+- 自动引入打包后的js文件
+- 不同js可以配置不同的html文件
+
+:::
+
+下载相关依赖包
 
 ```bash
 npm i html-webpack-plugin -D
 ```
 
-webpack.config.js配置
+webpack.config.js 配置
 
 ```js
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // 引入
 
 // 插件
-  plugins: [
-    new HtmlWebpackPlugin({
-        // 指定html文件
-      template: path.resolve(__dirname,'public/index.html'),
-    })
-  ],
+plugins: [
+  new HtmlWebpackPlugin({
+      // 指定html文件
+    template: path.resolve(__dirname,'public/index.html'),
+  })
+],
 ```
 
-`html-webpack-plugin`还有很多相关其他配置，可以参考官网地址：https://github.com/jantimon/html-webpack-plugin
+html-webpack-plugin 还有很多相关其他配置，参考文档地址：https://github.com/jantimon/html-webpack-plugin
 
 #### 3.1.3、处理样式资源
 
-1. 处理css样式资源
+(1)、处理css样式资源
 
-下载相关依赖：
+下载相关依赖
 
 ```bash
 npm i style-loader css-loader -D
 ```
 
-创建css文件，并且在main.js进行引入：
+创建 css 文件，并且在 main.js 进行引入：
 
 ![1663495367607](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368604-0e3d41.png)
 
-同时webpack.config.js的配置
+同时 webpack.config.js 的配置
 
 ```js
-  // 加载器
-  module: {
-    rules: [
-      {
-        test: /\.css$/, // 自检测.css文件
-        // use的执行顺序：从右到左（从下到上）
-        use: [
-          "style-loader", // 将js中的css通过创建style标签添加html文件生效
-          "css-loader" // 将css资源编译成common.js模块到js中
-        ]
-      }
-    ]
-  },
+// 加载器
+module: {
+  rules: [
+    {
+      test: /\.css$/, // 自检测.css文件
+      // use的执行顺序：从右到左（从下到上）
+      use: [
+        "style-loader", // 将js中的css通过创建style标签添加html文件生效
+        "css-loader" // 将css资源编译成common.js模块到js中
+      ]
+    }
+  ]
+},
 ```
 
-引入的css此时不会单独生成css文件，而是被js动态创建style标签引入
+引入的 css 此时不会单独生成 css 文件，而是被 js 动态创建style标签引入
 
 ![1663496233944](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368608-d95947.png)
 
-👋注意： <u>use的执行顺序：从右到左（从下到上）</u>
+🔔注意： use的执行顺序：从右到左（从下到上）
 
-2. 处理sass资源
+(2)、处理sass资源
 
-下载相关依赖：
+下载相关依赖
 
 ```bash
 npm i sass-loader sass -D
 ```
 
-webpack.config.js配置，同时注意在入口文件引入scss文件
+webpack.config.js 配置，同时注意在入口文件引入 scss 文件
 
 ```js
- {
-        test: /\.s[ac]ss/,
-        use: [
-          "style-loader",
-          "css-loader",
-          "sass-loader", // 将sass编译成css文件
-        ]
+{
+    test: /\.s[ac]ss/,
+    use: [
+      "style-loader",
+      "css-loader",
+      "sass-loader", // 将sass编译成css文件
+    ]
 }
 ```
 
 #### 3.1.4、处理图片资源
 
-html中的引入div
+html 中的引入 div
 
 ```html
 <body>
@@ -206,11 +212,11 @@ html中的引入div
 </body>
 ```
 
-css的文件样式：
+css 的文件样式：
 
 ![1663499461450](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368611-fbb2e5.png)
 
-webpack.config.js的文件
+webpack.config.js 的文件
 
 ```js
 {
@@ -234,7 +240,7 @@ webpack.config.js的文件
 
 #### 3.1.5、处理字体图标资源
 
-在webpack中的module的rule中代码：
+在 webpack 中的 module 的 rule 中代码：
 
 ```js
 {
@@ -248,11 +254,11 @@ webpack.config.js的文件
 }
 ```
 
-在public目录下html的使用：
+在 public 目录下 html 的使用：
 
 ![1666528206531](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368617-2d8175.png)
 
-👋注意： <u>字体图标使用iconfont.css对应字体文件目录</u>
+🔔注意： 字体图标使用 iconfont.css 对应字体文件目录
 
 ![1666528342334](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368621-3ff853.png)
 
@@ -262,55 +268,59 @@ webpack.config.js的文件
 
 #### 3.1.7、处理js资源
 
-在处理js涉及js的语法兼容性处理和压缩处理，详细的可以参考babel的使用和babel在webpack中的使用，这里不做详细的解析
+在处理js涉及js的语法兼容性处理和压缩处理，详细的可以参考 babel 的使用和 babel 在 webpack 中的使用，这里不做详细的解析
 
 #### 3.1.8、其他
 
-1. 修改输出文件目录
+(1)、修改输出文件目录
 
-   ![1666527479948](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368630-60cd7f.png)
+![1666527479948](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368630-60cd7f.png)
 
-2. 自动清空上次打包的目录
+(2)、自动清空上次打包的目录
 
-   ![1666527522325](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368633-527ca1.png)
+![1666527522325](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368633-527ca1.png)
 
 ### 3.2、生产模式搭建
 
-> 生产模式要求我们的对html文件、css样式文件、js文件等进行兼容和压缩处理，基于这个需要针对兼容和压缩这两个操作而作一些处理
+:::tip[提示]
+
+生产模式要求我们的对html文件、css样式文件、js文件等进行兼容和压缩处理，基于这个需要针对兼容和压缩这两个操作而作一些处理
+
+:::
 
 #### 3.2.1、提取css成单独文件
 
-安装相关依赖：
+安装相关依赖
 
 ```bash
 npm i mini-css-extract-plugin -D
 ```
 
-在匹配css或者scss、less中添加：
+在匹配 css 或者 scss、less 中添加：
 
 ![1666528789283](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368637-4e6878.png)
 
-在plugins的使用：
+在plugins的使用
 
 ![1666528920167](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368640-6a702f.png)
 
-打包后的结果：
+打包后的结果如下：
 
 ![1666528950979](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368644-20f4c6.png)
 
 #### 3.2.2、样式兼容性处理
 
-安装相关依赖包：
+安装相关依赖包
 
 ```bash
 npm i postcss-loader postcss- postcss-preset-env -D
 ```
 
-使用：
+使用如下：
 
 ![1666529351021](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368647-5a6030.png)
 
-在package.json设置兼容版本(设置兼容版本形式多样，这里不做详细讲解)：
+在 package.json 设置兼容版本(设置兼容版本形式多样，这里不做详细讲解)：
 
 ![1666529673359](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368653-50943d.png)
 
@@ -318,11 +328,11 @@ npm i postcss-loader postcss- postcss-preset-env -D
 
 ![1666529654676](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368656-4d317b.png)
 
-👋注意： <u>要放在css-loader之后，sass-loader和less-loader之前</u>
+🔔注意： 要放在 css-loader 之后，sass-loader 和 less-loader 之前
 
 #### 3.2.3、css压缩
 
-安装相关依赖：
+安装相关依赖
 
 ```bash
 npm i css-minimizer-webpack-plugin -D
@@ -340,26 +350,25 @@ const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 
 webpack开启生产模式时，默认开启js和html的压缩
 
-如果需要对js压缩配置选项：
-
-可以在optimization中minimizer配置插件
+如果需要对js压缩配置选项，可以在optimization中minimizer配置插件
 
 ![1667739507743](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368663-b29c00.png)
 
 #### 3.2.5、统一命名
 
-js命名:
+js命名如下图所示：
 
 ![1667742319662](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368666-a257a8.png)
 
-资源文件命名:
+资源文件命名如下图所示:
 
 ![1667742356257](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368670-bb4939.png)
 
-css命名:
+css命名如下图所示:
+
 ![1667742384554](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368674-19f1e6.png)
 
-## 四、Webpack高级
+## 四、Webpack 高级
 
 ### 4.1、SourceMap
 
@@ -373,7 +382,11 @@ css命名:
 
 ### 4.2、HMR
 
-> 热模块替换，修改某个模块代码，就只有这个模块代码需要重新打包编译，其他模块不变，这样打包速度就能很快
+:::info[提示]
+
+热模块替换，修改某个模块代码，就只有这个模块代码需要重新打包编译，其他模块不变，这样打包速度就能很快
+
+:::
 
 配置：
 
@@ -381,7 +394,11 @@ css命名:
 
 ### 4.3、OneOf
 
-> 作用：让文件只被其中一个配置进行处理
+:::info[提示]
+
+作用：让文件只被其中一个配置进行处理
+
+:::
 
 ```js
 rules: [
@@ -425,11 +442,15 @@ rules: [
 
 ### 4.4、Include-Exclude
 
-> include：包含，只处理xxx文件
->
-> exclude：排除，除了xxx文件其他文件都处理
->
-> 两个只能写一个
+:::info[信息]
+
+include：包含，只处理xxx文件
+
+exclude：排除，除了xxx文件其他文件都处理
+
+两个只能写一个
+
+:::
 
 使用：
 
@@ -437,11 +458,15 @@ rules: [
 
 ### 4.5、多进程打包
 
-> 当项目越来越大时，打包速度越来越慢。
->
-> 多进程打包：开启电脑的多个进程同时干一件事
->
-> 👋注意： <u>请仅在特别耗时的操作中使用，因为每个进程启动就有大约600ms左右的开销</u>
+:::info[信息]
+
+当项目越来越大时，打包速度越来越慢。
+
+多进程打包：开启电脑的多个进程同时干一件事
+
+🔔注意： 请仅在特别耗时的操作中使用，因为每个进程启动就有大约600ms左右的开销
+
+:::
 
 安装依赖包
 
@@ -449,7 +474,7 @@ rules: [
 npm i thread-loader -D
 ```
 
-同时需要node的os模块获取电脑的cpu核数
+同时需要 node 的 os 模块获取电脑的 cpu 核数
 
 ```js
 const os = require('os');
@@ -476,15 +501,18 @@ const threads = os.cpus().length;
 ![1667720360115](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368688-c78b62.png)
 
 多进程的压缩js代码
+
 ![1667720391319](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368692-3e2f26.png)
 
 ### 4.6、TreeShaking
 
-> 实现目的：减少代码体积
->
-> 通常用于描述移除JavaScript中的没有使用的代码，在mode：“production”下webpack默认开启
+:::info[信息]
 
-**使用：**
+实现目的：减少代码体积
+
+通常用于描述移除JavaScript中的没有使用的代码，在mode：“production”下webpack默认开启
+
+:::
 
 在math.js中导出 `mul`、`add` 两个函数
 
@@ -494,13 +522,17 @@ const threads = os.cpus().length;
 
 ![1666531179104](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368701-917250.png)
 
-👋注意：<u>设置sideEffects</u>
+:::warning
 
-> 指的是：webpack在做tree-sharking的时候，发现模块没有被引用就会被删除
->
-> sideEffects设置true，指定所有引用未使用的文件都是有作用的，不可以删除代码
->
-> sideEffects设置false，指定所有引用未使用文件都是无作用的，可以删除代码
+🔔注意：设置sideEffects
+
+指的是：webpack在做tree-sharking的时候，发现模块没有被引用就会被删除
+
+sideEffects设置true，指定所有引用未使用的文件都是有作用的，不可以删除代码
+
+sideEffects设置false，指定所有引用未使用文件都是无作用的，可以删除代码
+
+:::
 
 简单设置body的背景色
 
@@ -538,52 +570,52 @@ import './css/iconfont.css';
 
 ### 4.7、CodeSplit
 
-> 打包代码时会将所有的js文件打包到一个文件中,体积太大了,我们如果只有渲染首页,就应该只加载首页的js文件, 其他文件不应该加载
->
-> 所以我们需要将打包生成的文件进行代码分割, 生成多个js文件,渲染那个页面就只加载某个js文件,这样加载的资源就少,速度就更快
+打包代码时会将所有的js文件打包到一个文件中,体积太大了,我们如果只有渲染首页,就应该只加载首页的js文件, 其他文件不应该加载
+
+所以我们需要将打包生成的文件进行代码分割, 生成多个js文件,渲染那个页面就只加载某个js文件,这样加载的资源就少,速度就更快
 
 CodeSplit主要做了两件事:
 
 1. 分割文件: 将打包生成的文件进行分割,生成多个js文件
 1. 按需加载: 需要那个文件就加载那个文件
 
-1、单入口
+#### 4.7.1、单入口
 
-> 开发时我们可能是单页面应用（SPA）,只有一个入口（单入口）
+开发时我们可能是单页面应用（SPA）,只有一个入口（单入口）
 
 一般设置以下即可：
 
 ```js
- splitChunks: {
-      chunks: "all",
- }
+splitChunks: {
+    chunks: "all",
+}
 ```
 
-2、多入口
+4.7.2、多入口
 
 详细解释如下：
 
 ```js
 splitChunks: {
-      chunks: "all", // 对所有模块都进行分割
-      /* 以下是默认值 */
-      minSize: 20000, // 分割代码最小的大小
-      minRemainingSize: 0, // 类似于minSize，最后确保提取的文件大小不能为0
-      minChunks: 1, // 至少被引用的次数，满足条件才会代码分割
-      maxAsyncRequests: 30, // 按需加载时并行加载的文件最大数量
-      maxInitialRequests: 30, // 入口js文件最大并行请求数量
-      enforceSizeThreshold: 50000, // 超过50kb一定会单独打包（此时会忽略minRemainingSize、maxAsyncRequests、maxInitialRequests）
-      cacheGroups: {
-        defaultVendors: { // 组名
-          test: /[\\/]node_modules[\\/]/, // 需要打包到一起的模块
-          priority: -10, // 权重（越大越高）
-          reuseExistingChunk: true, // 如果当前chunk包含已从主bundle中拆分的模块，则它将被重用，而不是生成新的模块
-        },
-        default: {
-          minChunks: 2,
-          priority: -20,
-          reuseExistingChunk: true
-        }
+    chunks: "all", // 对所有模块都进行分割
+    /* 以下是默认值 */
+    minSize: 20000, // 分割代码最小的大小
+    minRemainingSize: 0, // 类似于minSize，最后确保提取的文件大小不能为0
+    minChunks: 1, // 至少被引用的次数，满足条件才会代码分割
+    maxAsyncRequests: 30, // 按需加载时并行加载的文件最大数量
+    maxInitialRequests: 30, // 入口js文件最大并行请求数量
+    enforceSizeThreshold: 50000, // 超过50kb一定会单独打包（此时会忽略minRemainingSize、maxAsyncRequests、maxInitialRequests）
+    cacheGroups: {
+      defaultVendors: { // 组名
+        test: /[\\/]node_modules[\\/]/, // 需要打包到一起的模块
+        priority: -10, // 权重（越大越高）
+        reuseExistingChunk: true, // 如果当前chunk包含已从主bundle中拆分的模块，则它将被重用，而不是生成新的模块
+      },
+      default: {
+        minChunks: 2,
+        priority: -20,
+        reuseExistingChunk: true
       }
     }
+  }
 ```

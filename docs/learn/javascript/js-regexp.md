@@ -4,9 +4,6 @@ title: RegExp正则
 description: RegExp正则
 sidebar_label: RegExp正则
 hide_title: true
-last_update:
-  date: 2022-11-12
-  author: Chason
 ---
 
 ## 一、创建正则表达式的方式
@@ -48,7 +45,7 @@ console.log(/str/.test(url)); // 输出： false
 
 这里的str变量被作为一个字符串进行正则匹配，如果需要正则表达式传入一个变量，可以有以下操作
 
-1. eval函数（大部分不会使用）
+(1)、eval函数（大部分不会使用）
 
 ```js
 let url = 'www.baidu.com';
@@ -56,7 +53,7 @@ let str = '.com';
 console.log(eval(`/${str}/`).test(url)); // 输出：true
 ```
 
-2. 构造函数
+(2)、构造函数
 
 ```js
 let url = 'www.baidu.com';
@@ -80,13 +77,13 @@ console.log(str.match(/w/g)); // 输出: ['w', 'w']
 console.log(str.match(/w/gi)); // 输出: ['w', 'W', 'w', 'W', 'W']
 ```
 
-👋注意：<u>`g，i标识符`都是写在正则的最后面，不做顺序的区分</u>
+🔔注意：`g，i标识符`都是写在正则的最后面，不做顺序的区分
 
 ## 三、正则表达式字符
 
 ### 3.1、元字符
 
-> 在正则表达式有特殊含义的字符
+在正则表达式有特殊含义的字符，如下：
 
 - (**.**)：匹配单个的任意字符
 - (\w)：匹配单个的数字，字母，下划线
@@ -98,7 +95,7 @@ console.log(str.match(/w/gi)); // 输出: ['w', 'W', 'w', 'W', 'W']
 
 ### 3.2、限定符
 
-> 一般限定符配合元字符使用
+一般限定符配合元字符使用
 
 ```js
 var str = '11';
@@ -126,7 +123,7 @@ console.log(reg5.test(nm3)); //true 出现了2次
 console.log(reg5.test(nm4)); //false  出现了1次
 ```
 
-👋注意：<u>单纯使用限定符配合元字符使用（ /\d+/ ）对于一些验证可能不太准确，可以使用类似（/1\d?1/）加以限定开始和结尾</u>
+🔔注意：单纯使用限定符配合元字符使用 /\d+/ 对于一些验证可能不太准确，可以使用类似 /1\d?1/ 加以限定开始和结尾
 
 ### 3.3、转义字符
 
@@ -184,7 +181,7 @@ console.log(reg.test(price)); // 输出：false
 
 ### 3.4、边界符
 
-> 主要有两个 ^,$
+主要有两个 ^,$
 
 - ^表示匹配行首的文本（以谁开始)
 - $表示匹配行首的文本（以谁结束)
@@ -237,11 +234,11 @@ console.log(reg2.test('abcabcabc')); //true
 
 #### 4.1.1、test
 
-> 格式:正则.test(字符串)
->
-> 功能:在字符串中匹配这个正则是否存在
->
-> 返回值：如果匹配成功返回true，匹配失败则返回false
+格式:正则.test(字符串)
+
+功能:在字符串中匹配这个正则是否存在
+
+返回值：如果匹配成功返回true，匹配失败则返回false
 
 ```js
 let price = '115.55';
@@ -253,11 +250,11 @@ console.log(/\d+\.\d+/.test(price)); // 输出：false
 
 #### 4.1.2、exec
 
-> 格式：正则.exec(字符串)
->
-> 功能：在字符串中匹配这个正则是否存在
->
-> 返回值： 匹配成功，只返回一个装有字符串的数组,匹配失败返回null
+格式：正则.exec(字符串)
+
+功能：在字符串中匹配这个正则是否存在
+
+返回值： 匹配成功，只返回一个装有字符串的数组,匹配失败返回null
 
 ```js
 let str = 'abgswbdhabw';
@@ -268,11 +265,11 @@ console.log(/a/gi.exec(str1)); // 输出： ['a', index: 0, input: 'abgswbdhabw'
 
 #### 4.2.1、match
 
-> 格式：字符串.match(正则)
->
-> 功能：在字符串匹配是否符合正则表达式
->
-> 返回值：匹配成功，返回装有匹配的字符串的数组 匹配失败，返回null
+格式：字符串.match(正则)
+
+功能：在字符串匹配是否符合正则表达式
+
+返回值：匹配成功，返回装有匹配的字符串的数组 匹配失败，返回null
 
 ```js
 let str = 'dahbwWJwdWajbDWBA';
@@ -283,11 +280,11 @@ console.log(str.match(/w/gi)); // 输出: ['w', 'W', 'w', 'W', 'W']
 
 #### 4.2.2、replace
 
-> 格式：字符串.replace(oldStr/正则,newStr)
->
-> 功能：用newStr将oldStr替换
->
-> 返回值：替换成功的新字符串
+格式：字符串.replace(oldStr/正则,newStr)
+
+功能：用newStr将oldStr替换
+
+返回值：替换成功的新字符串
 
 ```js
 let str = 'abgswbdhabw';
@@ -297,11 +294,11 @@ console.log(str.replace(/a/g, '-')); // 输出：-bgswbdh-bw
 
 #### 4.2.3、split
 
-> 格式：字符串.split(分割符/正则);
->
-> 功能：用分割符将原字符串进行分割
->
-> 返回值：分割剩下的字符串数组
+格式：字符串.split(分割符/正则);
+
+功能：用分割符将原字符串进行分割
+
+返回值：分割剩下的字符串数组
 
 ```js
 let str = 'abgswbdhabw';
@@ -310,11 +307,11 @@ console.log(str.split(/b/)); // 输出：['a', 'gsw', 'dha', 'w']
 
 #### 4.2.4、search
 
-> 格式：字符串.search(字符串/正则)
->
-> 语法：找到符号条件的字符串第一次出现的位置
->
-> 返回值：有的话返回索引，没有返回-1,全局匹配标识符(g)此处没有作用
+格式：字符串.search(字符串/正则)
+
+语法：找到符号条件的字符串第一次出现的位置
+
+返回值：有的话返回索引，没有返回-1,全局匹配标识符(g)此处没有作用
 
 ```js
 let str = 'abgswbdhabw';
@@ -391,7 +388,7 @@ console.log('喜欢你'.match(regExp03)); // 输出：null
 console.log('喜欢我'.match(regExp03)); // 输出：[ '喜欢', index: 0, input: '喜欢你', groups: undefined ] 这个?!后面的条件不会返回，匹配成功只会返回 喜欢
 ```
 
-#### 5.4.4、{/* ?<! */}反向否定断言
+#### 5.4.4、{/_ ?<! _/}反向否定断言
 
 ```js
 // 反向否定查找

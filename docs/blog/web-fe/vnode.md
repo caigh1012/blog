@@ -4,9 +4,6 @@ title: Virtual DOM理解
 description: Virtual DOM理解
 sidebar_label: Virtual DOM理解
 hide_title: true
-last_update:
-  date: 2023-03-14
-  author: Chason
 ---
 
 ## 一、什么是Virtual DOM
@@ -197,7 +194,7 @@ export function h(sel, b, c) {
 }
 ```
 
-👋注意：<u>这里去除了源码中对SVG元素的支持</u>
+🔔注意：<u>这里去除了源码中对SVG元素的支持</u>
 
 测试代码实现：
 

@@ -4,9 +4,6 @@ title: 浏览器底层原理
 description: 浏览器底层原理
 sidebar_label: 浏览器底层原理
 hide_title: true
-last_update:
-  date: 2023-04-13
-  author: Chason
 ---
 
 ## 浏览器底层原理

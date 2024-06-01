@@ -1,12 +1,9 @@
 ---
 id: devopsblog
 title: blog
-description: DevOps部署个人自动化博客
-sidebar_label: DevOps部署个人自动化博客
+description: DevOps自动化博客
+sidebar_label: DevOps自动化博客
 hide_title: true
-last_update:
-  date: 2023-2-22
-  author: Chason
 ---
 
 ## 一、前期准备工作
@@ -167,7 +164,7 @@ services:
 docker-compose up -d
 ```
 
-👋注意：<u>这里会经常遇到的问题是Jenkins容器一直在启动中, 可以使用 `docker ps` 查看容器状态</u>
+🔔注意：<u>这里会经常遇到的问题是Jenkins容器一直在启动中, 可以使用 `docker ps` 查看容器状态</u>
 
 ```bash
 docker ps # 查看Jenkins容器状态
@@ -291,7 +288,7 @@ Jenkins使用时会经常出现以下错误(很是烦躁)
 
 ![1676953164310](https://gitee.com/caigh1012/assets/raw/main/blog/devops-v1.0/1676953164310.png)
 
-👋注意：<u>第一次打包是比较慢，因为jenkins需要安装Node，版本就是上诉图片选择的版本，这里选择Node版本是16.18.1</u>
+🔔注意：<u>第一次打包是比较慢，因为jenkins需要安装Node，版本就是上诉图片选择的版本，这里选择Node版本是16.18.1</u>
 
 ### 6.3、安装Generic Webhook Trigger插件实现远程构建
 
@@ -371,7 +368,7 @@ Jenkins使用时会经常出现以下错误(很是烦躁)
 
 ![1676953604251](https://gitee.com/caigh1012/assets/raw/main/blog/devops-v1.0/1676953604251.png)
 
-👋注意：<u>第一次构建可能会出现`Host key verification failed`原因拉取失败，这里推荐现在第一个`Accept first connection`进行第一次构建，构建成功后还原默认设置</u>
+🔔注意：<u>第一次构建可能会出现`Host key verification failed`原因拉取失败，这里推荐现在第一个`Accept first connection`进行第一次构建，构建成功后还原默认设置</u>
 
 错误输出：
 
@@ -565,7 +562,7 @@ pipeline {
 
 ```
 
-👋注意：<u>credentialsId需要使用Jenkins生成的凭证id</u>
+🔔注意：<u>credentialsId需要使用Jenkins生成的凭证id</u>
 
 ### 10.2、配置docker.sh脚本
 
@@ -663,7 +660,7 @@ fetch(`${jenkins_url.toString().trim()}/generic-webhook-trigger/invoke?token=${j
   });
 ```
 
-👋注意：<u>jobName必须和Jenkinsfile的generic-webhook-trigger插件配置token保持一致</u>
+🔔注意：<u>jobName必须和Jenkinsfile的generic-webhook-trigger插件配置token保持一致</u>
 
 ### 10.2、package.json创建scripts脚本
 

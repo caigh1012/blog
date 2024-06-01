@@ -1,12 +1,9 @@
 ---
 id: devopsblog02
 title: blog
-description: DevOps部署个人自动化博客(改进)
-sidebar_label: DevOps部署个人自动化博客(改进)
+description: DevOps自动化博客2.0
+sidebar_label: DevOps自动化博客2.0
 hide_title: true
-last_update:
-  date: 2023-12-25
-  author: Chason
 ---
 
 ## 一、调整原因

@@ -1,12 +1,9 @@
 ---
 id: rxjs
 title: Rxjs
-description: Rxjs快速入门使用
-sidebar_label: Rxjs快速入门使用
+description: Rxjs快速入门
+sidebar_label: Rxjs快速入门
 hide_title: true
-last_update:
-  date: 2023-07-08
-  author: Chason
 ---
 
 ## 一、Rxjs前置知识
@@ -468,7 +465,7 @@ of(1, 2, 3)
   .subscribe((v) => console.log(`value: ${v}`)); // 输出：4
 ```
 
-👋注意： <u>该 `pipe()` 函数类似于可观察量上 `.pipe()` 的方法，但不是一回事。</u>
+🔔注意： 该 `pipe()` 函数类似于可观察量上 `.pipe()` 的方法，但不是一回事。
 
 #### 5.4.2、从头开始创建新运算符
 

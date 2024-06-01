@@ -4,9 +4,6 @@ title: History对象
 description: History对象
 sidebar_label: History对象
 hide_title: true
-last_update:
-  date: 2022-11-19
-  author: Chason
 ---
 
 ## 一、Window.history的API
@@ -42,21 +39,21 @@ state: 状态对象 state 是一个 JavaScript 对象，必填。用户导航到
 
 title: Firefox 目前忽略这个参数，但未来可能会用到，可以传一个空字符串，必填。
 
-url: 该参数定义了新的历史 URL 记录。注意，调用 `pushState()` 后浏览器并不会立即加载这个 URL，但可能会在稍后某些情况下加载这个 URL，比如在用户重新打开浏览器时。新 URL 不必须为绝对路径。如果新 URL 是相对路径，那么它将被作为相对于当前 URL 处理。新 URL 必须与当前 URL 同源，否则 `pushState()` 会抛出一个异常。该参数是可选的，缺省为当前 URL。
+url: 该参数定义了新的历史 URL 记录。注意，调用 pushState() 后浏览器并不会立即加载这个 URL，但可能会在稍后某些情况下加载这个 URL，比如在用户重新打开浏览器时。新 URL 不必须为绝对路径。如果新 URL 是相对路径，那么它将被作为相对于当前 URL 处理。新 URL 必须与当前 URL 同源，否则 pushState() 会抛出一个异常。该参数是可选的，缺省为当前 URL。
 
 #### 1.3.2、replaceState
 
-参数与 `pushState` 相同，含义也相同。
+参数与 pushState 相同，含义也相同。
 
-区别在于 `replaceState` 是修改了当前的历史记录而不是新建一个。注意这并不会阻止其在全局浏览器历史记录中创建一个新的历史记录项。
+区别在于 replaceState 是修改了当前的历史记录而不是新建一个。注意这并不会阻止其在全局浏览器历史记录中创建一个新的历史记录项。
 
 #### 1.3.3、popstate
 
-当历史记录发生变化时，将触发 `popstate` 事件。如果被激活的历史记录是通过调用 `history.pushState() or history.replaceState()` 创建的，`popstate` 事件的 state 属性包含历史记录的状态对象的副本。
+当历史记录发生变化时，将触发 popstate 事件。如果被激活的历史记录是通过调用 history.pushState() or history.replaceState() 创建的，popstate 事件的 state 属性包含历史记录的状态对象的副本。
 
-直接调用 `history.pushState() or history.replaceState()` 不会触发 `popstate` 事件。只有在作出浏览器动作时，才会触发该事件，如用户去点击浏览器的前进/回退按钮，或者在 JavaScript 代码中调用 `history.forward() / history.back()`。
+直接调用 history.pushState() or history.replaceState() 不会触发 popstate 事件。只有在作出浏览器动作时，才会触发该事件，如用户去点击浏览器的前进/回退按钮，或者在 JavaScript 代码中调用 history.forward() / history.back()。
 
-不同的浏览器在加载页面时处理 `popstate` 事件的形式存在差异。页面加载时 Chrome 和 Safari 通常会触发`popstate` 事件，但 Firefox 则不会。
+不同的浏览器在加载页面时处理 popstate 事件的形式存在差异。页面加载时 Chrome 和 Safari 通常会触发 popstate 事件，但 Firefox 则不会。
 
 ### 1.4、代码实践
 

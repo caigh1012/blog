@@ -1,11 +1,8 @@
 ---
 title: JQuery
 description: JQuery
-sidebar_label: JQuery理解使用
+sidebar_label: JQuery快速入门
 hide_title: true
-last_update:
-  date: 2023-02-27
-  author: Chason
 ---
 
 ## 一、jQuery基础部分
@@ -50,7 +47,7 @@ jQuery获取元素的结果:
 
 从结果中可以看出来，jQuery获取到的是伪数组，不能使用操作DOM元素的方式来操作jQuery获取到的伪数组，jQuery提供了一套专门用来操作jQuery伪数组的方法来操作，而这套方法是不能被DOM元素使用的。
 
-从伪数组中取下标可以获取到DOM元素：
+从伪数组中取下标可以获取到DOM元素
 
 ```js
 var oDiv = $('div')[0]; // 取下标
@@ -58,13 +55,13 @@ var oDiv = $('div').get(下标); // 下标
 console.log(oDiv);
 ```
 
-jQuery伪数组中获取到DOM元素结果：
+jQuery伪数组中获取到DOM元素结果如下：
 
 ![1604992861410](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685365989-bbc54a.png)
 
 经过这样获取后得到的DOM元素才能使用
 
-原生js的dom元素也不能使用jQuery提供的方法操作，但可以将DOM元素转为jQuery伪数组：
+原生js的dom元素也不能使用jQuery提供的方法操作，但可以将DOM元素转为jQuery伪数组
 
 ```js
 var oDiv = document.querySelector('div');
@@ -72,11 +69,11 @@ var $div = $(div);
 console.log($div);
 ```
 
-DOM元素转jQuery伪数组结果：
+DOM元素转jQuery伪数组结果如下：
 
 ![1604995288992](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685365994-78e0e2.png)
 
-👏注意：<u>原生js中的window，在jQuery中是$(window)，原生js中的document，在jQuery中是$(document)，原生js中的this，在jQuery中是$(this)</u>
+🔔注意：原生js中的window，在jQuery中是$(window)，原生js中的document，在jQuery中是$(document)，原生js中的this，在jQuery中是$(this)
 
 ### 1.4、jQuery选择器及表单选择器
 
@@ -145,7 +142,7 @@ $('input：checked'); // 所有选中的表单元素 -- 重点
 $('option:selected'); // 被选中的下拉框元素 -- 重点
 ```
 
-👏注意：<u>jQuery获取元素不会获取单个元素，页面中只要满足选择器的，都会获取到，也就是jQuery获取到的永远是集合（伪数组）。</u>
+🔔注意：jQuery获取元素不会获取单个元素，页面中只要满足选择器的，都会获取到，也就是jQuery获取到的永远是集合（伪数组）。
 
 ### 1.5、jQuery筛选器及筛选器方法
 
@@ -504,7 +501,7 @@ span.replaceWith(b);
 
 ```
 
-将span替换成b结果：
+将 span 替换成 b 结果：
 
 ![1567971137680](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366032-830379.png)
 
@@ -850,7 +847,7 @@ $.ajax({
 
 ### 3.2、jQuery的标识符
 
-jquery的开头都是$获取时jQuery。如果在页面引入别人的插件，别人的插件写的也是要用$或jQuery开头的，那么会和引入的jquery产生冲突。jquery早已预料到了这种情况，所以jquery可以将$或jQuery的使用权交出，或换成其他的操作符。
+jquery的开头都是 $ 获取时 jQuery。如果在页面引入别人的插件，别人的插件写的也是要用 $ 或 jQuery 开头的，那么会和引入的 jquery产生冲突。jquery 早已预料到了这种情况，所以 jquery 可以将 $ 或 jQuery 的使用权交出，或换成其他的操作符。
 
 ```js
 jQuery.noConflict()； // 交出了$使用权，$符号不能使用了，只能使用jQuery
@@ -956,9 +953,7 @@ $("form").validate({
 });
 ```
 
-5. 自定义错误信息样式，使用类名error
-
-6. 自定义验证方法：
+5. 自定义验证方法：
 
 ```js
 jQuery.validator.addMethod(
@@ -1004,7 +999,7 @@ $("img.lazy").lazyload(function(){
 
 #### 3.4.4、laydate时间插件
 
-官网：`<http://www.layui.com/laydate/>`
+官网：http://www.layui.com/laydate/
 
 下载插件，引入核心的js文件
 
@@ -1037,7 +1032,7 @@ $("img.lazy").lazyload(function(){
 
 #### 3.4.5、layer弹出层插件
 
-弹出层网址：`<http://layer.layui.com/>`
+弹出层网址：http://layer.layui.com/
 
 加载层
 

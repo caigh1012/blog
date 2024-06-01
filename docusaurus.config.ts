@@ -108,6 +108,11 @@ const config: Config = {
               sidebarId: 'webpack',
             },
             {
+              label: 'Rxjs',
+              type: 'docSidebar',
+              sidebarId: 'rxjs',
+            },
+            {
               label: '网络工程',
               type: 'docSidebar',
               sidebarId: 'network',
@@ -117,7 +122,7 @@ const config: Config = {
         {
           type: 'docSidebar',
           sidebarId: 'blog',
-          label: '文章',
+          label: '博客',
           position: 'left',
         },
         {

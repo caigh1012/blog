@@ -4,9 +4,6 @@ title: 浏览器解析HTML文档工作过程
 description: 浏览器解析HTML文档工作过程
 sidebar_label: 浏览器解析HTML文档工作过程
 hide_title: true
-last_update:
-  date: 2023-04-13
-  author: Chason
 ---
 
 ## 一、解析Html文档工作过程

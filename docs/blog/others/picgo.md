@@ -4,9 +4,6 @@ title: Picgo
 description: 利用md文件提高写文档效率
 sidebar_label: 利用md文件提高写文档效率
 hide_title: true
-last_update:
-  date: 2023-07-01
-  author: Chason
 ---
 
 ## 一、前期准备工作
@@ -19,7 +16,9 @@ last_update:
 
 ### 2.1、创建公共仓库
 
-> gitee和GitHub都可以作为图床的一个仓库，这里选择gitee的原因是：github属于外网，访问较慢，gitee访问就比较快。
+:::info[信息]
+gitee和GitHub都可以作为图床的一个仓库，这里选择gitee的原因是：github属于外网，访问较慢，gitee访问就比较快。
+:::
 
 ![image-20230520182100452](https://gitee.com/caigh1012/assets/raw/main/blog/picgo/2023-05-21-1684639882-2c8662.png)
 
@@ -29,13 +28,13 @@ last_update:
 
 ![image-20230520213919224](https://gitee.com/caigh1012/assets/raw/main/blog/picgo/2023-05-21-1684639897-002ca2.png)
 
-👋注意： <u>gitee目前只能选择私有仓库，创建成功后需要手动设置为公共仓库。同时gitee仓库存储免费个人用户只有5GB</u>
+🔔注意：gitee目前只能选择私有仓库，创建成功后需要手动设置为公共仓库。同时gitee仓库存储免费个人用户只有5GB
 
 ### 2.2、创建存储私人令牌
 
 ![image-20230520213919224](https://gitee.com/caigh1012/assets/raw/main/blog/picgo/2023-05-21-1684639952-3cd7ec.png)
 
-👋注意: <u>私人令牌记得保存好</u>
+🔔注意: 私人令牌记得保存好
 
 ## 三、配置PicGo
 
@@ -63,7 +62,7 @@ token：对应gitee的私人令牌
 
 paths：对应仓库的文件路径
 
-👋注意： <u>customPath和customUrl默认不设置</u>
+🔔注意：customPath 和 customUrl 默认不设置
 
 ### 3.4、测试上传
 
@@ -71,7 +70,7 @@ paths：对应仓库的文件路径
 
 ![image-20230520221905333](https://gitee.com/caigh1012/assets/raw/main/blog/picgo/2023-05-21-1684639993-b4124f.png)
 
-当上传成功后在PicGo的`相册区域可以查看上传后的文件`
+当上传成功后在PicGo的 相册区域可以查看上传后的文件
 
 ![image-20230520221905333](https://gitee.com/caigh1012/assets/raw/main/blog/picgo/2023-05-21-1684640001-3ce32b.png)
 

@@ -4,9 +4,6 @@ title: AST抽象语法树
 description: AST抽象语法树
 sidebar_label: AST抽象语法树
 hide_title: true
-last_update:
-  date: 2023-02-27
-  author: Chason
 ---
 
 ## 一、AST是什么和如何生成？

@@ -31,7 +31,7 @@ export default function Home(): JSX.Element {
                 <div className="hero-cta">
                   <a
                     className="button button-primary"
-                    href="/blog" >
+                    href="/blog/front-engineer/ast" >
                     快速去博客
                   </a>
                 </div>

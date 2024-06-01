@@ -1,15 +1,10 @@
 ---
 id: http
 title: Http
-description: Http缓存原理
-sidebar_label: Http缓存原理
+description: Http缓存
+sidebar_label: Http缓存
 hide_title: true
-last_update:
-  date: 2023-04-17
-  author: Chason
 ---
-
-## 浏览器缓存与Http缓存
 
 ## 一、浏览器缓存大概的种类
 
@@ -98,7 +93,7 @@ Expires是HTTP/1.0的字段，但是现在浏览器的默认使用的是HTTP/1.1
 
 由于Cache-Control的优先级比expires，那么直接根据Cache-Control的值进行缓存，意思就是说在600秒内再次发起该请求，则会直接使用缓存结果，强制缓存生效。
 
-👋注意：<u>在无法确定客户端的时间是否与服务端的时间同步的情况下，Cache-Control相比于expires是更好的选择，所以同时存在时，只有Cache-Control生效。</u>
+🔔注意：在无法确定客户端的时间是否与服务端的时间同步的情况下，Cache-Control相比于expires是更好的选择，所以同时存在时，只有Cache-Control生效。
 
 #### 2.2.2、协商缓存
 
@@ -133,12 +128,10 @@ Expires是HTTP/1.0的字段，但是现在浏览器的默认使用的是HTTP/1.1
 
 ![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685366404-d28e88.png)
 
-<span className="highlight">附注：</span>Etag / If-None-Match优先级高于Last-Modified / If-Modified-Since，同时存在则只有Etag / If-None-Match生效。
+<span className="highlight">附注：</span>Etag / If-None-Match优先级高于 Last-Modified / If-Modified-Since，同时存在则只有 Etag / If-None-Match 生效。
 
 #### 2.2.3、总结：
 
-强制缓存优先于协商缓存进行，若强制缓存(Expires和Cache-Control)生效则直接使用缓存，若不生效则进行协商缓存(Last-Modified / If-Modified-Since和Etag / If-None-Match)，协商缓存由服务器决定是否使用缓存，若协商缓存失效，那么代表该请求的缓存失效，重新获取请求结果，再存入浏览器缓存中；生效则返回304，继续使用缓存，主要过程如下：
+强制缓存优先于协商缓存进行，若强制缓存(Expires和Cache-Control)生效则直接使用缓存，若不生效则进行协商缓存( Last-Modified / If-Modified-Since 和 Etag / If-None-Match)，协商缓存由服务器决定是否使用缓存，若协商缓存失效，那么代表该请求的缓存失效，重新获取请求结果，再存入浏览器缓存中；生效则返回304，继续使用缓存，主要过程如下：
 
 ![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685366409-013572.png)
-
-## 三、Nginx配置强缓存和协商缓存实战
