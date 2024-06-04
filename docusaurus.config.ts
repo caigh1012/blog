@@ -30,13 +30,23 @@ const config: Config = {
   organizationName: 'Kyler Tsai', // Usually your GitHub org/user name.
   projectName: 'blog', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
 
   /**
    * 静态资源文件
    */
   staticDirectories: ['static', 'assets'],
+
+  i18n: {
+    defaultLocale: 'zh-cn',
+    locales: ['zh-cn'],
+    localeConfigs: {
+      'zh-cn': {
+        htmlLang: 'zh',
+      },
+    },
+  },
 
   presets: [
     [
@@ -138,9 +148,14 @@ const config: Config = {
           position: 'left',
         },
         {
-          href: 'https://github.com/facebook/docusaurus',
-          className: 'header-github-link',
+          type: 'localeDropdown',
           position: 'right',
+        },
+        {
+          href: 'https://github.com/caigh1012/blog',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
       ],
     },
