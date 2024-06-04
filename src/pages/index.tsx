@@ -27,11 +27,11 @@ export default function Home(): JSX.Element {
                 <h1 className="hero-title mt-0">
                   欢迎来到我的博客，我是Kyler Tsai
                 </h1>
-                <p className="hero-paragraph">本博客网站用于记录个人日常学习记录笔记以及个人编写的博客文章</p>
+                <p className="hero-paragraph">本网址用于记录个人日常学习笔记和总结以及个人记录的博客文章</p>
                 <div className="hero-cta">
                   <a
                     className="button button-primary"
-                    href="/blog/front-engineer/ast" >
+                    href="/blog/web-fe/ast" >
                     快速去博客
                   </a>
                 </div>
