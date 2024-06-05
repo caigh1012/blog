@@ -8,9 +8,10 @@ const config: Config = {
 
   // Set the production url of your site here
   url: 'https://your-docusaurus-site.example.com',
+
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/blog/',
 
   headTags: [
     /**
@@ -53,9 +54,11 @@ const config: Config = {
       'classic',
       {
         docs: {
+          path: 'docs',
           routeBasePath: '/', // Serve the docs at the site's root.
           sidebarPath: './sidebars.ts',
         },
+        blog: false,
         theme: {
           customCss: './src/css/entry.css',
         },
