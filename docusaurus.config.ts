@@ -76,8 +76,6 @@ const config: Config = {
   themes: ['@docusaurus/theme-mermaid'],
 
   themeConfig: {
-    // Replace with your project's social card
-    image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'Kyler Tsai',
       logo: {
@@ -126,7 +124,7 @@ const config: Config = {
               sidebarId: 'rxjs',
             },
             {
-              label: '网络工程',
+              label: '计算机网络',
               type: 'docSidebar',
               sidebarId: 'network',
             },
@@ -165,6 +163,12 @@ const config: Config = {
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: true,
+    },
+    algolia: {
+      // If Algolia did not provide you any appId, use 'BH4D9OD16A'
+      appId: 'W0V4B3VI2C',
+      apiKey: 'c3aa19958ce2373940a05438a746daad',
+      indexName: 'caigh',
     },
     footer: {
       style: 'dark',
