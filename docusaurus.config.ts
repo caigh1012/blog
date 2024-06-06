@@ -166,8 +166,8 @@ const config: Config = {
     },
     algolia: {
       // If Algolia did not provide you any appId, use 'BH4D9OD16A'
-      appId: 'W0V4B3VI2C',
-      apiKey: 'e8bb0297457a05f9be17fe5c290ac673',
+      appId: '1O27NX5P6U',
+      apiKey: '9a3cda1a305fcf408046b270ee111e88',
       indexName: 'caigh',
     },
     footer: {
