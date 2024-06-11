@@ -31,6 +31,7 @@ Docker 是一个开源的应用容器引擎，基于 Go 语言 并遵从Apache2.
 ```
 
 执行结果如下图：
+
 ![1669216531976](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361673-0fbba4.png)
 
 ### 2.2、设置yum的repo
@@ -43,6 +44,7 @@ sudo yum-config-manager \
 ```
 
 执行结果如下图：
+
 ![1669216564964](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361684-641f00.png)
 
 ### 2.3、安装Docker Engine
@@ -52,6 +54,7 @@ sudo yum install docker-ce docker-ce-cli containerd.io docker-compose-plugin
 ```
 
 执行结果如下图：
+
 ![1669216689717](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361690-f22367.png)
 
 ### 2.4、启动docker
@@ -68,6 +71,7 @@ docker info
 ```
 
 执行结果如下图：
+
 ![1669216731413](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361696-b43c53.png)
 
 ```bash
@@ -75,6 +79,7 @@ sudo docker run hello-world
 ```
 
 执行结果如下图：
+
 ![1669216803789](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361701-fe5046.png)
 
 ### 2.5、卸载docker
@@ -126,6 +131,7 @@ docker pull ubuntu:12.04
 ```
 
 下载centos镜像，如下图：
+
 ![1669296855884](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361718-b4ab33.png)
 
 🔨命令解析：docker pull registry.hub.docker.com/ubuntu:12.04 即从服务器 registry.hub.docker.com中的ubuntu仓库来下载标记 12.04 的镜像
@@ -133,6 +139,7 @@ docker pull ubuntu:12.04
 ### 5.2、列出镜像
 
 列出镜像命令：docker images
+
 ![1669295789331](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361723-b200bb.png)
 
 在列出信息中，可以看到几个字段信息
@@ -154,6 +161,7 @@ docker save -o centos.tar centos:latest
 ```
 
 执行结果如下图：
+
 ![1669297020933](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361730-0d4773.png)
 
 #### 5.3.2、载入镜像
@@ -210,6 +218,7 @@ docker run -it centos /bin/bash
 ```
 
 执行结果如下图：
+
 ![1669537989179](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361739-359078.png)
 
 ### 6.2、进入容器
@@ -223,6 +232,7 @@ docker exec -it 容器id /bin/bash
 ```
 
 执行结果如下图：
+
 ![1669553086221](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361745-9c7907.png)
 
 ### 6.3、删除容器
@@ -245,9 +255,11 @@ docker rm -f $(docker ps -aq)  		# 删除所有容器
 3. 使用快捷键Ctrl+P+Q，容器不停止退出容器
 
 使用exit退出容器
+
 ![1669538034832](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361750-44e9b9.png)
 
 使用Ctrl+P+Q退出容器
+
 ![1669553267892](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361753-c92fc0.png)
 
 ### 6.5、查看正在运行的容器
@@ -260,6 +272,7 @@ docker ps -aq  # 只显示容器id
 ```
 
 查看运行的容器，执行结果如下：
+
 ![1669552659111](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361757-0ab9aa.png)
 
 其中信息获取如下：
@@ -293,12 +306,15 @@ PORTS ：端口映射
 有时候使用 Docker Hub 这样的公共仓库可能不方便，用户可以创建一个本地仓库供私人使用。而Docker推荐的是docker-registry，这里使用Harbor：https://goharbor.io/
 
 上传tar.gz文件至linux的/harbor目录下，并且进行解压
+
 ![1669556998856](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361762-2c6847.png)
 
 解压操作
+
 ![1669557102049](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361765-dc7bf8.png)
 
 复制一份harbor.yml.tmpl，install.sh执行的是harbor.yml
+
 ![1669557374810](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361769-bdc685.png)
 
 更改harbor.yml配置文件
@@ -318,7 +334,9 @@ ip：192.168.1.120
 ![1669557601036](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361773-76c8ee.png)
 
 运行./install.sh文件
+
 ![1669557705995](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361777-a40ede.png)
 
 访问本地地址
+
 ![1669557871044](https://gitee.com/caigh1012/assets/raw/main/devops/docker/2023-05-29-1685361780-b578ca.png)

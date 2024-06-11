@@ -17,7 +17,6 @@ export default function Home(): JSX.Element {
           rel="stylesheet"
           href="landing_page/css/style.css"
         />
-        <script src="landing_page/js/preset.js"></script>
       </Head>
       <main style={{ minHeight: 'auto' }} className="landing-page">
         <section className="hero">
@@ -32,7 +31,7 @@ export default function Home(): JSX.Element {
                   <a
                     className="button button-primary"
                     href="/blog/web-fe/ast" >
-                    快速去博客
+                    Blog
                   </a>
                 </div>
               </div>

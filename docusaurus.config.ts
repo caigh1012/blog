@@ -3,7 +3,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Kyler Tsai‘s Blogs and Notes',
+  title: 'Kyler Tsai‘s blogs and notes',
   favicon: 'images/favicon.ico',
 
   // Set the production url of your site here
@@ -40,10 +40,10 @@ const config: Config = {
   staticDirectories: ['static', 'assets'],
 
   i18n: {
-    defaultLocale: 'zh-cn',
-    locales: ['zh-cn'],
+    defaultLocale: 'zh-CN',
+    locales: ['zh-CN'],
     localeConfigs: {
-      'zh-cn': {
+      'zh-CN': {
         htmlLang: 'zh',
       },
     },
@@ -169,6 +169,10 @@ const config: Config = {
       appId: '1O27NX5P6U',
       apiKey: '9a3cda1a305fcf408046b270ee111e88',
       indexName: 'caigh',
+      contextualSearch: false,
+      searchParameters: {
+        facetFilters: ['language:zh-CN'],
+      },
     },
     footer: {
       style: 'dark',
