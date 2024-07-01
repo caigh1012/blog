@@ -86,7 +86,7 @@ const config: Config = {
         {
           type: 'dropdown',
           position: 'left',
-          label: '学习笔记',
+          label: '前端',
           items: [
             {
               label: 'JavaScript',
@@ -123,12 +123,13 @@ const config: Config = {
               type: 'docSidebar',
               sidebarId: 'rxjs',
             },
-            {
-              label: '计算机网络',
-              type: 'docSidebar',
-              sidebarId: 'network',
-            },
           ],
+        },
+        {
+          type: 'docSidebar',
+          position: 'left',
+          label: 'Java',
+          sidebarId: 'java',
         },
         {
           type: 'docSidebar',
@@ -140,6 +141,18 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'devops',
           label: 'DevOps专题',
+          position: 'left',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'os',
+          label: '操作系统',
+          position: 'left',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'network',
+          label: '计算机网络',
           position: 'left',
         },
         {
