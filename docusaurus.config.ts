@@ -123,6 +123,11 @@ const config: Config = {
               type: 'docSidebar',
               sidebarId: 'rxjs',
             },
+            {
+              label: 'Flutter',
+              type: 'docSidebar',
+              sidebarId: 'flutter',
+            },
           ],
         },
         {
