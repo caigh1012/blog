@@ -26,7 +26,7 @@ hide_title: true
 
 浏览器与服务器通信的方式为应答模式，即是：**浏览器发起HTTP请求 – 服务器响应该请求**。那么浏览器第一次向服务器发起该请求后拿到请求结果，会根据响应报文中HTTP头的缓存标识，决定是否缓存结果，是则将请求结果和缓存标识存入浏览器缓存中，简单的过程如下图：
 
-![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685367504-c53227.png)
+![](https://gitee.com/caigh1012/assets/raw/main/network/http-cache/2023-05-29-1685367504-c53227.png)
 
 由上图我们可以知道:
 
@@ -43,15 +43,15 @@ hide_title: true
 
 (1)、不存在该缓存结果和缓存标识，强制缓存失效，则直接向服务器发起请求，如下图:
 
-![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685366493-3d1de2.png)
+![](https://gitee.com/caigh1012/assets/raw/main/network/http-cache/2023-05-29-1685366493-3d1de2.png)
 
 (2)、存在该缓存结果和缓存标识，但是结果已经失效，强制缓存失效，则使用协商缓存（暂不分析），如下图 :
 
-![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685366365-068016.png)
+![](https://gitee.com/caigh1012/assets/raw/main/network/http-cache/2023-05-29-1685366365-068016.png)
 
 (3)、存在该缓存结果和缓存标识，且该结果没有还没有失效，强制缓存生效，直接返回该结果，如下图：
 
-![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685366371-926e49.png)
+![](https://gitee.com/caigh1012/assets/raw/main/network/http-cache/2023-05-29-1685366371-926e49.png)
 
 强制缓存的缓存的规则
 
@@ -83,7 +83,7 @@ Expires是HTTP/1.0的字段，但是现在浏览器的默认使用的是HTTP/1.1
 
 案例：
 
-![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685366376-9f4a18.png)
+![](https://gitee.com/caigh1012/assets/raw/main/network/http-cache/2023-05-29-1685366376-9f4a18.png)
 
 由上面的例子我们可以知道：
 
@@ -101,11 +101,11 @@ Expires是HTTP/1.0的字段，但是现在浏览器的默认使用的是HTTP/1.1
 
 (1)、协商缓存生效，返回304，如下：
 
-![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685366382-fb87e4.png)
+![](https://gitee.com/caigh1012/assets/raw/main/network/http-cache/2023-05-29-1685366382-fb87e4.png)
 
 (2)、协商缓存失败，返回200和请求结果，如下：
 
-![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685366386-445841.png)
+![](https://gitee.com/caigh1012/assets/raw/main/network/http-cache/2023-05-29-1685366386-445841.png)
 
 同样，协商缓存的标识也是在响应报文的HTTP头中和请求结果一起返回给浏览器的，控制协商缓存的字段分别有：**Last-Modified / If-Modified-Since和Etag / If-None-Match**，其中Etag / If-None-Match的优先级比Last-Modified / If-Modified-Since高。
 
@@ -113,20 +113,20 @@ Expires是HTTP/1.0的字段，但是现在浏览器的默认使用的是HTTP/1.1
 
 ①、Last-Modified是服务器响应请求时，返回该资源文件在服务器最后被修改的时间，如下：
 
-![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685366392-5efbb2.png)
+![](https://gitee.com/caigh1012/assets/raw/main/network/http-cache/2023-05-29-1685366392-5efbb2.png)
 
 ②、If-None-Match是客户端再次发起该请求时，携带上次请求返回的唯一标识Etag值，通过此字段值告诉服务器该资源上次请求返回的唯一标识值。服务器收到该请求后，发现该请求头中含有If-None-Match，则会根据If-None-Match的字段值与该资源在服务器的Etag值做对比，一致则返回304，代表资源无更新，继续使用缓存文件；不一致则重新返回资源文件，状态码为200，如下：
-![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685366397-21ebd4.png)
+![](https://gitee.com/caigh1012/assets/raw/main/network/http-cache/2023-05-29-1685366397-21ebd4.png)
 
 **Etag / If-None-Match**
 
 ①、Etag是服务器响应请求时，返回当前资源文件的一个唯一标识(由服务器生成)，如下：
 
-![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685366401-2dd391.png)
+![](https://gitee.com/caigh1012/assets/raw/main/network/http-cache/2023-05-29-1685366401-2dd391.png)
 
 ②、If-None-Match是客户端再次发起该请求时，携带上次请求返回的唯一标识Etag值，通过此字段值告诉服务器该资源上次请求返回的唯一标识值。服务器收到该请求后，发现该请求头中含有If-None-Match，则会根据If-None-Match的字段值与该资源在服务器的Etag值做对比，一致则返回304，代表资源无更新，继续使用缓存文件；不一致则重新返回资源文件，状态码为200，如下：
 
-![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685366404-d28e88.png)
+![](https://gitee.com/caigh1012/assets/raw/main/network/http-cache/2023-05-29-1685366404-d28e88.png)
 
 <span className="highlight">附注：</span>Etag / If-None-Match优先级高于 Last-Modified / If-Modified-Since，同时存在则只有 Etag / If-None-Match 生效。
 
@@ -134,4 +134,4 @@ Expires是HTTP/1.0的字段，但是现在浏览器的默认使用的是HTTP/1.1
 
 强制缓存优先于协商缓存进行，若强制缓存(Expires和Cache-Control)生效则直接使用缓存，若不生效则进行协商缓存( Last-Modified / If-Modified-Since 和 Etag / If-None-Match)，协商缓存由服务器决定是否使用缓存，若协商缓存失效，那么代表该请求的缓存失效，重新获取请求结果，再存入浏览器缓存中；生效则返回304，继续使用缓存，主要过程如下：
 
-![](https://gitee.com/caigh1012/assets/raw/main/learn/network/http-cache/2023-05-29-1685366409-013572.png)
+![](https://gitee.com/caigh1012/assets/raw/main/network/http-cache/2023-05-29-1685366409-013572.png)

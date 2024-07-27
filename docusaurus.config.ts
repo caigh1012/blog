@@ -86,7 +86,7 @@ const config: Config = {
         {
           type: 'dropdown',
           position: 'left',
-          label: '前端',
+          label: '前端学习',
           items: [
             {
               label: 'JavaScript',
@@ -131,10 +131,21 @@ const config: Config = {
           ],
         },
         {
-          type: 'docSidebar',
+          type: 'dropdown',
           position: 'left',
-          label: 'Java',
-          sidebarId: 'java',
+          label: '其他编程语言',
+          items: [
+            {
+              label: 'Java编程',
+              type: 'docSidebar',
+              sidebarId: 'java',
+            },
+            {
+              label: 'Rust编程',
+              type: 'docSidebar',
+              sidebarId: 'rust',
+            },
+          ],
         },
         {
           type: 'docSidebar',
@@ -145,7 +156,7 @@ const config: Config = {
         {
           type: 'docSidebar',
           sidebarId: 'devops',
-          label: 'DevOps专题',
+          label: 'DevOps',
           position: 'left',
         },
         {
