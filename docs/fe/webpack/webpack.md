@@ -31,7 +31,7 @@ npm i webpack webpack-cli -D
 
 相关目录结构如下：
 
-![1663490396858](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368590-bf378a.png)
+![1663490396858](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368590-bf378a.png)
 
 ### 1.3、启用 Webpack
 
@@ -77,7 +77,7 @@ npx webpack ./src/main.js --mode=production
 
 在项目根目录新建文件：webpack.config.js
 
-![1663491734075](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368595-5a2114.png)
+![1663491734075](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368595-5a2114.png)
 
 ## 三、Webpack 基础
 
@@ -105,7 +105,7 @@ devServer: {
 
 展示效果：
 
-![1663493746999](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368600-94fdc8.png)
+![1663493746999](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368600-94fdc8.png)
 
 #### 3.1.2、处理html资源
 
@@ -154,7 +154,7 @@ npm i style-loader css-loader -D
 
 创建 css 文件，并且在 main.js 进行引入：
 
-![1663495367607](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368604-0e3d41.png)
+![1663495367607](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368604-0e3d41.png)
 
 同时 webpack.config.js 的配置
 
@@ -176,7 +176,7 @@ module: {
 
 引入的 css 此时不会单独生成 css 文件，而是被 js 动态创建style标签引入
 
-![1663496233944](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368608-d95947.png)
+![1663496233944](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368608-d95947.png)
 
 🔔注意： use的执行顺序：从右到左（从下到上）
 
@@ -214,7 +214,7 @@ html 中的引入 div
 
 css 的文件样式：
 
-![1663499461450](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368611-fbb2e5.png)
+![1663499461450](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368611-fbb2e5.png)
 
 webpack.config.js 的文件
 
@@ -256,15 +256,15 @@ webpack.config.js 的文件
 
 在 public 目录下 html 的使用：
 
-![1666528206531](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368617-2d8175.png)
+![1666528206531](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368617-2d8175.png)
 
 🔔注意： 字体图标使用 iconfont.css 对应字体文件目录
 
-![1666528342334](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368621-3ff853.png)
+![1666528342334](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368621-3ff853.png)
 
 #### 3.1.6、处理其他资源
 
-![1666527988131](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368626-d6f492.png)
+![1666527988131](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368626-d6f492.png)
 
 #### 3.1.7、处理js资源
 
@@ -274,11 +274,11 @@ webpack.config.js 的文件
 
 (1)、修改输出文件目录
 
-![1666527479948](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368630-60cd7f.png)
+![1666527479948](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368630-60cd7f.png)
 
 (2)、自动清空上次打包的目录
 
-![1666527522325](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368633-527ca1.png)
+![1666527522325](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368633-527ca1.png)
 
 ### 3.2、生产模式搭建
 
@@ -298,15 +298,15 @@ npm i mini-css-extract-plugin -D
 
 在匹配 css 或者 scss、less 中添加：
 
-![1666528789283](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368637-4e6878.png)
+![1666528789283](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368637-4e6878.png)
 
 在plugins的使用
 
-![1666528920167](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368640-6a702f.png)
+![1666528920167](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368640-6a702f.png)
 
 打包后的结果如下：
 
-![1666528950979](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368644-20f4c6.png)
+![1666528950979](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368644-20f4c6.png)
 
 #### 3.2.2、样式兼容性处理
 
@@ -318,15 +318,15 @@ npm i postcss-loader postcss- postcss-preset-env -D
 
 使用如下：
 
-![1666529351021](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368647-5a6030.png)
+![1666529351021](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368647-5a6030.png)
 
 在 package.json 设置兼容版本(设置兼容版本形式多样，这里不做详细讲解)：
 
-![1666529673359](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368653-50943d.png)
+![1666529673359](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368653-50943d.png)
 
 实现的结果:
 
-![1666529654676](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368656-4d317b.png)
+![1666529654676](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368656-4d317b.png)
 
 🔔注意： 要放在 css-loader 之后，sass-loader 和 less-loader 之前
 
@@ -344,7 +344,7 @@ npm i css-minimizer-webpack-plugin -D
 const CssMinimizerWebpackPlugin = require('css-minimizer-webpack-plugin');
 ```
 
-![1666530122178](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368660-eb24b9.png)
+![1666530122178](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368660-eb24b9.png)
 
 #### 3.2.4、html和js的压缩
 
@@ -352,21 +352,21 @@ webpack开启生产模式时，默认开启js和html的压缩
 
 如果需要对js压缩配置选项，可以在optimization中minimizer配置插件
 
-![1667739507743](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368663-b29c00.png)
+![1667739507743](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368663-b29c00.png)
 
 #### 3.2.5、统一命名
 
 js命名如下图所示：
 
-![1667742319662](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368666-a257a8.png)
+![1667742319662](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368666-a257a8.png)
 
 资源文件命名如下图所示:
 
-![1667742356257](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368670-bb4939.png)
+![1667742356257](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368670-bb4939.png)
 
 css命名如下图所示:
 
-![1667742384554](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368674-19f1e6.png)
+![1667742384554](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368674-19f1e6.png)
 
 ## 四、Webpack 高级
 
@@ -390,7 +390,7 @@ css命名如下图所示:
 
 配置：
 
-![1667719385831](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368678-2692ef.png)
+![1667719385831](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368678-2692ef.png)
 
 ### 4.3、OneOf
 
@@ -454,7 +454,7 @@ exclude：排除，除了xxx文件其他文件都处理
 
 使用：
 
-![1666534330587](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368683-ccbf1c.png)
+![1666534330587](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368683-ccbf1c.png)
 
 ### 4.5、多进程打包
 
@@ -498,11 +498,11 @@ const threads = os.cpus().length;
       },
 ```
 
-![1667720360115](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368688-c78b62.png)
+![1667720360115](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368688-c78b62.png)
 
 多进程的压缩js代码
 
-![1667720391319](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368692-3e2f26.png)
+![1667720391319](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368692-3e2f26.png)
 
 ### 4.6、TreeShaking
 
@@ -516,11 +516,11 @@ const threads = os.cpus().length;
 
 在math.js中导出 `mul`、`add` 两个函数
 
-![1666531137930](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368697-df1b1b.png)
+![1666531137930](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368697-df1b1b.png)
 
 在入口的main.js中只使用`mul`函数
 
-![1666531179104](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368701-917250.png)
+![1666531179104](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368701-917250.png)
 
 :::warning
 
@@ -556,17 +556,17 @@ import './css/iconfont.css';
 
 效果展示：
 
-![1667736226254](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368705-450e1b.png)
+![1667736226254](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368705-450e1b.png)
 
 设置sideEffects：true，css样式效果会一样起效果
 
 当设置sideEffects：false时, 因为css不是js代码，引入时被webpack当作引入未使用，会剔除css代码
 
-![1667736329006](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368710-755c7a.png)
+![1667736329006](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368710-755c7a.png)
 
 所以，设置sideEffects：true时，虽然可以让css样式文件生效，但是js就无法做tree-shaking。这时，sideEffects单独设置副作用文件，sideEffects：["*.css","*.scss"]
 
-![1667736834435](https://gitee.com/caigh1012/assets/raw/main/learn/webpack/webpack-use/2023-05-29-1685368718-7819ef.png)
+![1667736834435](https://gitee.com/caigh1012/assets/raw/main/fe/webpack/webpack-use/2023-05-29-1685368718-7819ef.png)
 
 ### 4.7、CodeSplit
 

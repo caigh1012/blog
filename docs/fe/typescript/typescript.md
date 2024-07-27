@@ -20,7 +20,7 @@ hide_title: true
 
 在typescript中，在编译时就会检查类型，如果和预期的类型不符合直接会在编辑器里报错、爆红
 
-![1661867586539](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368880-58b67e.png)
+![1661867586539](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368880-58b67e.png)
 
 当对某一个变量进行类型定义之后，该变量可以使用该类型的属性和方法等，可能无法是其他类型定义的方法和属性
 
@@ -40,7 +40,7 @@ console.log((555.454).toFixed(2));
 
 ### 1.3、非异常故障
 
-![1661868116306](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368888-27612a.png)
+![1661868116306](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368888-27612a.png)
 
 ## 二、基础类型
 
@@ -309,7 +309,7 @@ lowerCaseObject = {}; // ok
 
 执行结果：
 
-![1662208700431](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368896-d4c557.png)
+![1662208700431](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368896-d4c557.png)
 
 #### 2.12.2、Object
 
@@ -331,7 +331,7 @@ upperCaseObject = {}; // ok
 
 执行结果：
 
-![1662208937597](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368900-d80240.png)
+![1662208937597](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368900-d80240.png)
 
 #### 2.12.3、{}
 
@@ -353,7 +353,7 @@ ObjectLiteral = {}; // ok
 
 执行结果：
 
-![1662209212120](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368905-b31f46.png)
+![1662209212120](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368905-b31f46.png)
 
 🎨结论： {}、大 Object 是比小 object 更宽泛的类型（least specific），{} 和大 Object 可以互相代替，用来表示原始类型（null、undefined 除外）和非原始类型；而小 object 则表示非原始类型。
 
@@ -810,7 +810,7 @@ b.printName();
 
 🔔注意：抽象类不能被实例化，只能被继承。且子类必须构建抽象类的抽象成员
 
-![1663484892006](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368914-b9a56d.png)
+![1663484892006](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368914-b9a56d.png)
 
 ### 5.8、类的索引签名
 
@@ -1088,7 +1088,7 @@ console.log(tomcat, tom);
 
 执行结果：
 
-![1662187029573](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368923-d0bf24.png)
+![1662187029573](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368923-d0bf24.png)
 
 ### 6.4、参数默认值
 
@@ -1127,7 +1127,7 @@ add('1', '2'); //"12"
 
 由于 TypeScript 是 JavaScript 的超集，因此以上的代码可以直接在 TypeScript 中使用，但当 TypeScript 编译器开启 `noImplicitAny` 的配置项时，以上代码会提示以下错误信息：
 
-![1662191526541](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368927-5b8751.png)
+![1662191526541](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368927-5b8751.png)
 
 该信息告诉我们参数 x 和参数 y 隐式具有 any 类型。为了解决这个问题，我们可以为参数设置一个类型。因为我们希望 add 函数同时支持 string 和 number 类型，因此我们可以定义一个 string | number 联合类型，同时我们为该联合类型取个别名：
 
@@ -1146,7 +1146,7 @@ console.log(result);
 
 这时候我们想当然的认为此时 result 的变量的类型为 string，所以我们就可以正常调用字符串对象上的 `split` 方法。但这时 TypeScript 编译器又出现以下错误信息了：
 
-![1662191635639](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368931-9e436c.png)
+![1662191635639](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368931-9e436c.png)
 
 很明显 number 类型的对象上并不存在 split 属性。问题又来了，那如何解决呢？这时我们就可以利用 TypeScript 提供的函数重载特性。
 
@@ -1192,7 +1192,7 @@ console.log(identity<Number, string>(68, 'Semlinker'));
 
 <span className="highlight">图解：</span>
 
-![](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368935-715dbb.jpg)
+![](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368935-715dbb.jpg)
 
 其实并不是只能定义一个类型变量，我们可以引入希望定义的任何数量的类型变量。比如我们引入一个新的类型变量 `U`，用于扩展我们定义的 `identity` 函数：
 
@@ -1289,11 +1289,11 @@ type TestType = {
 
 执行结果：
 
-![1663507351758](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368941-43e108.png)
+![1663507351758](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368941-43e108.png)
 
 #### 8.1.2、类型别名会报错
 
-![1663507340555](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368946-914316.png)
+![1663507340555](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368946-914316.png)
 
 毋庸置疑，使用全局变量空间是危险的，因为它会与文件内的代码命名冲突。我们强烈推荐使用文件模块。
 
@@ -1324,7 +1324,7 @@ export type TestType = {
 
 执行结果：
 
-![1663507489632](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368951-95baac.png)
+![1663507489632](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368951-95baac.png)
 
 ## 九、命名空间
 
@@ -1418,7 +1418,7 @@ window.onmousedown = function (e) {
 
 执行结果：
 
-![1663249578740](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368960-8f0808.png)
+![1663249578740](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368960-8f0808.png)
 
 🔔注意： 类型推断发生在初始化变量和成员，设置默认参数值和决定函数返回值时。
 
@@ -1580,7 +1580,7 @@ type Direction = {
 
 执行结果：
 
-![1662903370043](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368966-ab6988.png)
+![1662903370043](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368966-ab6988.png)
 
 #### 11.4.3、扩展
 
@@ -1785,7 +1785,7 @@ const data: Example1 = '1';
 
 执行结果：
 
-![1663409962316](https://gitee.com/caigh1012/assets/raw/main/learn/typescript/typescript-use/2023-05-29-1685368972-c029ed.png)
+![1663409962316](https://gitee.com/caigh1012/assets/raw/main/fe/typescript/typescript-use/2023-05-29-1685368972-c029ed.png)
 
 条件类型与泛型结合
 
