@@ -1,7 +1,7 @@
 ---
 title: VMware
-description: VMware安装Linux系统
-sidebar_label: VMware安装Linux系统
+description: VMware安装CentOS系统
+sidebar_label: VMware安装CentOS系统
 hide_title: true
 ---
 
