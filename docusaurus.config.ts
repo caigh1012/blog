@@ -86,7 +86,7 @@ const config: Config = {
         {
           type: 'dropdown',
           position: 'left',
-          label: '前端学习',
+          label: '编程学习',
           items: [
             {
               label: 'JavaScript',
@@ -128,13 +128,6 @@ const config: Config = {
               type: 'docSidebar',
               sidebarId: 'flutter',
             },
-          ],
-        },
-        {
-          type: 'dropdown',
-          position: 'left',
-          label: '其他编程语言',
-          items: [
             {
               label: 'Java编程',
               type: 'docSidebar',
@@ -149,9 +142,15 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
-          sidebarId: 'blog',
-          label: '博客',
           position: 'left',
+          sidebarId: 'algorithm',
+          label: '数据结构与算法',
+        },
+        {
+          type: 'docSidebar',
+          position: 'left',
+          sidebarId: 'designMode',
+          label: '设计模式',
         },
         {
           type: 'docSidebar',
@@ -169,6 +168,12 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'network',
           label: '计算机网络',
+          position: 'left',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'blog',
+          label: '博客',
           position: 'left',
         },
         {
