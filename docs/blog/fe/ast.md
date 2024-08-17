@@ -1,6 +1,5 @@
 ---
-id: ast
-title: AST抽象语法树
+title: AST
 description: AST抽象语法树
 sidebar_label: AST抽象语法树
 hide_title: true

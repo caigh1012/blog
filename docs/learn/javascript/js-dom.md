@@ -1,6 +1,5 @@
 ---
-id: dom
-title: DOM对象
+title: DOM
 description: DOM对象
 sidebar_label: DOM对象
 hide_title: true

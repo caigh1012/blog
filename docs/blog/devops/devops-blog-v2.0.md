@@ -1,6 +1,5 @@
 ---
-id: devopsblog02
-title: blog
+title: DevOps
 description: DevOps自动化博客2.0
 sidebar_label: DevOps自动化博客2.0
 hide_title: true

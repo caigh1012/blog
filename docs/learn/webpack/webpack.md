@@ -1,6 +1,6 @@
 ---
 title: Webpack
-description: Webpack
+description: Webpack@5快速入门
 sidebar_label: Webpack@5快速入门
 hide_title: true
 ---

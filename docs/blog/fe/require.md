@@ -1,6 +1,5 @@
 ---
-id: require
-title: Node.js的模块require加载机制
+title: Require.js
 description: Node.js的模块require加载机制
 sidebar_label: Node.js的模块require加载机制
 hide_title: true

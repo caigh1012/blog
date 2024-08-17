@@ -1,12 +1,8 @@
 ---
-id: prototype
-title: JavaScript原型(链)及继承
+title: JavaScript Prototype
 description: JavaScript原型(链)及继承
 sidebar_label: JavaScript原型(链)及继承
 hide_title: true
-last_update:
-  date: 2023-03-05
-  author: Chason
 ---
 
 ## 一、常见创建对象的几种方式

@@ -1,6 +1,5 @@
 ---
-id: workprocess
-title: 浏览器解析HTML文档工作过程
+title: Browser
 description: 浏览器解析HTML文档工作过程
 sidebar_label: 浏览器解析HTML文档工作过程
 hide_title: true

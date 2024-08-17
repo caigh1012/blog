@@ -1,5 +1,5 @@
 ---
-title: iso
+title: Linux
 description: Linux的CentOS和ubuntu镜像
 sidebar_label: Linux的CentOS和ubuntu镜像
 hide_title: true

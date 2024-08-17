@@ -1,5 +1,4 @@
 ---
-id: rxjs
 title: Rxjs
 description: Rxjs快速入门
 sidebar_label: Rxjs快速入门

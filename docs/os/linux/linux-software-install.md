@@ -1,5 +1,6 @@
 ---
 title: Linux
+description: Linux系统的软件安装方式
 sidebar_label: Linux系统的软件安装方式
 hide_title: true
 ---

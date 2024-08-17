@@ -1,12 +1,8 @@
 ---
-id: babel
-title: Babel@7的使用
+title: Babel
 description: Babel@7的使用
 sidebar_label: Babel@7的使用
 hide_title: true
-last_update:
-  date: 2023-02-27
-  author: Chason
 ---
 
 ## 一、babel的作用

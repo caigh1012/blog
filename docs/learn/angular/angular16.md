@@ -1,5 +1,5 @@
 ---
-title: Angular@16
+title: Angular
 description: Angular@16的快速入门
 sidebar_label: Angular@16的快速入门
 hide_title: true

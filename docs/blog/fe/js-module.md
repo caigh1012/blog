@@ -1,6 +1,5 @@
 ---
-id: module
-title: ESM和Cjs模块化区别
+title: ESMoudle
 description: ESM和Cjs模块化区别
 sidebar_label: ESM和Cjs模块化区别
 hide_title: true

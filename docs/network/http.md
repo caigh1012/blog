@@ -1,5 +1,4 @@
 ---
-id: http
 title: Http
 description: Http缓存
 sidebar_label: Http缓存

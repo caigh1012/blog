@@ -1,6 +1,6 @@
 ---
 title: VSCode
-description: VSCode在Windows中的终端权限问题
+description: VSCode在Windows中的终端权限
 sidebar_label: VSCode在Windows中的终端权限
 hide_title: true
 ---

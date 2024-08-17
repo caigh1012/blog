@@ -1,7 +1,7 @@
 ---
 title: TypeScript
-description: TypeScript学习
-sidebar_label: TypeScript学习
+description: TypeScript快速入门
+sidebar_label: TypeScript快速入门
 hide_title: true
 ---
 

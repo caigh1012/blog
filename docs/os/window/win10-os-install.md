@@ -1,5 +1,6 @@
 ---
 title: Window
+description: Window10系统怎么把动态分区转化成基本分区
 sidebar_label: W10系统动态分区转化成基本分区
 hide_title: true
 ---

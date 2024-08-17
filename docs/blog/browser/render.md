@@ -1,6 +1,5 @@
 ---
-id: render
-title: 浏览器底层原理
+title: Browser
 description: 浏览器底层原理
 sidebar_label: 浏览器底层原理
 hide_title: true

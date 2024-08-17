@@ -1,5 +1,6 @@
 ---
 title: Linux
+description: Linux必备基础常识
 sidebar_label: Linux必备基础常识
 hide_title: true
 ---

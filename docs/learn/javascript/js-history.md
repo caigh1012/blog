@@ -1,6 +1,5 @@
 ---
-id: history
-title: History对象
+title: Window History
 description: History对象
 sidebar_label: History对象
 hide_title: true

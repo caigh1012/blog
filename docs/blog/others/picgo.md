@@ -1,5 +1,4 @@
 ---
-id: picgo
 title: Picgo
 description: 利用md文件提高写文档效率
 sidebar_label: 利用md文件提高写文档效率

@@ -1,6 +1,5 @@
 ---
-id: vnode
-title: Virtual DOM理解
+title: Virtual DOM
 description: Virtual DOM理解
 sidebar_label: Virtual DOM理解
 hide_title: true

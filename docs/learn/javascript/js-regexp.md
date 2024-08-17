@@ -1,6 +1,5 @@
 ---
-id: regexp
-title: RegExp正则
+title: RegExp
 description: RegExp正则
 sidebar_label: RegExp正则
 hide_title: true

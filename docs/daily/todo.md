@@ -1,6 +1,7 @@
 ---
-title: todo
+title: Todo
+description: 学习待办记录
+sidebar_label: 学习待办记录
 sidebar_position: 1
-sidebar_label: 学习待办
 hide_title: true
 ---

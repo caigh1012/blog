@@ -1,6 +1,6 @@
 ---
 title: Rust
-description: Rust 在 window10 环境下的安装
+description: Rust在window10 环境下的安装
 sidebar_label: Rust在window10环境下的安装
 hide_title: true
 ---

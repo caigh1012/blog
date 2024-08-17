@@ -1,5 +1,6 @@
 ---
 title: Linux
+description: Linux操作系统
 sidebar_label: Linux操作系统
 hide_title: true
 ---

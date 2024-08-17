@@ -1,6 +1,6 @@
 ---
 title: JQuery
-description: JQuery
+description: JQuery快速入门
 sidebar_label: JQuery快速入门
 hide_title: true
 ---

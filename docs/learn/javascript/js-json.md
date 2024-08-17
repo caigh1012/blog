@@ -1,5 +1,4 @@
 ---
-id: json
 title: JSON
 description: JSON与对象结构的区别
 sidebar_label: JSON与对象结构的区别
