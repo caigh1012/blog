@@ -299,4 +299,4 @@ console.log(add(1, 6));
 
 代码测试结果：
 
-![1678025456223](https://gitee.com/caigh1012/assets/raw/main/blog/requirejs/1678025456223.png)
+![1678025456223](https://gitee.com/caigh1012/assets/raw/main/blog/fe/requirejs/1678025456223.png)

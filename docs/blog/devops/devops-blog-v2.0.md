@@ -18,7 +18,7 @@ hide_title: true
 
 云服务器`/home`下有以下目录：
 
-![20231224214248378](https://gitee.com/caigh1012/assets/raw/main/blog/devops-v2.0/20231224214248378.png)
+![20231224214248378](https://gitee.com/caigh1012/assets/raw/main/blog/devops/devops-v2.0/20231224214248378.png)
 
 在docker_jenkins目录下存在docker-compose.yml文件用于运行Jenkins镜像，我将镜像内Jenkins构建打包后build目录资源文件复制到/home/html目录下，以下是执行docker.sh配置：
 

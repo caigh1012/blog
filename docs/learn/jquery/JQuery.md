@@ -26,11 +26,11 @@ jQuery的好处：
 
 jQuery的引入
 
-![1568085194931](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685365974-a72dcf.png)
+![1568085194931](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685365974-a72dcf.png)
 
 jQuery最终的返回和暴露
 
-![1604992075237](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685365980-f9ca39.png)
+![1604992075237](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685365980-f9ca39.png)
 
 ### 1.3、jQuery伪数组与DOM元素
 
@@ -43,7 +43,7 @@ console.log($div);
 
 jQuery获取元素的结果:
 
-![1604992278901](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685365984-fd184d.png)
+![1604992278901](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685365984-fd184d.png)
 
 从结果中可以看出来，jQuery获取到的是伪数组，不能使用操作DOM元素的方式来操作jQuery获取到的伪数组，jQuery提供了一套专门用来操作jQuery伪数组的方法来操作，而这套方法是不能被DOM元素使用的。
 
@@ -57,7 +57,7 @@ console.log(oDiv);
 
 jQuery伪数组中获取到DOM元素结果如下：
 
-![1604992861410](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685365989-bbc54a.png)
+![1604992861410](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685365989-bbc54a.png)
 
 经过这样获取后得到的DOM元素才能使用
 
@@ -71,7 +71,7 @@ console.log($div);
 
 DOM元素转jQuery伪数组结果如下：
 
-![1604995288992](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685365994-78e0e2.png)
+![1604995288992](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685365994-78e0e2.png)
 
 🔔注意：原生js中的window，在jQuery中是$(window)，原生js中的document，在jQuery中是$(document)，原生js中的this，在jQuery中是$(this)
 
@@ -307,7 +307,7 @@ $(元素).on(事件类型[,委托的子元素][,传入的参数],处理的函数
 
 jquery中on绑定事件执行结果：
 
-![1573559528459](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685366001-d66728.png)
+![1573559528459](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366001-d66728.png)
 
 off方法用于解绑事件
 
@@ -350,7 +350,7 @@ console.log(box);
 
 给父元素追加子元素结果：
 
-![](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685366006-231a30.png)
+![](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366006-231a30.png)
 
 #### 2.1.2、添加元素
 
@@ -377,7 +377,7 @@ box.prepend(b);
 
 给父元素追加子元素结果：
 
-![1567970288795](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685366010-dacd5d.png)
+![1567970288795](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366010-dacd5d.png)
 
 给父元素最前面添加子元素：
 
@@ -402,7 +402,7 @@ box.prepend(b);
 
 父元素最前面添加子元素结果：
 
-![1567970395029](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685366017-dfb279.png)
+![1567970395029](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366017-dfb279.png)
 
 将子元素添加到父元素中：
 
@@ -440,7 +440,7 @@ span.after(b);
 
 添加下一个兄弟元素结果：
 
-![1567970288795](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685366022-67e35e.png)
+![1567970288795](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366022-67e35e.png)
 
 添加上一个兄弟元素：
 
@@ -466,7 +466,7 @@ span.before(b);
 
 添加上一个兄弟元素结果：
 
-![1567970395029](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685366026-a141bb.png)
+![1567970395029](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366026-a141bb.png)
 
 将元素添加到某个元素的前面或后面：
 
@@ -503,7 +503,7 @@ span.replaceWith(b);
 
 将 span 替换成 b 结果：
 
-![1567971137680](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685366032-830379.png)
+![1567971137680](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366032-830379.png)
 
 用新元素替换掉某个元素：
 
@@ -536,7 +536,7 @@ box.empty();
 
 删除元素内部所有标签和内容结果：
 
-![1567971351886](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685366036-c7ec3b.png)
+![1567971351886](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366036-c7ec3b.png)
 
 将当前标签从页面中删除
 
@@ -560,7 +560,7 @@ box.remove();
 
 删除当前标签结果：
 
-![1567971478903](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685366040-98c2e9.png)
+![1567971478903](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366040-98c2e9.png)
 
 #### 2.1.5、复制元素
 
@@ -740,7 +740,7 @@ stop有两个参数，值都是布尔值：
 
 动画队列 - 动画链式操作效果图：
 
-![](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685366046-7eadd6.gif)
+![](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366046-7eadd6.gif)
 
 ## 三、jQuery的ajax请求和插件部分
 
@@ -1028,7 +1028,7 @@ $("img.lazy").lazyload(function(){
 
 时间插件效果：
 
-![](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685366056-618703.png)
+![](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366056-618703.png)
 
 #### 3.4.5、layer弹出层插件
 
@@ -1059,7 +1059,7 @@ $("img.lazy").lazyload(function(){
 
 效果图：
 
-![](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685366063-83e9ce.gif)
+![](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366063-83e9ce.gif)
 
 提示层：
 
@@ -1079,4 +1079,4 @@ $("img.lazy").lazyload(function(){
 
 效果图：
 
-![](https://gitee.com/caigh1012/assets/raw/main/fe/jquery/2023-05-29-1685366068-61b210.gif)
+![](https://gitee.com/caigh1012/assets/raw/main/learn/jquery/2023-05-29-1685366068-61b210.gif)

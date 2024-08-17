@@ -27,7 +27,7 @@ Web API是浏览器提供的一套操作浏览器功能和页面元素的 API(BO
 
 ### 2.2、DOM树
 
-![](https://gitee.com/caigh1012/assets/raw/main/fe/javascript/dom/2023-05-29-1685365608-5a81a2.png)
+![](https://gitee.com/caigh1012/assets/raw/main/learn/javascript/dom/2023-05-29-1685365608-5a81a2.png)
 
 ## 三、DOM操作
 
@@ -541,7 +541,7 @@ e = window.event || e; //兼容写法
 
 - 事件对象属性和方法
 
-![](https://gitee.com/caigh1012/assets/raw/main/fe/javascript/dom/2023-05-29-1685365617-171074.png)
+![](https://gitee.com/caigh1012/assets/raw/main/learn/javascript/dom/2023-05-29-1685365617-171074.png)
 
 - 鼠标坐标，如果是键盘事件里面就包含的键盘事件的信息，比如判断用户按下了那个键
 
@@ -549,11 +549,11 @@ e = window.event || e; //兼容写法
 
 #### 4.4.1、事件流
 
-![](https://gitee.com/caigh1012/assets/raw/main/fe/javascript/dom/2023-05-29-1685365623-2b0da3.png)
+![](https://gitee.com/caigh1012/assets/raw/main/learn/javascript/dom/2023-05-29-1685365623-2b0da3.png)
 
 🔔切记注意：
 
-![](https://gitee.com/caigh1012/assets/raw/main/fe/javascript/dom/2023-05-29-1685365627-66e66d.png)
+![](https://gitee.com/caigh1012/assets/raw/main/learn/javascript/dom/2023-05-29-1685365627-66e66d.png)
 
 #### 4.4.2、事件冒泡
 

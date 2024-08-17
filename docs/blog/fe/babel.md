@@ -50,7 +50,7 @@ var fn = function fn() {
 
 执行结果：
 
-![1664725792261](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664725792261.png)
+![1664725792261](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664725792261.png)
 
 ### 2.2、使用babel配置文件
 
@@ -92,11 +92,11 @@ console.log(z); // { a: 3, b: 4 }
 
 3. 然后执行`npm run babel`
 
-![1664726696241](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664726696241.png)
+![1664726696241](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664726696241.png)
 
 参考如下图：
 
-![./images/20221003001343.png](https://gitee.com/caigh1012/assets/raw/main/blog/babel/20221003001343.png)
+![./images/20221003001343.png](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/20221003001343.png)
 
 发现此时并不会编译，并且在IE浏览器上课可能会存在兼容性问题。原因是扩展运算符并没有配置相关插件去进行相关转换，进到 Babel 插件页面 *https://www.babeljs.cn/docs/plugins-list* ，看需要什么插件能处理扩展运算符——可以看到这是一个 ES2018 的特性，通过 @babel/plugin-proposal-object-rest-spread[4] 插件就可以用啦。
 
@@ -116,11 +116,11 @@ npm i @babel/plugin-proposal-object-rest-spread -D
 
 编译后的结果：
 
-![1664727156204](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664727156204.png)
+![1664727156204](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664727156204.png)
 
 同时此时还是会存在兼容性问题，IE浏览器不兼容解构赋值，需要安装 @babel/plugin-transform-destructuring
 
-![](https://gitee.com/caigh1012/assets/raw/main/blog/babel/20221003001407.png)
+![](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/20221003001407.png)
 
 安装 @babel/plugin-transform-destructuring
 
@@ -130,11 +130,11 @@ npm i @babel/plugin-transform-destructuring -D
 
 编译后的代码：
 
-![1664727695437](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664727695437.png)
+![1664727695437](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664727695437.png)
 
 再次看 IE浏览器的反应：
 
-![](https://gitee.com/caigh1012/assets/raw/main/blog/babel/20221003002049.png)
+![](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/20221003002049.png)
 
 ## 四、优化babel的配置
 
@@ -152,13 +152,13 @@ module.exports = {
 ```
 
 编译结果：
-![1664728282764](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664728282764.png)
+![1664728282764](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664728282764.png)
 
 ### 4.2、@babel/plugin-transform-runtime优化代码量
 
 新建一个文件index2.js，
 
-![1664729748797](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664729748797.png)
+![1664729748797](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664729748797.png)
 
 结果是 \_objectWithoutProperties 和 \_objectWithoutPropertiesLoose 居然都会重复声明两次。这对于需要转换的特性，我使用很多次，转换后输出的文件不是爆炸了么？此时需要一个插件来控制代码量——@babel/plugin-transform-runtime[14] 。对于这种转换函数，在外部模块化，用到的地方直接引入即可。
 
@@ -173,7 +173,7 @@ module.exports = {
 
 编译结果：
 
-![1664729954870](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664729954870.png)
+![1664729954870](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664729954870.png)
 
 ## 五、配置 `@babel/polyfill `垫片
 
@@ -214,11 +214,11 @@ console.log(a.includes(7));
 
 发现`@babel/polyfill`是弃用的，原因是babel在7.4.0之后就被弃用了。
 
-![1664733961843](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664733961843.png)
+![1664733961843](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664733961843.png)
 
 官方文档的说明：
 
-![1664734155346](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664734155346.png)
+![1664734155346](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664734155346.png)
 
 需要使用：
 
@@ -228,7 +228,7 @@ import "core-js/stable"; 替换 import '@babel/polyfill';
 
 此时无论设置`useBuiltIns`为何值时，都不起作用
 
-![1664733981890](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664733981890.png)
+![1664733981890](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664733981890.png)
 
 #### 5.2.3、配置`core-js/stable`
 
@@ -248,15 +248,15 @@ console.log(a.includes(7));
 
 当useBuiltIns为entry时：
 
-![1664735115854](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664735115854.png)
+![1664735115854](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664735115854.png)
 
 当useBuiltIns为usage时：
 
-![1664735201539](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664735201539.png)
+![1664735201539](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664735201539.png)
 
 useBuiltIns为false时：
 
-![1664735239981](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664735239981.png)
+![1664735239981](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664735239981.png)
 
 ## 六、babel对模块化的处理
 
@@ -276,7 +276,7 @@ console.log(a.includes(7));
 
 编译后的结果：
 
-![1664768231207](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664768231207.png)
+![1664768231207](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664768231207.png)
 
 可以在preset-env的配置项中添加modules，其中modules的值：
 
@@ -290,7 +290,7 @@ console.log(a.includes(7));
 
 modules当前设置为 false
 
-![1664769336839](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664769336839.png)
+![1664769336839](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664769336839.png)
 
 ## 七、babel在webpack中的使用
 
@@ -298,8 +298,8 @@ modules当前设置为 false
 
 ### 7.1、webpack的配置
 
-![1664773797505](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664773797505.png)
+![1664773797505](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664773797505.png)
 
 ### 7.2、babel的配置
 
-![1664773835792](https://gitee.com/caigh1012/assets/raw/main/blog/babel/1664773835792.png)
+![1664773835792](https://gitee.com/caigh1012/assets/raw/main/blog/fe/babel/1664773835792.png)

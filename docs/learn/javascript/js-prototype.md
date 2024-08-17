@@ -166,7 +166,7 @@ console.log(p2);
 
 ### 3.3、原型链结构图
 
-![](https://gitee.com/caigh1012/assets/raw/main/fe/javascript/extends/2023-05-29-1685365671-840b08.jpg)
+![](https://gitee.com/caigh1012/assets/raw/main/learn/javascript/extends/2023-05-29-1685365671-840b08.jpg)
 
 ## 四、继承
 

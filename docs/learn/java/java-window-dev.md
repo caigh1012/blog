@@ -34,15 +34,15 @@ hide_title: true
 
 进入[Oralce官网](https://www.oracle.com/)，点击 `Products` 栏，在 `Hardware and Software` 标题栏找到 java
 
-![image-20240617213117119](https://gitee.com/caigh1012/assets/raw/main/java/java-window-dev/image-20240617213117119.png)
+![image-20240617213117119](https://gitee.com/caigh1012/assets/raw/main/learn/java/java-window-dev/image-20240617213117119.png)
 
 点击进入之后，找到 Download Java now 按钮
 
-![image-20240617213226444](https://gitee.com/caigh1012/assets/raw/main/java/java-window-dev/image-20240617213226444.png)
+![image-20240617213226444](https://gitee.com/caigh1012/assets/raw/main/learn/java/java-window-dev/image-20240617213226444.png)
 
 进入到下载页面，切换到 Java archive 下滚找到 Java SE 8 (8u212) 版本即可
 
-![image-20240617213358915](https://gitee.com/caigh1012/assets/raw/main/java/java-window-dev/image-20240617213358915.png)
+![image-20240617213358915](https://gitee.com/caigh1012/assets/raw/main/learn/java/java-window-dev/image-20240617213358915.png)
 
 找到对应操作系统的安装包点击下载即可
 
@@ -52,21 +52,21 @@ hide_title: true
 
 1、双击程序安装包，开始进行 `JDK` 安装，点击下一步。
 
-![image-20240617215834370](https://gitee.com/caigh1012/assets/raw/main/java/java-window-dev/image-20240617215834370.png)
+![image-20240617215834370](https://gitee.com/caigh1012/assets/raw/main/learn/java/java-window-dev/image-20240617215834370.png)
 
 2、点击更改，更改 `JDK` 的安装位置。
 
-![image-20240617215908806](https://gitee.com/caigh1012/assets/raw/main/java/java-window-dev/image-20240617215908806.png)
+![image-20240617215908806](https://gitee.com/caigh1012/assets/raw/main/learn/java/java-window-dev/image-20240617215908806.png)
 
 这个时候程序将要安装的位置已经更改，点击下一步即可开始安装。
 
 安装完 `JDK` 后，会弹出一个提示框，提示我们安装的 `JDK` 版本不受到收费影响，点确定即可。
 
-![image-20240617220332528](https://gitee.com/caigh1012/assets/raw/main/java/java-window-dev/image-20240617220332528.png)
+![image-20240617220332528](https://gitee.com/caigh1012/assets/raw/main/learn/java/java-window-dev/image-20240617220332528.png)
 
 3、因为刚才我们没有放弃独立 `JRE` 的安装，所以现在开始安装它，自己更改好安装路径。
 
-![image-20240617220504998](https://gitee.com/caigh1012/assets/raw/main/java/java-window-dev/image-20240617220504998.png)
+![image-20240617220504998](https://gitee.com/caigh1012/assets/raw/main/learn/java/java-window-dev/image-20240617220504998.png)
 
 点击下一步，等待安装，安装成功点击关闭，即完成安装。
 
@@ -74,11 +74,11 @@ hide_title: true
 
 在 window10 环境中打开编辑系统环境变量，在 用户变量 和 系统变量 中选择在 系统变量 添加一个JAVA_HOME变量
 
-![image-20240617221059400](https://gitee.com/caigh1012/assets/raw/main/java/java-window-dev/image-20240617221059400.png)
+![image-20240617221059400](https://gitee.com/caigh1012/assets/raw/main/learn/java/java-window-dev/image-20240617221059400.png)
 
 然后在系统变量的Path新建添加
 
-![image-20240617221228400](https://gitee.com/caigh1012/assets/raw/main/java/java-window-dev/image-20240617221228400.png)
+![image-20240617221228400](https://gitee.com/caigh1012/assets/raw/main/learn/java/java-window-dev/image-20240617221228400.png)
 
 输入以下命令，验证是否安装成功
 
@@ -86,4 +86,4 @@ hide_title: true
 java -version
 ```
 
-![image-20240617221350340](https://gitee.com/caigh1012/assets/raw/main/java/java-window-dev/image-20240617221350340.png)
+![image-20240617221350340](https://gitee.com/caigh1012/assets/raw/main/learn/java/java-window-dev/image-20240617221350340.png)

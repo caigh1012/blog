@@ -209,7 +209,7 @@ console.log(vnode, '<____vnode');
 
 代码执行结果：
 
-![1678631356912](https://gitee.com/caigh1012/assets/raw/main/blog/vnode/1678631356912.png)
+![1678631356912](https://gitee.com/caigh1012/assets/raw/main/blog/fe/vnode/1678631356912.png)
 
 ### 4.3、htmldomapi.js
 
@@ -1230,12 +1230,12 @@ patch(app, vnode);
 
 代码执行结果：
 
-![1678766413383](https://gitee.com/caigh1012/assets/raw/main/blog/vnode/1678766413383.png)
+![1678766413383](https://gitee.com/caigh1012/assets/raw/main/blog/fe/vnode/1678766413383.png)
 
 ## 五、Diff算法原理
 
 > 新旧虚拟DOM对比的时候，Diff算法比较只会在同层级进行, 不会跨层级比较。 所以Diff算法是:`深度优先算法`。 时间复杂度:`O(n)`
 
-![1678766976891](https://gitee.com/caigh1012/assets/raw/main/blog/vnode/1678766976891.png)
+![1678766976891](https://gitee.com/caigh1012/assets/raw/main/blog/fe/vnode/1678766976891.png)
 
 流程简述：先通过`sameVnode函数`对比`ul元素`是否为同一个节点，如果是同一个节点，通过`patchVnode`函数判断两个节点是更新了文本节点还是子节点。文本节点更新时改过文本节点，当新旧节点发生变化时，通过`updateChildren`函数对比子节点，如果子节点对比过程中存在相同的子节点时，在通过`patchVnode`对比更新两个节点变化。如此往复进行同层和深度对比。

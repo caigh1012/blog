@@ -15,7 +15,7 @@ hide_title: true
 
 早期 JavaScript 开发很容易存在**全局污染**和**依赖管理**混乱问题。这些问题在多人开发前端应用的情况下变得更加棘手。我这里例举一个很常见的场景：
 
-![1678783041846](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678783041846.png)
+![1678783041846](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678783041846.png)
 
 实际代码参考如下：
 
@@ -34,7 +34,7 @@ console.log(num); // 打印一个函数，而不是200
 
 执行结果：
 
-![1678783000886](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678783000886.png)
+![1678783000886](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678783000886.png)
 
 如果在没有模块化的前提下，会暴露一系列问题：
 
@@ -99,11 +99,11 @@ myModule.foo(); // foo() other data
 
 执行结果：
 
-![1678958967181](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678958967181.png)
+![1678958967181](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678958967181.png)
 
 打印结果：
 
-![1678958986961](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678958986961.png)
+![1678958986961](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678958986961.png)
 
 ### 3.4、模块化的优点
 
@@ -171,7 +171,7 @@ console.log(b, 'main b');
 
 打印结果：
 
-![1678879377290](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678879377290.png)
+![1678879377290](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678879377290.png)
 
 执行过程分析：
 
@@ -209,7 +209,7 @@ console.log(number.num); // 输出：3
 
 执行结果：
 
-![1678880976826](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678880976826.png)
+![1678880976826](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678880976826.png)
 
 分析：由于CommonJS是`「值的复制」`，一旦模块输出了值，模块内部的变化就影响不到这个值；因此main.js中的number变量本身和number.js没有任何指向关系了，虽然我们调用模块内部的add函数来改变值，但也影响不到这个值了；反而我们在输出后可以对这个值进行任意的编辑。
 
@@ -242,7 +242,7 @@ require('./b');
 
 打印结果：
 
-![1678881401602](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678881401602.png)
+![1678881401602](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678881401602.png)
 
 分析： 上面代码中我们通过a.js、b.js两个脚本同时引用一个模块进行修改和读取；需要注意的是由于缓存，因此b.js加载时其实已经是从缓存中读取的模块。
 
@@ -265,7 +265,7 @@ console.log(a);
 
 打印结果：
 
-![1678796114299](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678796114299.png)
+![1678796114299](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678796114299.png)
 
 ##### 3.5.2、为什么`exports={}`不可以
 
@@ -283,17 +283,17 @@ console.log(a);
 
 打印结果：
 
-![1678797050359](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678797050359.png)
+![1678797050359](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678797050359.png)
 
 原因解析：
 
 module.exports和exports都是指向同一个对象地址，而进行require导入时获取的是module.exports导出的对象。
 
-![1678797736477](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678797736477.png)
+![1678797736477](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678797736477.png)
 
 当`exports={}`时，exports和module.exports不在指向同一个地址
 
-![1678797817990](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678797817990.png)
+![1678797817990](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678797817990.png)
 
 如上图：实际导入获取到的是`{ name: “李四” }`
 
@@ -317,7 +317,7 @@ console.log(a);
 
 打印结果：
 
-![1678797955906](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678797955906.png)
+![1678797955906](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678797955906.png)
 
 ##### 3.5.3、module.exports
 
@@ -340,7 +340,7 @@ console.log(a);
 
 打印结果：
 
-![1678801698156](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678801698156.png)
+![1678801698156](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678801698156.png)
 
 ## 四、ESModule模块化
 
@@ -525,7 +525,7 @@ console.log(mod);
 
 执行结果：
 
-![1678885103310](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678885103310.png)
+![1678885103310](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678885103310.png)
 
 ### 4.2、ESModule加载机制
 
@@ -588,7 +588,7 @@ export let bar = 'bar';
 
 执行a.mjs时，抛出错误
 
-![1678955535216](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678955535216.png)
+![1678955535216](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678955535216.png)
 
 加载过程分析：
 首先，执行a.mjs以后，引擎发现它加载了b.mjs，因此会优先执行b.mjs，然后执行a.mjs。接着，执行b.mjs的时候，已知它从a.mjs输入了foo接口，这时不会去执行a.mjs，而是认为这个接口已经存在了，继续往下执行。执行到`console.log(foo)`的时候，才发现这个接口根本没有定义，因此报错。
@@ -619,7 +619,7 @@ export { bar };
 
 执行结果：
 
-![1678956392149](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678956392149.png)
+![1678956392149](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678956392149.png)
 
 这是因为函数具有提升作用(类似函数的变量提升)，在执行 `import {bar} from './b'`时，函数`foo`就已经有定义了，所以`b.mjs`加载的时候不会报错。这也意味着，如果把函数`foo`改写成函数表达式，也会报错。
 
@@ -638,7 +638,7 @@ export { foo };
 
 执行结果：
 
-![1678956547741](https://gitee.com/caigh1012/assets/raw/main/blog/module/1678956547741.png)
+![1678956547741](https://gitee.com/caigh1012/assets/raw/main/blog/fe/js-module/1678956547741.png)
 
 ## 五、ESModule和Commonjs的差异
 

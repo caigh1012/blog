@@ -158,7 +158,7 @@ url: 该参数定义了新的历史 URL 记录。注意，调用 pushState() 后
 
 打印结果如下：
 
-![1678534819652](https://gitee.com/caigh1012/assets/raw/main/fe/javascript/history/2023-05-29-1685365726-64af71.png)
+![1678534819652](https://gitee.com/caigh1012/assets/raw/main/learn/javascript/history/2023-05-29-1685365726-64af71.png)
 
 ## 二、依据路由变化实现切换UI
 
