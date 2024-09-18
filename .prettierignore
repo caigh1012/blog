@@ -4,3 +4,4 @@ build/**
 
 **/.git
 **/node_modules
+.docusaurus
