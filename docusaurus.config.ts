@@ -140,18 +140,18 @@ const config: Config = {
             },
           ],
         },
-        {
-          type: 'docSidebar',
-          position: 'left',
-          sidebarId: 'algorithm',
-          label: '数据结构与算法',
-        },
-        {
-          type: 'docSidebar',
-          position: 'left',
-          sidebarId: 'designMode',
-          label: '设计模式',
-        },
+        // {
+        //   type: 'docSidebar',
+        //   position: 'left',
+        //   sidebarId: 'algorithm',
+        //   label: '数据结构与算法',
+        // },
+        // {
+        //   type: 'docSidebar',
+        //   position: 'left',
+        //   sidebarId: 'designMode',
+        //   label: '设计模式',
+        // },
         {
           type: 'docSidebar',
           sidebarId: 'devops',
