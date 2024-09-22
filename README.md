@@ -1,6 +1,6 @@
-# Kyler Tsai's Blog
+<h1 align="center">Kyler Tsai's Blog</h1>
 
-Build my blog based on the [docusaurus](https://docusaurus.io/) library，
+<p align="center">Build my blog based on the [docusaurus](https://docusaurus.io/) library，</p>
 
 ## Install
 

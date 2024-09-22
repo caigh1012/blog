@@ -33,6 +33,7 @@ jobs:
           cache: 'npm'
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
+        # 因为.npmrc 的 registry 为 https://registry.npmmirror.com，这里不使用 npm ci 而是 npm i
         run: npm i
       - name: docs build
         run: npm run build
