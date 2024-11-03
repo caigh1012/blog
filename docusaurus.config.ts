@@ -86,18 +86,18 @@ const config: Config = {
         {
           type: 'dropdown',
           position: 'left',
-          label: '编程学习',
+          label: 'Coding',
           items: [
             {
               label: 'JavaScript',
               type: 'docSidebar',
               sidebarId: 'javascript',
             },
-            {
-              label: 'JQuery',
-              type: 'docSidebar',
-              sidebarId: 'jquery',
-            },
+            // {
+            //   label: 'JQuery',
+            //   type: 'docSidebar',
+            //   sidebarId: 'jquery',
+            // },
             {
               label: 'TypeScript',
               type: 'docSidebar',

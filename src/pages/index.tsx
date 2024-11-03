@@ -25,14 +25,14 @@ export default function Home(): JSX.Element {
           <div className="container">
             <div className="hero-inner">
               <div className="hero-copy">
-                <h1 className="hero-title mt-0">欢迎来到我的博客，我是Kyler Tsai</h1>
+                <h1 className="hero-title mt-0">欢迎来我的博客，我是Kyler Tsai</h1>
                 <p className="hero-paragraph">
-                  本网址用于记录个人日常学习笔记和总结以及个人记录的博客文章
+                  用于记录个人日常学习笔记和总结以及个人记录的博客文章
                 </p>
                 <div className="hero-cta">
                   <a
                     className="button button-primary"
-                    href="/blog/web-fe/ast">
+                    href="/blog/fe/ast">
                     Blog
                   </a>
                 </div>
@@ -92,7 +92,7 @@ export default function Home(): JSX.Element {
                         alt="Feature 01"
                       />
                     </div>
-                    <h4 className="feature-title mt-24">学习记录</h4>
+                    <h4 className="feature-title mt-24">编程记录</h4>
                     <p className="text-sm mb-0">个人学习IT技术过程以及记录学习过程中的文档总结</p>
                   </div>
                 </div>

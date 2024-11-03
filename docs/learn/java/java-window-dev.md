@@ -2,6 +2,7 @@
 title: Java SDK
 description: Window10安装JDK1.8版本
 sidebar_label: Window10安装JDK1.8版本
+sidebar_position: 1
 hide_title: true
 ---
 
