@@ -151,4 +151,36 @@ sudo apt-get install iputils-ping
 ping www.baidu.com
 ```
 
-以上就是安装全部过程
+安装 net-tools 工具，使用 ifconfig 命令查看本地ip
+
+```bash
+sudo apt-get install net-tools
+```
+
+安装 vim 工具
+
+```bash
+sudo apt-get install vim
+```
+
+## 五、设置静态ip
+
+```bash
+cd /etc/netplan
+```
+
+该目录下会存在 00-installer-config.yaml 文件，由于系统不同版本可能导致文件名称可能不一致。这里先将原始文件复制一份，防止设置错误可以及时回复原来的设置。
+
+```bash
+sudo cp 00-installer-config.yaml 00-installer-config-before.yaml
+```
+
+对 00-installer-config.yaml 进行修改，修改内容如下，修改好之后保存退出即可
+
+![image-20241121200301983](https://gitee.com/caigh1012/assets/raw/main/os/vmware/vmware-install-ubuntu/image-20241121200301983.png)
+
+最后执行以下命令即可
+
+```bash
+sudo netplan apply
+```
