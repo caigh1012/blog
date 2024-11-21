@@ -1,11 +1,11 @@
 ---
 title: Java SE
-description: Java 第一章基础入门
-sidebar_label: Java 第一章基础入门
+description: Java基础入门
+sidebar_label: Java基础入门
 hide_title: true
 ---
 
-## Java 第一章基础入门
+## Java第一章基础入门
 
 ## 一、简单程序开发步骤
 

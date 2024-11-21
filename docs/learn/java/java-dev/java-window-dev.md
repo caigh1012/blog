@@ -2,11 +2,10 @@
 title: Java SDK
 description: Window10安装JDK1.8版本
 sidebar_label: Window10安装JDK1.8版本
-sidebar_position: 1
 hide_title: true
 ---
 
-## window10 安装 Java SE 8 (8u212) 版本
+## window10安装Java SE 8 (8u212) 版本
 
 ## 一、JDK 和 JRE 的概念
 

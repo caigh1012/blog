@@ -2,7 +2,6 @@
 title: Maven
 description: Window10安装maven环境配置
 sidebar_label: Window10安装maven环境配置
-sidebar_position: 2
 hide_title: true
 ---
 

@@ -216,7 +216,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
     announcementBar: {
-      content: '🚀 本网址如有侵权，请速联系我删除 ~ 联系方式QQ：523492108@qq.com',
+      content: '🚀 本网址如有侵权，请联系删除。联系方式QQ：523492108@qq.com',
       textColor: '#091E42',
       isCloseable: false,
     },
