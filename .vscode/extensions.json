@@ -1,0 +1,12 @@
+{
+  "recommendations": [
+    "atommaterial.a-file-icon-vscode",
+    "dracula-theme.theme-dracula",
+    "esbenp.prettier-vscode",
+    "stylelint.vscode-stylelint",
+    "dbaeumer.vscode-eslint",
+    "Vue.volar",
+    "formulahendry.auto-rename-tag",
+    "EditorConfig.EditorConfig"
+  ]
+}

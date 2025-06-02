@@ -1,0 +1,49 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "description": "Build my blog based on the vitepress library",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky || true",
+    "preinstall": "npx only-allow pnpm",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "lint-staged": "lint-staged",
+    "lint": "eslint **/*.{js,ts,mts}",
+    "lint:fix": "eslint **/*.{js,ts,mts} --fix",
+    "format": "prettier **/*.{js,ts,mts,json} --write"
+  },
+  "author": "caigh1012",
+  "license": "ISC",
+  "packageManager": "pnpm@10.9.0",
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/js": "^9.28.0",
+    "@typescript-eslint/eslint-plugin": "^8.33.0",
+    "@typescript-eslint/parser": "^8.33.0",
+    "eslint": "^9.27.0",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.4.1",
+    "globals": "^16.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.32.1",
+    "vitepress": "^1.6.3"
+  },
+  "dependencies": {
+    "vue": "^3.5.15"
+  },
+  "lint-staged": {
+    "*.{js,ts,mts,json}": [
+      "npm run format"
+    ],
+    "*.{js,ts,mts}": [
+      "npm run lint"
+    ]
+  }
+}
