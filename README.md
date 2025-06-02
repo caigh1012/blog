@@ -1,6 +1,6 @@
 <h1 align="center">Tsai's Blog</h1>
 
-<div align="center">Build my blog based on the <a href="https://docusaurus.io/">docusaurus</a> library，</div>
+<div align="center">Build my blog based on the <a href="https://vitepress.dev/">vitepress</a> library，</div>
 
 ## Install
 
@@ -11,5 +11,5 @@ pnpm install
 ## Start
 
 ```bash
-pnpm run start
+pnpm docs:dev
 ```
