@@ -143,5 +143,13 @@ export default defineConfig({
       copyright: `Copyright © ${new Date().getFullYear()} by Tsai, Inc. Built with VitePress.`,
     },
   },
+
+  markdown: {
+    lineNumbers: true,
+    math: true,
+    image: {
+      lazyLoading: true
+    },
+  },
   ignoreDeadLinks: true,
 });
