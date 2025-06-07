@@ -62,21 +62,62 @@ export default defineConfig({
           { text: 'Rust', link: '/item-3' },
         ],
       },
-      { text: '博客', link: '/sda' },
+      { text: '博客', link: '/blog' },
       { text: 'CI/CD', link: '/markdomples' },
       { text: '计算机网络', link: '/markdo' },
-      { text: '操作系统', link: '/sda' },
-      { text: '日常记录', link: '/markdmples' },
+      { text: '操作系统', link: '/os/window/win10-os-install' },
+      { text: '日常记录', link: '/daily/todo' },
     ],
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-        ],
-      },
-    ],
+    sidebar: {
+      '/daily/': [
+        {
+          items: [
+            { text: '待办记录', link: '/daily/todo' },
+            { 
+              text: '操作系统', 
+              items: [
+                { text: 'Linux的CentOS和ubuntu镜像', link: '/daily/os/linux-system-iso', collapsed: true },
+              ] 
+            },
+            { 
+              text: '编辑器', 
+              items: [
+                { text: 'VSCode终端权限问题', link: '/daily/idea/vscode-terminal', collapsed: true },
+              ] 
+            },
+          ]
+        }
+      ],
+      '/os/': [
+        {
+          text: 'Windows操作系统',
+          items: [
+            { text: 'Win10将动态分区转成基本分区', link: '/os/window/win10-os-install'  },
+          ]
+        },
+        {
+          text: 'MacOS操作系统',
+          items: [
+            { text: 'MacOS操作系统', link: '/os/macos/macos'  },
+          ]
+        },
+        {
+          text: 'Linux操作系统',
+          items: [
+            { text: 'Linux必备基础常识', link: '/os/linux/linux-base'  },
+            { text: 'Linux常用命令', link: '/os/linux/linux-cmd'  },
+            { text: 'Linux系统的软件安装方式', link: '/os/linux/linux-software-install/index'  },
+          ]
+        },
+        {
+          text: 'VMware',
+          items: [
+            { text: 'VMware安装CentOS系统', link: '/os/vmware/vmware-install-centos' },
+            { text: 'VMware安装Ubuntu系统', link: '/os/vmware/vmware-install-ubuntu' },
+          ]
+        }
+      ],
+    },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/caigh1012/blog' }],
 
