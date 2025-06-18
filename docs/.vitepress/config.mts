@@ -51,15 +51,16 @@ export default defineConfig({
       {
         text: '编程',
         items: [
-          { text: 'JavaScript', link: '/item-1' },
-          { text: 'TypeScript', link: '/item-2' },
-          { text: 'Node', link: '/item-3' },
-          { text: 'Angular', link: '/item-3' },
-          { text: 'Webpack', link: '/item-3' },
-          { text: 'Rxjs', link: '/item-3' },
-          { text: 'Flutter', link: '/item-3' },
-          { text: 'Java', link: '/item-3' },
-          { text: 'Rust', link: '/item-3' },
+          { text: 'JavaScript', link: '/javaScript' },
+          { text: 'TypeScript', link: '/coding/typescript/basic' },
+          { text: 'Node', link: '/node' },
+          { text: 'Angular', link: '/angular' },
+          { text: 'Webpack', link: '/webpack' },
+          { text: 'Rxjs', link: '/rxjs' },
+          { text: 'Flutter', link: '/coding/flutter/flutter-window-dev' },
+          { text: 'Java', link: '/coding/java' },
+          { text: 'Rust', link: '/rust' },
+          { text: '数据库', link: '5454'}
         ],
       },
       { text: '博客', link: '/blog' },
@@ -117,6 +118,21 @@ export default defineConfig({
           ]
         }
       ],
+      '/coding/typescript/': [
+        {
+          items: [
+            { text: 'TypeScript快速入门', link: '/coding/typescript/basic' },
+            { text: 'TypeScript高级进阶', link: '/coding/typescript/advance' },
+            { text: 'TypeScript的tsconfig配置讲解', link: '/coding/typescript/tsconfig' },
+          ]
+        }
+      ],
+      '/coding/java': [
+         { text: 'Java学习路线', link: '/coding/java' },
+      ],
+      '/coding/flutter': [
+         { text: 'Win10搭建Flutter项目开发环境', link: '/coding/flutter/flutter-window-dev' },
+      ]
     },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/caigh1012/blog' }],
