@@ -54,7 +54,7 @@ export default defineConfig({
           { text: 'JavaScript', link: '/javaScript' },
           { text: 'TypeScript', link: '/coding/typescript/basic' },
           { text: 'Node', link: '/node' },
-          { text: 'Angular', link: '/angular' },
+          { text: 'Angular', link: '/coding/angular/angular16' },
           { text: 'Webpack', link: '/webpack' },
           { text: 'Rxjs', link: '/rxjs' },
           { text: 'Flutter', link: '/coding/flutter/flutter-window-dev' },
@@ -128,11 +128,16 @@ export default defineConfig({
         }
       ],
       '/coding/java': [
-         { text: 'Java学习路线', link: '/coding/java' },
+        { text: 'Java学习路线', link: '/coding/java' },
       ],
       '/coding/flutter': [
-         { text: 'Win10搭建Flutter项目开发环境', link: '/coding/flutter/flutter-window-dev' },
-      ]
+        { text: 'Win10搭建Flutter项目开发环境', link: '/coding/flutter/flutter-window-dev' },
+        { text: 'Dart快速入门', link: '/coding/flutter/dart' },
+        { text: 'Flutter开发Android和iOS实战', link: '/coding/flutter/flutter-app-template' },
+      ],
+      '/coding/angular': [
+         { text: 'Angular@16快速入门', link: '/coding/angular/angular16' },
+      ],
     },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/caigh1012/blog' }],
