@@ -51,7 +51,7 @@ export default defineConfig({
       {
         text: '编程',
         items: [
-          { text: 'JavaScript', link: '/javaScript' },
+          { text: 'JavaScript', link: '/coding/javascript/reference' },
           { text: 'TypeScript', link: '/coding/typescript/basic' },
           { text: 'Node', link: '/node' },
           { text: 'Angular', link: '/coding/angular/angular16' },
@@ -127,17 +127,29 @@ export default defineConfig({
           ]
         }
       ],
-      '/coding/java': [
+      '/coding/java/': [
         { text: 'Java学习路线', link: '/coding/java' },
       ],
-      '/coding/flutter': [
+      '/coding/flutter/': [
         { text: 'Win10搭建Flutter项目开发环境', link: '/coding/flutter/flutter-window-dev' },
         { text: 'Dart快速入门', link: '/coding/flutter/dart' },
         { text: 'Flutter开发Android和iOS实战', link: '/coding/flutter/flutter-app-template' },
       ],
-      '/coding/angular': [
+      '/coding/angular/': [
          { text: 'Angular@16快速入门', link: '/coding/angular/angular16' },
       ],
+      '/coding/javascript/': [
+        { text: '值传递和引用传递', link: '/coding/javascript/reference' },
+        { text: '正则表达式', link: '/coding/javascript/regexp' },
+        { text: '浏览器加载JavaScript方式', link: '/coding/javascript/load' },
+        { text: 'V8是如何执行JavaScript代码', link: '/coding/javascript/v8' },
+        { text: '预解析与变量提升', link: '/coding/javascript/pre-parser' },
+        { text: '作用域和作用域链', link: '/coding/javascript/scope' },
+        { text: 'this指向', link: '/coding/javascript/this' },
+        { text: '链式调用', link: '/coding/javascript/chain-call' },
+        { text: '原型和原型链', link: '/coding/javascript/prototype' },
+        { text: '继承', link: '/coding/javascript/extends' },
+      ]
     },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/caigh1012/blog' }],
