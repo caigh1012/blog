@@ -53,13 +53,13 @@ export default defineConfig({
         items: [
           { text: 'JavaScript', link: '/coding/javascript/reference' },
           { text: 'TypeScript', link: '/coding/typescript/basic' },
-          { text: 'Node', link: '/node' },
+          { text: 'Node', link: '/coding/node/node' },
           { text: 'Angular', link: '/coding/angular/angular16' },
           { text: 'Webpack', link: '/webpack' },
           { text: 'Rxjs', link: '/rxjs' },
           { text: 'Flutter', link: '/coding/flutter/flutter-window-dev' },
           { text: 'Java', link: '/coding/java' },
-          { text: 'Rust', link: '/rust' },
+          { text: 'Rust', link: '/coding/rust/rust-window-install' },
           { text: '数据库', link: '5454'}
         ],
       },
@@ -149,7 +149,14 @@ export default defineConfig({
         { text: '链式调用', link: '/coding/javascript/chain-call' },
         { text: '原型和原型链', link: '/coding/javascript/prototype' },
         { text: '继承', link: '/coding/javascript/extends' },
-      ]
+      ],
+      '/coding/node/': [
+        { text: 'Node.js快速入门', link: '/coding/node/node' },
+        { text: 'require模块加载机制', link: '/coding/node/require' },
+      ],
+      '/coding/rust/': [
+        { text: 'Rust在Win10环境下的安装', link: '/coding/rust/rust-window-install' },
+      ],
     },
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/caigh1012/blog' }],
