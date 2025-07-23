@@ -71,7 +71,7 @@ export default defineConfig({
           { text: '框架核心原理', link: '/blog/devops/devops-blog-v1.0' },
           { text: '常用库源码解析', link: '/blog/devops/devops-blog-v1.0' },
           { text: 'DevOps', link: '/blog/devops/devops-blog-v1.0' },
-          { text: '其他', link: '/blog/devops/devops-blog-v1.0' },
+          { text: '其他', link: '/blog/other/picgo' },
         ],
       },
       { text: 'CI/CD', link: '/markdomples' },
