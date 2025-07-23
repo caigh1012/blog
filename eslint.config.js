@@ -5,7 +5,7 @@ const importPlugin = require('eslint-plugin-import');
 
 module.exports = [
   {
-    ignores: ['node_modules', 'dist', 'docs/.vitepress'], // 忽略目录
+    ignores: ['node_modules', 'dist', 'docs/.vitepress/cache'], // 忽略目录
   },
   {
     files: ['*.js'],

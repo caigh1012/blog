@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress';
+import sidebar from './sidebar/sidebar.mts';
 
 export default defineConfig({
   title: 'Tsai',
@@ -60,104 +61,25 @@ export default defineConfig({
           { text: 'Flutter', link: '/coding/flutter/flutter-window-dev' },
           { text: 'Java', link: '/coding/java' },
           { text: 'Rust', link: '/coding/rust/rust-window-install' },
-          { text: '数据库', link: '5454'}
+          { text: '数据库', link: '5454' },
         ],
       },
-      { text: '博客', link: '/blog' },
+      {
+        text: '博客',
+        items: [
+          { text: '前端工程化', link: '/blog/devops/devops-blog-v1.0' },
+          { text: '框架核心原理', link: '/blog/devops/devops-blog-v1.0' },
+          { text: '常用库源码解析', link: '/blog/devops/devops-blog-v1.0' },
+          { text: 'DevOps', link: '/blog/devops/devops-blog-v1.0' },
+          { text: '其他', link: '/blog/devops/devops-blog-v1.0' },
+        ],
+      },
       { text: 'CI/CD', link: '/markdomples' },
       { text: '计算机网络', link: '/markdo' },
       { text: '操作系统', link: '/os/window/win10-os-install' },
       { text: '日常记录', link: '/daily/todo' },
     ],
-    sidebar: {
-      '/daily/': [
-        {
-          items: [
-            { text: '待办记录', link: '/daily/todo' },
-            { 
-              text: '操作系统', 
-              items: [
-                { text: 'Linux的CentOS和ubuntu镜像', link: '/daily/os/linux-system-iso', collapsed: true },
-              ] 
-            },
-            { 
-              text: '编辑器', 
-              items: [
-                { text: 'VSCode终端权限问题', link: '/daily/idea/vscode-terminal', collapsed: true },
-              ] 
-            },
-          ]
-        }
-      ],
-      '/os/': [
-        {
-          text: 'Windows操作系统',
-          items: [
-            { text: 'Win10将动态分区转成基本分区', link: '/os/window/win10-os-install'  },
-          ]
-        },
-        {
-          text: 'MacOS操作系统',
-          items: [
-            { text: 'MacOS操作系统', link: '/os/macos/macos'  },
-          ]
-        },
-        {
-          text: 'Linux操作系统',
-          items: [
-            { text: 'Linux必备基础常识', link: '/os/linux/linux-base'  },
-            { text: 'Linux常用命令', link: '/os/linux/linux-cmd'  },
-            { text: 'Linux系统的软件安装方式', link: '/os/linux/linux-software-install/index'  },
-          ]
-        },
-        {
-          text: 'VMware',
-          items: [
-            { text: 'VMware安装CentOS系统', link: '/os/vmware/vmware-install-centos' },
-            { text: 'VMware安装Ubuntu系统', link: '/os/vmware/vmware-install-ubuntu' },
-          ]
-        }
-      ],
-      '/coding/typescript/': [
-        {
-          items: [
-            { text: 'TypeScript快速入门', link: '/coding/typescript/basic' },
-            { text: 'TypeScript高级进阶', link: '/coding/typescript/advance' },
-            { text: 'TypeScript的tsconfig配置讲解', link: '/coding/typescript/tsconfig' },
-          ]
-        }
-      ],
-      '/coding/java/': [
-        { text: 'Java学习路线', link: '/coding/java' },
-      ],
-      '/coding/flutter/': [
-        { text: 'Win10搭建Flutter项目开发环境', link: '/coding/flutter/flutter-window-dev' },
-        { text: 'Dart快速入门', link: '/coding/flutter/dart' },
-        { text: 'Flutter开发Android和iOS实战', link: '/coding/flutter/flutter-app-template' },
-      ],
-      '/coding/angular/': [
-         { text: 'Angular@16快速入门', link: '/coding/angular/angular16' },
-      ],
-      '/coding/javascript/': [
-        { text: '值传递和引用传递', link: '/coding/javascript/reference' },
-        { text: '正则表达式', link: '/coding/javascript/regexp' },
-        { text: '浏览器加载JavaScript方式', link: '/coding/javascript/load' },
-        { text: 'V8是如何执行JavaScript代码', link: '/coding/javascript/v8' },
-        { text: '预解析与变量提升', link: '/coding/javascript/pre-parser' },
-        { text: '作用域和作用域链', link: '/coding/javascript/scope' },
-        { text: 'this指向', link: '/coding/javascript/this' },
-        { text: '链式调用', link: '/coding/javascript/chain-call' },
-        { text: '原型和原型链', link: '/coding/javascript/prototype' },
-        { text: '继承', link: '/coding/javascript/extends' },
-      ],
-      '/coding/node/': [
-        { text: 'Node.js快速入门', link: '/coding/node/node' },
-        { text: 'require模块加载机制', link: '/coding/node/require' },
-      ],
-      '/coding/rust/': [
-        { text: 'Rust在Win10环境下的安装', link: '/coding/rust/rust-window-install' },
-      ],
-    },
+    sidebar: sidebar,
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/caigh1012/blog' }],
 
@@ -188,7 +110,7 @@ export default defineConfig({
     lineNumbers: true,
     math: true,
     image: {
-      lazyLoading: true
+      lazyLoading: true,
     },
   },
   ignoreDeadLinks: true,
