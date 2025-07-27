@@ -181,6 +181,7 @@ function _Module(id = '') {
 
 // require其实是Module类的一个实例方法
 _Module.prototype.require = function (id) {
+  const fileId = path.resolve(__dirname, id);
   // id 为文件路径
   return _Module._load(id);
 };
