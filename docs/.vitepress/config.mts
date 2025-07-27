@@ -56,8 +56,6 @@ export default defineConfig({
           { text: 'TypeScript', link: '/coding/typescript/basic' },
           { text: 'Node', link: '/coding/node/node' },
           { text: 'Angular', link: '/coding/angular/angular16' },
-          { text: 'Webpack', link: '/webpack' },
-          { text: 'Rxjs', link: '/rxjs' },
           { text: 'Flutter', link: '/coding/flutter/flutter-window-dev' },
           { text: 'Java', link: '/coding/java' },
           { text: 'Rust', link: '/coding/rust/rust-window-install' },
@@ -67,9 +65,12 @@ export default defineConfig({
       {
         text: '博客',
         items: [
-          { text: '前端工程化', link: '/blog/devops/devops-blog-v1.0' },
+          { text: '前端编译原理', link: '/blog/devops/devops-blog-v1.0' },
+          { text: '前端构建工具', link: '/blog/devops/devops-blog-v1.0' },
           { text: '框架核心原理', link: '/blog/devops/devops-blog-v1.0' },
           { text: '常用库源码解析', link: '/blog/devops/devops-blog-v1.0' },
+          { text: '前端图表', link: '/blog/devops/devops-blog-v1.0' },
+          { text: '响应式编程', link: '/blog/devops/devops-blog-v1.0' },
           { text: 'DevOps', link: '/blog/devops/devops-blog-v1.0' },
           { text: '其他', link: '/blog/other/picgo' },
         ],
