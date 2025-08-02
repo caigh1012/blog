@@ -68,7 +68,7 @@ export default defineConfig({
         text: '博客',
         items: [
           { text: '前端编译原理', link: '/blog/devops/devops-blog-v1.0' },
-          { text: '前端框架', link: '/blog/devops/devops-blog-v1.0' },
+          { text: '前端框架', link: '/blog/framework/angular/angular16' },
           { text: '前端构建工具', link: '/blog/devops/devops-blog-v1.0' },
           { text: '框架核心原理', link: '/blog/devops/devops-blog-v1.0' },
           { text: '常用库源码解析', link: '/blog/devops/devops-blog-v1.0' },
