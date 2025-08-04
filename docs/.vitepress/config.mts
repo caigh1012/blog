@@ -55,7 +55,6 @@ export default defineConfig({
           { text: 'JavaScript', link: '/coding/javascript/reference' },
           { text: 'TypeScript', link: '/coding/typescript/basic' },
           { text: 'Node', link: '/coding/node/node' },
-          { text: 'Angular', link: '/coding/angular/angular16' },
           { text: 'Flutter', link: '/coding/flutter/flutter-window-dev' },
           { text: 'Java', link: '/coding/java' },
           { text: 'Rust', link: '/coding/rust/rust-window-install' },
@@ -69,7 +68,7 @@ export default defineConfig({
         items: [
           { text: '前端编译原理', link: '/blog/devops/devops-blog-v1.0' },
           { text: '前端框架', link: '/blog/framework/angular/angular16' },
-          { text: '前端构建工具', link: '/blog/devops/devops-blog-v1.0' },
+          { text: '前端构建工具', link: '/blog/build/webpack-base' },
           { text: '框架核心原理', link: '/blog/devops/devops-blog-v1.0' },
           { text: '常用库源码解析', link: '/blog/devops/devops-blog-v1.0' },
           { text: '前端图表', link: '/blog/graphics/svg' },

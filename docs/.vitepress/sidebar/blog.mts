@@ -1,4 +1,5 @@
 export default {
+  '/blog/build/': [{ text: 'Webpack基础入门', link: '/webpack-base' }],
   '/blog/devops/': [
     { text: 'DevOps自动化部署实战V1.0', link: '/devops-blog-v1.0' },
     { text: 'DevOps自动化部署实战V2.0', link: '/devops-blog-v2.0' },
