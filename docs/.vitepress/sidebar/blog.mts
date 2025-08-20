@@ -1,5 +1,8 @@
 export default {
-  '/blog/build/': [{ text: 'Webpack基础入门', link: '/blog/build/webpack-base' }],
+  '/blog/build/': [
+    { text: 'Webpack基础入门', link: '/blog/build/webpack-base' },
+    { text: 'Webpack高级', link: '/blog/build/webpack-advance' },
+  ],
   '/blog/devops/': [
     { text: 'DevOps自动化部署实战V1.0', link: '/blog/devops/devops-blog-v1.0' },
     { text: 'DevOps自动化部署实战V2.0', link: '/blog/devops/devops-blog-v2.0' },
