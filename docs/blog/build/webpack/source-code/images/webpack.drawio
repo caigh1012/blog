@@ -1,0 +1,139 @@
+<mxfile host="65bd71144e">
+    <diagram id="EMZYI32Uqtat35su97Ki" name="第 1 页">
+        <mxGraphModel dx="1135" dy="546" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="2336" background="#ffffff" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="12" value="初始化阶段" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="40" y="40" width="400" height="960" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="" style="edgeStyle=none;html=1;" parent="12" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="webpack(options)" style="rounded=0;whiteSpace=wrap;html=1;" parent="12" vertex="1">
+                    <mxGeometry x="120" y="60" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" value="" style="edgeStyle=none;html=1;" parent="12" source="3" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="createCompiler方法" style="rounded=0;whiteSpace=wrap;html=1;" parent="12" vertex="1">
+                    <mxGeometry x="120" y="140" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="" style="edgeStyle=none;html=1;" parent="12" source="4" target="5" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="getNormalizedWebpackOptions(rawOptions)&lt;div&gt;初始化 options 默认值&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="12" vertex="1">
+                    <mxGeometry x="40" y="220" width="320" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="" style="edgeStyle=none;html=1;" parent="12" source="5" target="6" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="new Compiler(options.context, options)" style="rounded=0;whiteSpace=wrap;html=1;" parent="12" vertex="1">
+                    <mxGeometry x="72.5" y="320" width="257.5" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="" style="edgeStyle=none;html=1;" parent="12" source="6" target="7" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="挂载webpack.config.js 配置的插件" style="rounded=0;whiteSpace=wrap;html=1;" parent="12" vertex="1">
+                    <mxGeometry x="91.25" y="400" width="220" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="new WebpackOptionsApply().process(options, compiler)&lt;div&gt;挂载 webpack 内置插件&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="12" vertex="1">
+                    <mxGeometry x="38.75" y="480" width="325" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="" style="edgeStyle=elbowEdgeStyle;elbow=horizontal;endArrow=classic;html=1;curved=0;rounded=0;endSize=8;startSize=8;" parent="12" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="330" y="340" as="sourcePoint"/>
+                        <mxPoint x="600" y="80" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="440" y="210"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="13" value="构建阶段" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="520" y="40" width="400" height="960" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="" style="edgeStyle=none;html=1;" parent="13" source="14" target="15" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="执行&amp;nbsp;compile.run 方法" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry x="121" y="60" width="159" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="" style="edgeStyle=none;html=1;" parent="13" source="15" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="new&amp;nbsp; Compilation" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry x="121" y="140" width="158.5" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="edgeStyle=none;html=1;" parent="13" source="16" target="17" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="执行 compiler.hooks.make 钩子" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry x="103" y="220" width="197" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="edgeStyle=none;html=1;" parent="13" source="17" target="18" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="会触发 EnryPlugin&amp;nbsp;compiler.hooks.make.tapAsync，&lt;div&gt;同时触发 compilation.addEntry 方法&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry x="40" y="300" width="320" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="" style="edgeStyle=none;html=1;" parent="13" source="18" target="19" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="&lt;span style=&quot;color: rgb(63, 63, 63);&quot;&gt;compilation.addEntry() 方法&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry x="71.5" y="400" width="260" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="" style="edgeStyle=none;html=1;" parent="13" source="19" target="22" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="addModuleTree 方法创建模块树" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry x="80" y="480" width="240" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="" style="edgeStyle=none;html=1;" parent="13" source="20" target="23" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="执行 runLoaders 方法，&lt;span style=&quot;color: rgb(63, 63, 63); background-color: transparent;&quot;&gt;也是执行loader的过程&lt;/span&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry x="40" y="640" width="320" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="edgeStyle=none;html=1;" parent="13" source="22" target="20" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="执行 module.build" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry x="120" y="560" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="" style="edgeStyle=none;html=1;" parent="13" source="23" target="24" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="parser.parse" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry x="120" y="720" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="48" value="" style="edgeStyle=none;html=1;" parent="13" source="24" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="acorn.parse" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry x="120" y="800" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="handleParseResult" style="rounded=0;whiteSpace=wrap;html=1;" parent="13" vertex="1">
+                    <mxGeometry x="120" y="880" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="完成阶段" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+                    <mxGeometry x="1000" y="40" width="400" height="960" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="触发&amp;nbsp;hooks.finishMake 钩子" style="rounded=0;whiteSpace=wrap;html=1;" parent="21" vertex="1">
+                    <mxGeometry x="120" y="60" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="触发 compilation.finish 方法" style="rounded=0;whiteSpace=wrap;html=1;" parent="21" vertex="1">
+                    <mxGeometry x="120" y="140" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="触发 compilation.seal 方法&lt;div&gt;也是 module chunk 的生成和 module 优化阶段&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" parent="21" vertex="1">
+                    <mxGeometry x="60" y="220" width="280" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="compiler.emitAssets" style="rounded=0;whiteSpace=wrap;html=1;" parent="21" vertex="1">
+                    <mxGeometry x="120" y="300" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="compiler.outputFileSystem 输出文件到磁盘之中" style="rounded=0;whiteSpace=wrap;html=1;" parent="21" vertex="1">
+                    <mxGeometry x="40" y="380" width="320" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
