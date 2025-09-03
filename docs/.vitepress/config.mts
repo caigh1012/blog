@@ -74,15 +74,15 @@ export default defineConfig({
           { text: '前端图表', link: '/blog/graphics/svg' },
           { text: '响应式编程', link: '/blog/rxjs/rxjs' },
           { text: 'DevOps', link: '/blog/devops/devops-blog-v1.0' },
-          // { text: '前端测试库应用', link: '/blog/devops/devops-blog-v1.0' },
           { text: '其他', link: '/blog/other/picgo' },
         ],
       },
-      { text: 'CI/CD', link: '/markdomples' },
+      { text: 'CI/CD', link: '/devops/podman' },
       { text: '计算机网络', link: '/markdo' },
       { text: '操作系统', link: '/os/window/win10-os-install' },
       { text: '日常记录', link: '/daily/todo' },
     ],
+
     sidebar: sidebar,
 
     socialLinks: [{ icon: 'github', link: 'https://github.com/caigh1012/blog' }],

@@ -5,6 +5,7 @@ export default {
   '/blog/compile/': [
     { text: 'AST抽象语法树', link: '/blog/compile/ast' },
     { text: 'Babel@7使用入门', link: '/blog/compile/babel@7' },
+    { text: 'SWC编译器使用入门', link: '/blog/compile/swc' },
   ],
   /**
    * 前端构建工具
@@ -15,6 +16,8 @@ export default {
     { text: 'Webpack源码执行过程分析', link: '/blog/build/webpack/source-code' },
     { text: 'Webpack热更新原理', link: '/blog/build/webpack/dev-server' },
     { text: 'style-css-loader原理', link: '/blog/build/webpack/style-css-loader' },
+    { text: 'import原理', link: '/blog/build/webpack/import' },
+    { text: '动态import原理', link: '/blog/build/webpack/dynamic-import' },
   ],
   /**
    * 框架使用
@@ -39,6 +42,7 @@ export default {
   '/blog/framework-principle/': [
     { text: 'AST抽象语法树', link: '/blog/compile/ast' },
     { text: 'Babel@7使用入门', link: '/blog/compile/babel@7' },
+    { text: 'SWC编译器使用入门', link: '/blog/compile/swc' },
   ],
   '/blog/source-code-analysis/': [
     { text: 'Ant-Design', link: '/blog/source-code-analysis/ant-design' },
