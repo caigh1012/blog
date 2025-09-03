@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
-import sidebar from './sidebar/sidebar.mts';
+import sidebar from './sidebar.mts';
+import nav from './nav.mts';
 
 export default defineConfig({
   title: 'Tsai',
@@ -48,40 +49,7 @@ export default defineConfig({
       },
     },
 
-    nav: [
-      {
-        text: '编程',
-        items: [
-          { text: 'JavaScript', link: '/coding/javascript/reference' },
-          { text: 'TypeScript', link: '/coding/typescript/basic' },
-          { text: 'Node', link: '/coding/node/node' },
-          { text: 'Flutter', link: '/coding/flutter/flutter-window-dev' },
-          { text: 'Java', link: '/coding/java' },
-          { text: 'Rust', link: '/coding/rust/rust-window-install' },
-          { text: 'Database', link: '5454' },
-          { text: '设计模式', link: '5454' },
-          { text: '数据结构与算法', link: '5454' },
-        ],
-      },
-      {
-        text: '博客',
-        items: [
-          { text: '前端编译原理', link: '/blog/compile/ast' },
-          { text: '前端框架使用', link: '/blog/framework/angular/angular16' },
-          { text: '前端构建工具', link: '/blog/build/webpack/base' },
-          { text: '框架核心原理', link: '/blog/framework-principle/signals' },
-          { text: '常用库源码解析', link: '/blog/source-code-analysis/ant-design' },
-          { text: '前端图表', link: '/blog/graphics/svg' },
-          { text: '响应式编程', link: '/blog/rxjs/rxjs' },
-          { text: 'DevOps', link: '/blog/devops/devops-blog-v1.0' },
-          { text: '其他', link: '/blog/other/picgo' },
-        ],
-      },
-      { text: 'CI/CD', link: '/devops/podman' },
-      { text: '计算机网络', link: '/markdo' },
-      { text: '操作系统', link: '/os/window/win10-os-install' },
-      { text: '日常记录', link: '/daily/todo' },
-    ],
+    nav: nav,
 
     sidebar: sidebar,
 

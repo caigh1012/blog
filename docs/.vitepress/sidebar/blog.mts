@@ -3,21 +3,21 @@ export default {
    * 前端编译原理
    */
   '/blog/compile/': [
-    { text: 'AST抽象语法树', link: '/blog/compile/ast' },
-    { text: 'Babel@7使用入门', link: '/blog/compile/babel@7' },
-    { text: 'SWC编译器使用入门', link: '/blog/compile/swc' },
+    { text: 'AST抽象语法树', link: '/blog/compile/ast/index' },
+    { text: 'Babel@7使用入门', link: '/blog/compile/babel@7/index' },
+    { text: 'SWC编译器使用入门', link: '/blog/compile/swc/index' },
   ],
   /**
    * 前端构建工具
    */
   '/blog/build/': [
-    { text: 'Webpack基础入门', link: '/blog/build/webpack/base' },
-    { text: 'Webpack高级', link: '/blog/build/webpack/advance' },
-    { text: 'Webpack源码执行过程分析', link: '/blog/build/webpack/source-code' },
-    { text: 'Webpack热更新原理', link: '/blog/build/webpack/dev-server' },
-    { text: 'style-css-loader原理', link: '/blog/build/webpack/style-css-loader' },
-    { text: 'import原理', link: '/blog/build/webpack/import' },
-    { text: '动态import原理', link: '/blog/build/webpack/dynamic-import' },
+    { text: 'Webpack基础入门', link: '/blog/build/webpack/base/index' },
+    { text: 'Webpack高级', link: '/blog/build/webpack/advance/index' },
+    { text: 'Webpack源码执行过程分析', link: '/blog/build/webpack/source-code/index' },
+    { text: 'Webpack热更新原理', link: '/blog/build/webpack/dev-server/index' },
+    { text: 'style-css-loader原理', link: '/blog/build/webpack/style-css-loader/index' },
+    { text: 'import原理', link: '/blog/build/webpack/import/index' },
+    { text: '动态import原理', link: '/blog/build/webpack/dynamic-import/index' },
   ],
   /**
    * 框架使用
@@ -29,7 +29,7 @@ export default {
     },
     {
       text: 'Angular框架',
-      items: [{ text: 'Angular@16快速入门', link: '/blog/framework/angular/angular16' }],
+      items: [{ text: 'Angular@16快速入门', link: '/blog/framework/angular/angular16/index' }],
     },
     {
       text: 'Vue框架',
@@ -58,11 +58,11 @@ export default {
    * 前端图表
    */
   '/blog/graphics/': [
-    { text: 'SVG文档入门', link: '/blog/graphics/svg' },
-    { text: 'SVG.js入门指南', link: '/blog/graphics/svg.js' },
+    { text: 'SVG文档入门', link: '/blog/graphics/svg/index' },
+    { text: 'SVG.js入门指南', link: '/blog/graphics/svg.js/index' },
   ],
   /**
    * 其他
    */
-  '/blog/other/': [{ text: 'PicGo使用', link: '/blog/other/picgo' }],
+  '/blog/other/': [{ text: 'PicGo使用', link: '/blog/other/picgo/index' }],
 };
