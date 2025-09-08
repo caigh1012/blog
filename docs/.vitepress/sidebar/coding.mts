@@ -4,7 +4,51 @@ export default {
     { text: 'TypeScript高级进阶', link: '/coding/typescript/advance/index' },
     { text: 'TypeScript的tsconfig配置讲解', link: '/coding/typescript/tsconfig/index' },
   ],
-  '/coding/java/': [{ text: 'Java学习路线', link: '/coding/java/index' }],
+  '/coding/java/': [
+    { text: 'Java学习路线', link: '/coding/java/index' },
+    { text: 'Java在Window10环境安装', link: '/coding/java/java-window-install/index' },
+    { text: 'Java快速入门', link: '/coding/java/java-se/index' },
+    { text: 'MySQL快速入门', link: '/coding/java/mysql/index' },
+    { text: 'JDBC连接数据库', link: '/coding/java/jdbc/index' },
+    {
+      text: 'Maven构建工具',
+      items: [
+        { text: 'Maven在Window10安装', link: '/coding/java/maven/maven-window-install/index' },
+        { text: 'Maven构建工具使用', link: '/coding/java/maven/maven/index' },
+        { text: 'Maven私服仓库搭建', link: '/coding/java/maven/nexus/index' },
+        { text: '不使用Maven构建jar包', link: '/coding/java/maven/no-maven-build-jar/index' },
+        { text: '不使用Maven构建war包', link: '/coding/java/maven/no-maven-build-war/index' },
+        { text: 'Maven构建jar包', link: '/coding/java/maven/maven-build-jar/index' },
+        { text: 'Maven构建war包', link: '/coding/java/maven/maven-build-war/index' },
+      ],
+    },
+    {
+      text: 'Mybatis',
+      items: [{ text: 'Mybatis快速入门', link: '/coding/java/mybatis/index' }],
+    },
+    {
+      text: 'SSM项目搭建',
+      items: [
+        { text: 'SSM注解方式搭建', link: '/coding/java/ssm/ssm-inn' },
+        { text: 'SSM的XML方式搭建', link: '/coding/java/ssm/ssm-xml' },
+      ],
+    },
+    {
+      text: 'SpringBoot',
+      items: [
+        { text: '三层架构', link: '/coding/java/springboot/three-tier' },
+        { text: 'SpringSession', link: '/coding/java/springboot/session' },
+      ],
+    },
+    {
+      text: 'Redis',
+      items: [{ text: 'Redis@7快速入门', link: '/coding/java/redis/index' }],
+    },
+    {
+      text: '微服务',
+      items: [{ text: '微服务快速入门', link: '/coding/java/microservice/index' }],
+    },
+  ],
   '/coding/flutter/': [
     { text: 'Win10搭建Flutter项目开发环境', link: '/coding/flutter/flutter-window-dev/index' },
     { text: 'Dart快速入门', link: '/coding/flutter/dart/index' },

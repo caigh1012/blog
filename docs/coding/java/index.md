@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# Java 学习路线图
+# Java 学习路线
 
 一、Java基础
 
