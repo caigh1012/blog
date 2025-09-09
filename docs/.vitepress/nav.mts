@@ -8,7 +8,6 @@ export default [
       { text: 'Flutter', link: '/coding/flutter/flutter-window-dev/index' },
       { text: 'Java', link: '/coding/java/index' },
       { text: 'Rust', link: '/coding/rust/rust-window-install/index' },
-      { text: 'Database', link: '5454' },
       { text: '设计模式', link: '5454' },
       { text: '数据结构与算法', link: '5454' },
     ],
@@ -28,7 +27,7 @@ export default [
     ],
   },
   { text: 'CI/CD', link: '/devops/podman/index' },
-  { text: '计算机网络', link: '/markdo' },
-  { text: '操作系统', link: '/os/window/win10-os-install/index' },
+  { text: '计算机网络', link: '/network/index' },
+  { text: '操作系统', link: '/os/window/win10-os-install' },
   { text: '日常记录', link: '/daily/todo' },
 ];

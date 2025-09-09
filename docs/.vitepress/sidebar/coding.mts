@@ -48,6 +48,10 @@ export default {
       text: '微服务',
       items: [{ text: '微服务快速入门', link: '/coding/java/microservice/index' }],
     },
+    {
+      text: '常见字符集',
+      link: '/coding/java/unicode/index',
+    },
   ],
   '/coding/flutter/': [
     { text: 'Win10搭建Flutter项目开发环境', link: '/coding/flutter/flutter-window-dev/index' },

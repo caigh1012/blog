@@ -3,6 +3,7 @@ import daily from './sidebar/daily.mts';
 import os from './sidebar/os.mts';
 import coding from './sidebar/coding.mts';
 import devops from './sidebar/devops.mts';
+import network from './sidebar/network.mts';
 
 export default {
   '/daily/': daily,
@@ -10,4 +11,5 @@ export default {
   ...blog,
   ...coding,
   '/devops/': devops,
+  '/network/': network,
 };
