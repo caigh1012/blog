@@ -2,7 +2,7 @@ export default {
   '/coding/typescript/': [
     { text: 'TypeScript快速入门', link: '/coding/typescript/basic/index' },
     { text: 'TypeScript高级进阶', link: '/coding/typescript/advance/index' },
-    { text: 'TypeScript的tsconfig配置讲解', link: '/coding/typescript/tsconfig/index' },
+    { text: 'tsconfig.json配置讲解', link: '/coding/typescript/tsconfig/index' },
   ],
   '/coding/java/': [
     { text: 'Java学习路线', link: '/coding/java/index' },

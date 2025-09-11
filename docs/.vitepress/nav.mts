@@ -9,7 +9,7 @@ export default [
       { text: 'Java', link: '/coding/java/index' },
       { text: 'Rust', link: '/coding/rust/rust-window-install/index' },
       { text: '设计模式', link: '5454' },
-      { text: '数据结构与算法', link: '5454' },
+      // { text: '数据结构与算法', link: '5454' },
     ],
   },
   {
