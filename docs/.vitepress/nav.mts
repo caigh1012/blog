@@ -8,8 +8,8 @@ export default [
       { text: 'Flutter', link: '/coding/flutter/flutter-window-dev/index' },
       { text: 'Java', link: '/coding/java/index' },
       { text: 'Rust', link: '/coding/rust/rust-window-install/index' },
-      { text: '设计模式', link: '5454' },
-      // { text: '数据结构与算法', link: '5454' },
+      { text: '设计模式', link: '/coding/patterns/index' },
+      // { text: '数据结构与算法', link: '' },
     ],
   },
   {
