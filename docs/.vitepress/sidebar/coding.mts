@@ -60,13 +60,6 @@ export default {
   ],
   '/coding/javascript/': [
     {
-      text: '浏览器',
-      items: [
-        { text: '浏览器加载JavaScript方式', link: '/coding/javascript/load/index' },
-        { text: 'V8是如何执行JavaScript代码', link: '/coding/javascript/v8/index' },
-      ],
-    },
-    {
       text: 'JavaScript',
       items: [
         { text: '值传递和引用传递', link: '/coding/javascript/reference/index' },
@@ -78,6 +71,25 @@ export default {
         { text: '原型和原型链', link: '/coding/javascript/prototype/index' },
         { text: '继承', link: '/coding/javascript/extends' },
       ],
+    },
+    {
+      text: '浏览器',
+      items: [
+        { text: '浏览器加载JavaScript方式', link: '/coding/javascript/load/index' },
+        { text: 'V8是如何执行JavaScript代码', link: '/coding/javascript/v8/index' },
+        {
+          text: '浏览器Cookie、LocalStorage和SessionStorage详解',
+          link: '/coding/javascript/cookie/index',
+        },
+        {
+          text: 'cookie和session共享登录案例',
+          link: '/coding/javascript/session/index',
+        },
+      ],
+    },
+    {
+      text: 'Web安全',
+      items: [],
     },
   ],
   '/coding/node/': [
