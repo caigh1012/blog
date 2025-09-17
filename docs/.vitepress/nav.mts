@@ -27,7 +27,7 @@ export default [
     ],
   },
   { text: 'CI/CD', link: '/devops/podman/index' },
-  { text: '计算机网络', link: '/network/index' },
+  { text: '计算机网络', link: '/network/ip' },
   { text: '操作系统', link: '/os/window/win10-os-install' },
   { text: '日常记录', link: '/daily/todo' },
 ];

@@ -2,7 +2,7 @@
 outline: deep
 ---
 
-# cookie和session共享登录案例
+# Cookie和Session共享登录案例
 
 ### 一、 同域名下不同项目的Session共享（cookie-session-login-01）
 

@@ -451,7 +451,9 @@ app.listen(8080, () => {
 
 SameSite 需要在实际应用才能体现，这里主要牢记可以设置值和其所起到的作用。
 
+#### 4.5.3、path、domain
 
+详细应用可以参考下一章 [cookie和session共享登录案例](../session/)
 
 
 

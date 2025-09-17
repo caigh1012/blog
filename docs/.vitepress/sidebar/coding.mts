@@ -76,25 +76,35 @@ export default {
       text: '浏览器',
       items: [
         { text: '浏览器加载JavaScript方式', link: '/coding/javascript/load/index' },
+        {
+          text: '浏览器import模块加载机制',
+          link: '/coding/javascript/cookie/index',
+        },
         { text: 'V8是如何执行JavaScript代码', link: '/coding/javascript/v8/index' },
+        { text: '浏览器缓存', link: '/coding/javascript/v8/index' },
         {
           text: '浏览器Cookie、LocalStorage和SessionStorage详解',
           link: '/coding/javascript/cookie/index',
         },
         {
-          text: 'cookie和session共享登录案例',
+          text: 'Cookie和Session共享登录案例',
           link: '/coding/javascript/session/index',
         },
       ],
     },
     {
       text: 'Web安全',
-      items: [],
+      items: [
+        { text: 'XSS攻击', link: '/coding/javascript/xss/index' },
+        { text: 'CSRF攻击', link: '/coding/javascript/csrf/index' },
+        { text: '前端存储Token方案', link: '/coding/javascript/token/index' },
+      ],
     },
   ],
   '/coding/node/': [
     { text: 'Node.js快速入门', link: '/coding/node/node/index' },
     { text: 'require模块加载机制', link: '/coding/node/require/index' },
+    { text: '模块化对比', link: '/coding/node/require/index' },
     { text: '密码学', link: '/coding/node/crypto/index' },
   ],
   '/coding/rust/': [
