@@ -47,10 +47,8 @@ java -version
 使用 yum 安装软件，以安装 net-tools 为例
 
 ```bash
-yum install net-tools -y
+yum install net-tools -y # -y 表示遇到依赖默认选择安装
 ```
-
-`-y` 表示遇到依赖默认选择安装
 
 ![image-20240811212826307](./images/image-20240811212826307.png)
 
@@ -60,7 +58,7 @@ yum install net-tools -y
 
 apt-get 是 apt 工具集中的一个组件，它是 apt 的前端命令行工具，用于从软件源中获取、安装、更新和卸载软件包。通过 apt-get，用户可以方便地管理系统上的软件包，同时它还支持自动解决软件包依赖关系，大大简化了软件包管理的流程。
 
-Ubuntu22.04版本的最小安装默认带 dpkg 命令，如下图
+Ubuntu 22.04 版本的最小安装默认带 dpkg 命令，如下图
 
 ![image-20240812203940321](./images/image-20240812203940321.png)
 
@@ -82,21 +80,21 @@ sudo apt-get install git
 
 ## 三、二进制安装
 
-1、从 node 官网下载 nodejs 的二进制包，然后利用远程连接工具上传 nginx 压缩包，已安装 nodejs 为例
+从 node 官网下载 nodejs 的二进制包，然后利用远程连接工具上传 nginx 压缩包，已安装 nodejs 为例
 
 ![image-20240813205159650](./images/image-20240813205159650.png)
 
-2、解压 tar.gz 文件
+解压 tar.gz 文件
 
 ```bash
 tar zxvf node-v22.3.0-linux-x64.tar.gz
 ```
-3、将解压的 node 文件进行重命名，方便后续的操作
+将解压的 node 文件进行重命名，方便后续的操作
 
 ```bash
 mv node-v22.3.0-linux-x64 nodejs
 ```
-4、全局引用
+全局引用
 
 ```bash
 ln -s /node/nodejs/bin/node /usr/local/bin # 引用 node
@@ -106,34 +104,34 @@ ln -s /node/nodejs/bin/node /usr/local/bin # 引用 npm
 
 ![image-20240813211817119](./images/image-20240813211817119.png)
 
-原因是：https://github.com/nodejs/issues 从v18开始，Nodejs 不再支持 centos7 和其他一些 Linux 发行版，因为 glibc 版本不兼容。
+原因是：https://github.com/nodejs/issues 从 v18 开始，Nodejs 不再支持 centos7 和其他一些 Linux 发行版，因为 glibc 版本不兼容。
 
-这里我改成 Ubuntu22.4 版本安装 node22.3.0 版本，同样执行上述步骤过程，执行结果如下图
+这里我改成 Ubuntu 22.04 版本安装 node22.3.0 版本，同样执行上述步骤过程，执行结果如下图
 
 ![image-20240813214105568](./images/image-20240813214105568.png)
 
 ## 四、源代码安装
 
-1、在 nginx 官网下载 nginx 源代码包，然后利用远程连接工具上传nginx压缩包，以安装 nginx 为例
+在 nginx 官网下载 nginx 源代码包，然后利用远程连接工具上传 nginx 压缩包，以安装 nginx 为例
 
 ![image-20240813200205960](./images/image-20240813200205960.png)
 
-2、解压 tar.gz 文件
+解压 tar.gz 文件
 
 ```bash
 tar zxvf nginx-1.26.1.tar.gz
 ```
 ![image-20240813200502742](./images/image-20240813200502742.png)
 
-3、进入到nginx-1.26.1的文件夹中，找到 `configure 文件执行预编译脚本`
+进入到 nginx-1.26.1 的文件夹中，找到 `configure 文件执行预编译脚本`
 
 ![image-20240813200616555](./images/image-20240813200616555.png)
 
-4、安装nginx执行环境
+安装 nginx 执行环境
 
-> 由于nginx是C++编写执行的,可能在liunx中缺少相关C语言的相关执行环境
+> 由于 nginx 是 C++ 编写执行的，可能在 liunx 中缺少相关C语言的相关执行环境
 
-这里使用yum 进行安装 gcc
+这里使用 yum 进行安装 gcc
 
 ```bash
 yum install -y gcc
@@ -148,23 +146,23 @@ yum install -y gcc
 
 ![image-20240813201045763](./images/image-20240813201045763.png)
 
-需要再安装pcre 和 pcre-devel
+需要再安装 pcre 和 pcre-devel
 
 ```bash
 yum install -y pcre pcre-devel
 ```
 
-执行安装完成之后，再次执行 `./configure --prefix=/usr/local/nginx`,发现缺少zlib库
+执行安装完成之后，再次执行 `./configure --prefix=/usr/local/nginx`，发现缺少 zlib 库
 
 ![image-20240813201225010](./images/image-20240813201225010.png)
 
-需要安装zlib和zlib-devel
+需要安装 zlib 和 zlib-devel
 
 ```bash
 yum install -y zlib zlib-devel
 ```
 
-安装完成之后再次执行`./configure --prefix=/usr/local/nginx`，出现下列图示，说明执行编译完成
+安装完成之后再次执行 `./configure --prefix=/usr/local/nginx`，出现下列图示，说明执行编译完成
 
 ![image-20240813201418044](./images/image-20240813201418044.png)
 
@@ -178,7 +176,7 @@ make
 make install
 ```
 
-执行完成之后，进入`/usr/local/nginx`路径查看
+执行完成之后，进入 `/usr/local/nginx` 路径查看
 
 ![image-20240813201623240](./images/image-20240813201623240.png)
 
