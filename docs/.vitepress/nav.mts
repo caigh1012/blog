@@ -2,7 +2,7 @@ export default [
   {
     text: '编程',
     items: [
-      { text: 'JavaScript', link: '/coding/javascript/reference/index' },
+      { text: 'JavaScript', link: '/coding/javascript/javascript/reference/index' },
       { text: 'TypeScript', link: '/coding/typescript/basic/index' },
       { text: 'Node', link: '/coding/node/node/index' },
       { text: 'Flutter', link: '/coding/flutter/flutter-window-dev/index' },

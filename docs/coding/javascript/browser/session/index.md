@@ -95,7 +95,7 @@ server:
 
 🔔注意：由于是在同一台电脑上所以项目A的端口和项目B的端口不一样
 
-### 三、同根域名下不同二级子域名的Session共享（cookie-session-login-02）
+### 二、同根域名下不同二级子域名的Session共享（cookie-session-login-02）
 ```bash
 # 示例：项目A和项目B 共享session
 aaa.example.com # 项目A
