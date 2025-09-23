@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Quick view
-      link: /markdown-examples
+      link: /blog/compile/ast/
   image:
       src: /code.svg
       alt: VitePress
