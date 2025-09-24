@@ -104,7 +104,7 @@ export default {
   '/coding/node/': [
     { text: 'Node.js快速入门', link: '/coding/node/node/index' },
     { text: 'require模块加载机制', link: '/coding/node/require/index' },
-    { text: '模块化对比', link: '/coding/node/require/index' },
+    { text: 'ESM与CJS区别', link: '/coding/node/esm-cjs/index' },
     { text: '密码学', link: '/coding/node/crypto/index' },
   ],
   '/coding/rust/': [
