@@ -77,8 +77,8 @@ export default {
       items: [
         { text: '浏览器加载JavaScript方式', link: '/coding/javascript/browser/load/index' },
         {
-          text: '浏览器import模块加载机制',
-          link: '/coding/javascript/browser/cookie/index',
+          text: 'ES模块的工作原理（浏览器环境）',
+          link: '/coding/javascript/browser/esmodule/index',
         },
         { text: 'V8是如何执行JavaScript代码', link: '/coding/javascript/browser/v8/index' },
         { text: '浏览器缓存', link: '/coding/javascript/browser/http/index' },
