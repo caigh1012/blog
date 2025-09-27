@@ -64,6 +64,7 @@ export default {
       items: [
         { text: '值传递和引用传递', link: '/coding/javascript/javascript/reference/index' },
         { text: '正则表达式', link: '/coding/javascript/javascript/regexp' },
+        { text: 'history对象', link: '/coding/javascript/javascript/history' },
         { text: '预解析与变量提升', link: '/coding/javascript/javascript/pre-parser' },
         { text: '作用域和作用域链', link: '/coding/javascript/javascript/scope/index' },
         { text: 'this指向', link: '/coding/javascript/javascript/this' },

@@ -1042,5 +1042,62 @@ optimization: {
 },
 ```
 
+## 七、Webpack中核心概念理解
+
+### 7.1、模块
+
+模块是代码组织的基本单位。在 Webpack 眼里，每一个文件都是一个模块。
+
+像：
+
++ ES6 Modules：import 导入文件
++ CommonJS：require 导入文件
++ css：@import 导入文件
++ 图片、字体等静态资源
+
+特点：模块之间通过依赖关系（`import/require`）形成一张巨大的**依赖图**。
+
+### 7.2、Chunk（代码块）
+
+Chunk 是 Webpack 在打包过程中的一个中间概念。它是 `一组 Modules（模块） 的集合`，是连接 Module 和 Bundle 的桥梁。
+
+1. 入口文件：每一个在 `webpack.config.js` 中配置的 `entry` 都会生成一个 Chunk。
+2. 动态导入：使用 `import()`语法异步加载的模块，会生成一个新的 Chunk。
+3. 代码分割：通过 `optimization.splitChunks` 配置，将公共的模块或来自 `node_modules` 的模块分离到独立的 Chunk 中（例如 `vendors~main.js`）。
+
+特点：Chunk 是编译和优化的单位。Webpack 会对每个 Chunk 执行编译、压缩、Tree-shaking 等操作。
+
+### 7.3、Bundle（包/捆）
+
+Bundle 是 Chunk `经过处理（编译、压缩、打包等）后得到的最终产物`，也就是最终输出到 `dist` 目录下的一个或多个文件。
+
+关系：在绝大多数情况下，`一个 Chunk 会对应一个 Bundle`。但也有一些例外：
+
++ 一个 Chunk 可以被提取成多个 Bundle，例如通过 `mini-css-extract-plugin` 将 CSS 从 JS Chunk 中提取成独立的 CSS Bundle。
+
+- 多个 Chunk 也可能被合并成一个 Bundle（虽然不常见）。
+
+### 7.4、hash相关的生成
+
+#### 7.4.1、项目级hash（hash）
+
+范围：整个项目每次构建都会生成一个唯一的 hash。
+
+特点：只要项目中 `任何一个文件` 发生改变，这次构建生成的所有 Bundle 文件的 `[hash]` 值都会改变。
+
+#### 7.4.2、Chunk级hash（chunkhash）
+
+范围：每个 Chunk 都有自己的 hash。
+
+特点：只有属于该 Chunk 的模块内容发生变化时，其对应的 Bundle 的 `[chunkhash]` 才会改变。这非常有利于缓存，因为你可以只更新发生变化的文件。
+
+注意：如果 CSS 被 JS 引入且没有被提取出来，它们属于同一个 Chunk，因此会共享同一个 `chunkhash`。
+
+7.4.3、内容级hash（contenthash）
+
+范围：每个 Bundle 文件根据其自身内容生成 hash。
+
+特点：只有当文件自身的**内容**发生变化时，`[contenthash]` 才会改变。这是最精确的缓存控制方式。
+
 
 
