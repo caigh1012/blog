@@ -3,10 +3,10 @@ export default [
     text: 'Windows操作系统',
     items: [{ text: 'Win10将动态分区转成基本分区', link: '/os/window/win10-os-install' }],
   },
-  {
-    text: 'MacOS操作系统',
-    items: [{ text: 'MacOS操作系统', link: '/os/macos/macos' }],
-  },
+  // {
+  //   text: 'MacOS操作系统',
+  //   items: [{ text: 'MacOS操作系统', link: '/os/macos/macos' }],
+  // },
   {
     text: 'Linux操作系统',
     items: [

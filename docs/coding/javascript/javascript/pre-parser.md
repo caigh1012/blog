@@ -4,7 +4,7 @@ outline: deep
 
 # 预解析与变量提升
 
-在 [V8如何执行JavaScript代码](./v8/index.md) 中讲述了 V8 执行 JavaScript 代码的基本流程，本文将深入探讨预解析（Pre-Parsing）和变量提升（Hoisting）的概念。
+在 [V8如何执行JavaScript代码](../browser/v8/index.md) 中讲述了 V8 执行 JavaScript 代码的基本流程，本文将深入探讨预解析（Pre-Parsing）和变量提升（Hoisting）的概念。
 
 在预解析过程中：
 
