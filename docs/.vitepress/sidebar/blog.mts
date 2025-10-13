@@ -39,13 +39,13 @@ export default {
    * 前端框架核心原理分析
    */
   '/blog/framework-principle/': [
-    { text: 'Singal原理分析', link: '/blog/framework-principle/signals/index' },
-    { text: '虚拟Dom原理分析', link: '/blog/framework-principle/vnode/index' },
+    { text: 'Singal源码分析', link: '/blog/framework-principle/signals/index' },
+    // { text: '虚拟Dom原理分析', link: '/blog/framework-principle/vnode/index' },
     { text: 'React合成事件', link: '/blog/framework-principle/vnode/index' },
-    { text: 'zustand源码', link: '/blog/framework-principle/vnode/index' },
     { text: 'React的Fiber架构', link: '/blog/framework-principle/vnode/index' },
     { text: 'React渲染原理', link: '/blog/framework-principle/vnode/index' },
     { text: 'React-Router原理分析', link: '/blog/framework-principle/vnode/index' },
+    { text: 'zustand源码', link: '/blog/framework-principle/vnode/index' },
   ],
   /**
    * 源码分析
