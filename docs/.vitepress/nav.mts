@@ -19,7 +19,7 @@ export default [
       { text: '前端框架使用', link: '/blog/framework/angular/angular16/index' },
       { text: '前端构建工具', link: '/blog/build/webpack/base/index' },
       { text: '框架核心原理', link: '/blog/framework-principle/signals' },
-      { text: '常用库源码解析', link: '/blog/source-code-analysis/ant-design' },
+      { text: '常用库源码解析', link: '/blog/source-code-analysis/axios/index' },
       { text: '前端图表', link: '/blog/graphics/svg' },
       { text: '响应式编程', link: '/blog/rxjs/rxjs' },
       { text: 'DevOps', link: '/blog/devops/devops-blog-v1.0' },

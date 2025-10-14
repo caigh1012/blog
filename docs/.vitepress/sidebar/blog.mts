@@ -51,9 +51,9 @@ export default {
    * 源码分析
    */
   '/blog/source-code-analysis/': [
-    { text: 'ant-design源码', link: '/blog/source-code-analysis/ant-design' },
-    { text: 'axios源码', link: '/blog/source-code-analysis/ant-design' },
-    { text: 'Promise源码', link: '/blog/source-code-analysis/ant-design' },
+    { text: 'axios源码分析', link: '/blog/source-code-analysis/axios/index' },
+    { text: 'antd源码分析', link: '/blog/source-code-analysis/ant-design/index' },
+    // { text: 'Promise实现原理分析', link: '/blog/source-code-analysis/ant-design' },
   ],
   /**
    * DevOps
