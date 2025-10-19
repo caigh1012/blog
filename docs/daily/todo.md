@@ -9,4 +9,6 @@ outline: deep
 3. 框架源码（Reeact-Router源码、zustand源码、antd架构设计和源码）
 4. Flutter （Flutter项目实战文档编写）
 5. Flutter配合java的开源全栈项目文档
-6. Rust编程学习（进行中）
+6. 完善项目搭建模板
+7. 完善Flutter与H5交互的 SDK
+8. Rust编程学习（进行中）
