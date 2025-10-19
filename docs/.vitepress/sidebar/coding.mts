@@ -78,9 +78,9 @@ export default {
         { text: 'Proxy代理与Reflect', link: '/coding/javascript/javascript/proxy' },
         { text: 'Promise原理分析', link: '/coding/javascript/javascript/promise' },
         { text: '迭代器和生成器', link: '/coding/javascript/javascript/b' },
-        { text: '事件循环', link: '/coding/javascript/javascript/f' },
-        { text: '执行栈和执行上下文', link: '/coding/javascript/javascript/e' },
-        { text: '垃圾回收机制', link: '/coding/javascript/javascript/g' },
+        // { text: '事件循环', link: '/coding/javascript/javascript/f' },
+        // { text: '执行栈和执行上下文', link: '/coding/javascript/javascript/e' },
+        // { text: '垃圾回收机制', link: '/coding/javascript/javascript/g' },
         { text: '正则表达式', link: '/coding/javascript/javascript/regexp' },
       ],
     },
@@ -101,6 +101,7 @@ export default {
     {
       text: '浏览器',
       items: [
+        // { text: '浏览器渲染原理', link: '/coding/javascript/browser/load/index' },
         { text: '浏览器加载JavaScript方式', link: '/coding/javascript/browser/load/index' },
         {
           text: 'ES模块的工作原理（浏览器环境）',

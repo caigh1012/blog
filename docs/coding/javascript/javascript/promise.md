@@ -1,4 +1,8 @@
-## Promise实现原理分析
+---
+outline: deep
+---
+
+# Promise实现原理分析
 
 ## 一、Promise实现原理分析
 

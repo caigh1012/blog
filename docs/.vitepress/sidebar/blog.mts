@@ -44,16 +44,15 @@ export default {
     { text: 'React合成事件', link: '/blog/framework-principle/vnode/index' },
     { text: 'React的Fiber架构', link: '/blog/framework-principle/vnode/index' },
     { text: 'React渲染原理', link: '/blog/framework-principle/vnode/index' },
-    { text: 'React-Router原理分析', link: '/blog/framework-principle/vnode/index' },
-    { text: 'zustand源码', link: '/blog/framework-principle/vnode/index' },
+    // { text: 'React-Router原理分析', link: '/blog/framework-principle/vnode/index' },
+    // { text: 'zustand源码', link: '/blog/framework-principle/vnode/index' },
   ],
   /**
    * 源码分析
    */
   '/blog/source-code-analysis/': [
     { text: 'axios源码分析', link: '/blog/source-code-analysis/axios/index' },
-    { text: 'antd源码分析', link: '/blog/source-code-analysis/ant-design/index' },
-    // { text: 'Promise实现原理分析', link: '/blog/source-code-analysis/ant-design' },
+    // { text: 'antd源码分析', link: '/blog/source-code-analysis/ant-design/index' },
   ],
   /**
    * DevOps
