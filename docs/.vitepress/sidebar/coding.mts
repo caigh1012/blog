@@ -77,7 +77,7 @@ export default {
         { text: '链式调用', link: '/coding/javascript/javascript/chain-call' },
         { text: 'Proxy代理与Reflect', link: '/coding/javascript/javascript/proxy' },
         { text: 'Promise原理分析', link: '/coding/javascript/javascript/promise' },
-        { text: '迭代器和生成器', link: '/coding/javascript/javascript/b' },
+        // { text: '迭代器和生成器', link: '/coding/javascript/javascript/b' },
         // { text: '事件循环', link: '/coding/javascript/javascript/f' },
         // { text: '执行栈和执行上下文', link: '/coding/javascript/javascript/e' },
         // { text: '垃圾回收机制', link: '/coding/javascript/javascript/g' },
