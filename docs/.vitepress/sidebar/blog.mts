@@ -41,8 +41,7 @@ export default {
   '/blog/framework-principle/': [
     { text: 'Singal源码分析', link: '/blog/framework-principle/signals/index' },
     // { text: '虚拟Dom原理分析', link: '/blog/framework-principle/vnode/index' },
-    { text: 'React的Fiber架构原理', link: '/blog/framework-principle/vnode/index' },
-    { text: 'React渲染原理', link: '/blog/framework-principle/vnode/index' },
+    { text: 'React渲染原理', link: '/blog/framework-principle/react-render/index' },
     { text: 'React合成事件', link: '/blog/framework-principle/react-synthetic-event/index' },
 
     // { text: 'React-Router原理分析', link: '/blog/framework-principle/vnode/index' },
