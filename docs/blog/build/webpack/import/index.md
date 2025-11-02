@@ -463,6 +463,16 @@ printFunc();
 })();
 ```
 
+### 2.6、工程化import的本质
+
+工程化 import 导入实际是通过 Object.defineProperty 来模拟 ES Module，
+
+```javascript
+Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+```
+
+其本质还是 “地址赋值引用”，而非浏览器加载 ES Module 的真正引用传递
+
 ## 三、动态import导入分析
 
 调整 main.js 入口文件，调整如下
