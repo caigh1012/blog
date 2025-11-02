@@ -110,5 +110,83 @@ const cloneDeepObj = cloneDeep(obj);
 console.log(cloneDeepObj, 'cloneDeep');
 ```
 
+## 四、处理深拷贝的循环引用
 
+使用 WeakMap 追踪已拷贝对象
+
+```javascript
+/**
+ * 深拷贝的循环引用问题
+ */
+
+function cloneDeep(source, cache = new WeakMap()) {
+  // 1.处理基本类型 和 null
+  if (typeof source !== 'object' || source === null) return source;
+
+  if (cache.has(source)) {
+    return cache.get(source); // 返回已拷贝的对象
+  }
+
+  console.log(cache);
+
+  const tag = Object.prototype.toString.call(source).slice(8, -1);
+
+  let result;
+
+  // 2.处理其他引用类型
+  switch (tag) {
+    case 'Date':
+      result = new Date(source.getTime());
+    case 'RegExp': {
+      result = new RegExp(source.source, source.flags);
+      result.lastIndex = source.lastIndex;
+    }
+    case 'Map': {
+      result = new Map();
+      source.forEach((v, k) => result.set(k, cloneDeep(v)));
+    }
+    case 'Set': {
+      result = new Set();
+      source.forEach((v) => result.add(cloneDeep(v)));
+    }
+  }
+
+  // 3.处理对象和数组
+  const isArray = tag === 'Array';
+  const isObject = tag === 'Object';
+
+  let bool = isObject || isArray;
+  result = isArray ? [] : {};
+  cache.set(source, result);
+
+  if (bool) {
+    for (const key in source) {
+      if (source.hasOwnProperty(key)) {
+        result[key] = cloneDeep(source[key], cache);
+      }
+    }
+  }
+
+  return result;
+}
+
+let original = {
+  a: 1,
+  b: {
+    c: 2,
+  },
+};
+
+original.b.d = original; // 创建循环引用
+
+let cloned = cloneDeep(original);
+
+console.log(cloned); // 深拷贝后的对象，没有栈溢出错误
+console.log(cloned.b.d === cloned); // true，保持了循环引用关系
+```
+
+当使用 JSON.stringify 和 JSON.parse 会有局限性：
+
+1. 无法拷贝函数、Date、RegExp、等非 JSON 安全的对象
+2. 无法处理循环引用，遇到循环引用回抛出错误
 
