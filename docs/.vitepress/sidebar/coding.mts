@@ -73,6 +73,7 @@ export default {
         { text: 'this指向', link: '/coding/javascript/javascript/this' },
         { text: '高阶函数', link: '/coding/javascript/javascript/higher-function' },
         { text: '闭包', link: '/coding/javascript/javascript/closure' },
+        { text: '防抖和节流', link: '/coding/javascript/javascript/debounce-throttle' },
         { text: '函数柯里化', link: '/coding/javascript/javascript/currying' },
         { text: '链式调用', link: '/coding/javascript/javascript/chain-call' },
         { text: 'Proxy代理与Reflect', link: '/coding/javascript/javascript/proxy' },

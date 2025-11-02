@@ -529,6 +529,8 @@ console.log('end');
 
 ### 2.4、async、await和Promise和宏任务结合
 
+题 1 如下
+
 ```javascript
 async function async1() {
   console.log('async1 start');
@@ -571,7 +573,60 @@ console.log('script end');
  */
 ```
 
+题 2 如下
 
+```javascript
+async function asy1() {
+  console.log(1);
+  await asy2();
+  console.log(2);
+}
+
+const asy2 = async () => {
+  await setTimeout(() => {
+    Promise.resolve().then(() => {
+      console.log(3);
+    });
+    console.log(4);
+  }, 0);
+};
+
+const asy3 = async () => {
+  Promise.resolve().then(() => {
+    console.log(6);
+  });
+};
+
+asy1();
+console.log(7);
+asy3();
+
+// 输出：1 7 6 2 4 3
+```
+
+题 3 如下
+
+```javascript
+async function asy1() {
+  console.log(1);
+  await asy2();
+  console.log(2);
+}
+
+async function asy2() {
+  console.log(3);
+  let a = await Promise.resolve(1).then(() => {
+    console.log(6);
+  });
+  console.log(a, 'a'); // undefined
+  console.log(5);
+}
+
+asy1();
+console.log(7);
+
+// 输出：1 3 7 6 5 2
+```
 
 
 
