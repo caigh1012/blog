@@ -30,7 +30,7 @@ HTML 提供了定义标题、段落、表格等等内容的元素。与此类似
 
 对于所有元素，SVG 使用的坐标系统或者说网格系统。这种坐标系统是以页面的左上角为 (0,0) 坐标点，坐标以像素为单位，x 轴正方向是向右，y 轴正方向是向下。
 
-![image-20250714193847137](images/svg_default_grid.png)
+![image-20250714193847137](images/canvas_default_grid.png)
 
 注意：这和你小时候所教的绘图方式是相反的。但是在 HTML 文档中，元素都是用这种方式定位的。
 
@@ -522,10 +522,5 @@ CSS 可以利用 style 属性插入元素的行间，或者可以移动到特殊
 | Adobe Illustrator | [www.adobe.com/products/illustrator](https://www.adobe.com/products/illustrator.html) |
 | Apache Batik      | [xmlgraphics.apache.org/batik/](https://xmlgraphics.apache.org/batik/) |
 | Snap.svg          | [snapsvg.io](http://snapsvg.io/)                             |
-
-
-
-### 
-
 
 
