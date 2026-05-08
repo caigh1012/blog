@@ -83,6 +83,8 @@ export default {
         // { text: '执行栈和执行上下文', link: '/coding/javascript/javascript/e' },
         // { text: '垃圾回收机制', link: '/coding/javascript/javascript/g' },
         { text: '正则表达式', link: '/coding/javascript/javascript/regexp' },
+        { text: 'Websocket', link: '/coding/javascript/javascript/websocket' },
+        { text: 'Web-Worker', link: '/coding/javascript/javascript/web-worker' },
       ],
     },
     {

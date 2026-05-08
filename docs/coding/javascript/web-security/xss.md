@@ -229,7 +229,22 @@ XSS 攻击是先注入再执行，因此要防止注入、防止执行。
 
 ### 3.2、输出编码
 
-将用户输入通过转义后再输出到页面，例如：将 `&`, `<`, `>`, `"`, `'` 分别转换为 `&`, `<`, `>`, `"`, `'`。
+将用户输入通过转义后再输出到页面，例如：将 `&`, `<`, `>`, `"`, `'` 分别转换为 `&amp;`, `&lt;`, `&gt;`, `&quot;`, `&#039;`。
+
+```javascript
+
+function escapeHtml(unsafe) {
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+}
+ 
+var user_input = "<script>alert('XSS');</script>";
+var safe_html = escapeHtml(user_input);
+```
 
 ### 3.3、使用内容安全策略（CSP）
 
