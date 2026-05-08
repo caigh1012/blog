@@ -1,8 +1,4 @@
----
-outline: deep
----
-
-# 浅拷贝和深拷贝
+## 浅拷贝和深拷贝
 
 ## 一、引用地址赋值示例
 
@@ -116,9 +112,8 @@ console.log(cloneDeepObj, 'cloneDeep');
 
 ```javascript
 /**
- * 深拷贝的循环引用问题
+ * 深拷贝
  */
-
 function cloneDeep(source, cache = new WeakMap()) {
   // 1.处理基本类型 和 null
   if (typeof source !== 'object' || source === null) return source;
@@ -143,11 +138,13 @@ function cloneDeep(source, cache = new WeakMap()) {
     }
     case 'Map': {
       result = new Map();
-      source.forEach((v, k) => result.set(k, cloneDeep(v)));
+      cache.set(source, result);
+      source.forEach((v, k) => result.set(k, cloneDeep(v, cache)));
     }
     case 'Set': {
       result = new Set();
-      source.forEach((v) => result.add(cloneDeep(v)));
+      cache.set(source, result);
+      source.forEach((v) => result.add(cloneDeep(v, cache)));
     }
   }
 

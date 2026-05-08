@@ -64,5 +64,51 @@ try {
 }
 ```
 
+链式编程带时间间隔执行
+
+```javascript
+/**
+ * 链式编程升级
+ */
+class TaskQueue {
+  constructor() {
+    this._queue = [];
+  }
+
+  // 添加一个任务（同步/异步函数）
+  do(fn) {
+    this._queue.push({ type: 'task', fn });
+    return this;
+  }
+
+  // 添加一个延迟
+  wait(ms) {
+    this._queue.push({ type: 'wait', ms });
+    return this;
+  }
+
+  // 启动队列，返回 Promise，可等待全部完成
+  async run() {
+    for (const item of this._queue) {
+      if (item.type === 'task') {
+        await item.fn();
+      } else if (item.type === 'wait') {
+        await new Promise((resolve) => setTimeout(resolve, item.ms));
+      }
+    }
+  }
+
+  log(msg) {
+    return this.do(() => console.log(msg));
+  }
+}
+
+// 使用示例
+const queue = new TaskQueue().log('准备开始').wait(2000).log('2秒后执行').wait(1000).log('再1秒后执行');
+
+console.log('start');
+queue.run().then(() => console.log('全部完成'));
+```
+
 
 
