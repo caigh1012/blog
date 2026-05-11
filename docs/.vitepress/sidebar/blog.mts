@@ -44,7 +44,7 @@ export default {
     { text: 'React渲染原理', link: '/blog/framework-principle/react-render/index' },
     { text: 'React合成事件', link: '/blog/framework-principle/react-synthetic-event/index' },
     { text: 'React-Router原理分析', link: '/blog/framework-principle/history/index' },
-    // { text: 'zustand源码', link: '/blog/framework-principle/vnode/index' },
+    { text: 'zustand源码', link: '/blog/framework-principle/zustand/index' },
   ],
   /**
    * 源码分析
