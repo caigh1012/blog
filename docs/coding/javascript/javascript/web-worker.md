@@ -140,7 +140,7 @@ expose(new ComlinkWorker());
 
 组件中的使用
 
-```react
+```tsx
 useEffect(() => {
   comlinkWorker.inc().then((res) => {
     console.log(res);

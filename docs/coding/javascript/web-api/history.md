@@ -107,7 +107,6 @@ history.pushState(state, title, url); // 往 history 栈栈顶压入一条新的
         history.replaceState
       </div>
     </div>
-    <script src="./src/main.js"></script>
     <script>
       // console.log(document.defaultView)
 
@@ -244,6 +243,80 @@ class HistoryRouter {
     window.addEventListener('popstate', (e) => {
       const path = e.state.path;
       this.updateUrl(path);
+    });
+  }
+}
+
+new HistoryRouter('container');
+```
+
+如果需要监听 `pushState` 、`replaceState`  可以进行自定义事件进行
+
+```javascript
+// 保存原始方法
+const originalPushState = history.pushState;
+const originalReplaceState = history.replaceState;
+
+// 重写 pushState
+history.pushState = function (...args) {
+  const { 0: data, 1: title, 2: path } = args;
+
+  // 先执行原本的逻辑
+  originalPushState.call(this, data, title, path);
+  // 派发自定义事件
+  window.dispatchEvent(new CustomEvent('pushstate', { detail: args }));
+};
+
+// 重写 replaceState
+history.replaceState = function (...args) {
+  const { 0: data, 1: title, 2: path } = args;
+  originalReplaceState.call(this, data, title, path);
+  window.dispatchEvent(new CustomEvent('replacestate', { detail: args }));
+};
+
+class HistoryRouter {
+  constructor(dom) {
+    this.dom = document.getElementById(dom);
+    this.listenClick();
+    this.listen();
+  }
+
+  listenClick() {
+    window.addEventListener('click', (e) => {
+      e.preventDefault();
+      const path = e.target.getAttribute('data-path');
+      if (path) {
+        window.history.pushState({ path: path }, 'title', path);
+      }
+    });
+  }
+
+  updateUrl(path) {
+    if (path) {
+      this.dom.innerHTML = '当前组件' + path;
+    } else {
+      this.dom.innerHTML = '';
+    }
+  }
+
+  // 通过监听 popstate 事件来处理 history.back()或 history.forward() 时的页面渲染
+  listen() {
+    window.addEventListener('popstate', (e) => {
+      const path = e.state?.path;
+      this.updateUrl(path);
+    });
+
+    // 现在你就能监听了
+    window.addEventListener('pushstate', (e) => {
+      console.log('pushState 被调用，参数:', e.detail);
+      const [data] = e.detail;
+      this.updateUrl(data.path);
+    });
+
+    window.addEventListener('replacestate', (e) => {
+      console.log('replaceState 被调用，参数:', e.detail);
+      const [data] = e.detail;
+      this.updateUrl(data.path);
     });
   }
 }
