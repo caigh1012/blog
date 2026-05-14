@@ -89,17 +89,123 @@ const user = new User('John');
 console.log(user.getName()); // 输出: John
 ```
 
-### 1.5、事件绑定的this
+### 1.5、this指向的 “特殊情况”
 
-当一个函数作为事件处理程序被调用时，`this` 通常指向触发事件的元素。
+在 JavaScript 里，`this` 的指向完全取决于函数被调用的方式，而不是它被定义的位置（箭头函数除外）。
 
 ```javascript
 /**
- * 事件绑定this
+ * this指向的 “特殊情况”
  */
-document.getElementById('root').addEventListener('click', function () {
-  console.log(this);
+
+// setTimeout中的延迟执行代码中的 this 永远都指向 window（严格模式下）
+// 默认绑定
+setTimeout(function () {
+  console.log(this); // 浏览器非严格模式：window；严格模式：undefined
+}, 0);
+
+// map/filter 回调：也是默认绑定，但可以传入 thisArg 显式绑定。
+// 如果不传，内部实现类似于 callback(item, index, arr)，所以 this 指向与 setTimeout 类似
+[1, 2, 3].map(function () {
+  console.log(this); // 输出： window
 });
+
+// 内部大致实现原理
+Array.prototype.myMap = function (callback, thisArg) {
+  const result = [];
+  for (let i = 0; i < this.length; i++) {
+    // 如果传入了 thisArg，就用它作为 this；否则传 undefined
+    result.push(callback.call(thisArg, this[i], i, this));
+  }
+  return result;
+};
+
+// 事件监听回调：显式绑定。浏览器事件系统在调用监听器时，
+// 会将 this 设置为绑定事件的元素（即 event.currentTarget），相当于 callback.call(element, event)。举例。
+document.getElementById('root').addEventListener('click', function () {
+  console.log(this); // 元素对象
+});
+```
+
+如果将 ` function () {} ` 换成箭头函数会有差别，this 继承外围函数作用域的 this
+
+```javascript
+setTimeout(() => {
+  console.log(this); // 输出：window
+}, 0);
+
+[1, 2, 3].map(() => {
+  console.log(this); // 输出：window
+});
+
+document.getElementById('root').addEventListener('click', () => {
+  console.log(this); // 输出：window
+});
+```
+
+对于 setTimeout 的匿名函数和数组 map、filter 等函数的匿名函数作为回调函数，this 始终都是 window
+
+```javascript
+var name = 'John';
+
+var obj = {
+  name: 'Jack',
+  getName: function () {
+    console.log(this); // 输出: {  name: 'Jack' }
+    setTimeout(function () {
+      console.log(this.name, 'function () {}'); // 输出：John (指向window)
+    });
+  },
+  getNameArrowFn: function () {
+    console.log(this); // 输出: {  name: 'Jack' }
+    setTimeout(() => {
+      console.log(this.name, '() => {}'); // 输出： Jack
+    }, 0);
+  },
+  arrayMap: function () {
+    console.log(this); // 输出: {  name: 'Jack' }
+    [1, 2, 3].map(function () {
+      console.log(this.name); // 输出：John (指向window)
+    });
+  },
+  arrayMapArrowFn: function () {
+    console.log(this); // 输出: {  name: 'Jack' }
+    [1, 2, 3].map(() => {
+      console.log(this.name); // 输出： Jack
+    });
+  },
+};
+
+obj.getName();
+obj.getNameArrowFn();
+
+obj.arrayMap();
+obj.arrayMapArrowFn();
+```
+
+对于返回的匿名函数（非箭头函数），this 指向却决于当前执行上下文的 this
+
+```javascript
+var obj = {
+  name: 'John',
+};
+
+var obj1 = {
+  name: 'Jack',
+  getThis: function () {
+    console.log(this); // 在浏览器环境中，this指向 obj1 对象
+    return function () {
+      console.log(this); // 当前 this 指向取决于调用的执行上下文
+    };
+  },
+};
+
+var foo = obj1.getThis();
+
+foo(); // 输出：window
+
+obj.foo = obj1.getThis();
+obj.foo(); // 输出：{ name: "John", foo: f() }
 ```
 
 ### 1.6、箭头函数
@@ -149,107 +255,6 @@ obj1.method()();
 
 ```javascript
 obj1.method.call(this)(); // 输出 window
-```
-
-### 1.7、匿名函数的this指向
-
-匿名函数在 JavaScript 中是一种没有具体函数名的函数。
-
-以下是匿名函数的三种使用
-
-```javascript
-setTimeout(function () {
-  console.log(this); // 输出：window
-}, 0);
-
-[1, 2, 3].map(function () {
-  console.log(this); // 输出：window
-});
-
-document.getElementById('root').addEventListener('click', function () {
-  console.log(this); // 输出：元素对象
-});
-```
-
-如果将 ` function () {} ` 换成箭头函数会有差别，this 继承外围函数作用域的 this
-
-```javascript
-setTimeout(() => {
-  console.log(this); // 输出：window
-}, 0);
-
-[1, 2, 3].map(() => {
-  console.log(this); // 输出：window
-});
-
-document.getElementById('root').addEventListener('click', () => {
-  console.log(this); // 输出：window
-});
-```
-
-对于 setTimeout 的匿名函数和数组 map、filter 等函数的匿名函数作为回调函数，this 始终都是 window
-
-```javascript
-var name = 'John';
-
-var obj = {
-  name: 'Jack',
-  getName: function () {
-    console.log(this); // 输出: {  name: 'Jack' }
-    setTimeout(function () {
-      console.log(this.name, 'function () {}'); // 输出：John
-    });
-  },
-  getNameArrowFn: function () {
-    console.log(this); // 输出: {  name: 'Jack' }
-    setTimeout(() => {
-      console.log(this.name, '() => {}'); // 输出： Jack
-    }, 0);
-  },
-  arrayMap: function () {
-    console.log(this); // 输出: {  name: 'Jack' }
-    [1, 2, 3].map(function () {
-      console.log(this.name); // 输出：John
-    });
-  },
-  arrayMapArrowFn: function () {
-    console.log(this); // 输出: {  name: 'Jack' }
-    [1, 2, 3].map(() => {
-      console.log(this.name); // 输出： Jack
-    });
-  },
-};
-
-obj.getName();
-obj.getNameArrowFn();
-
-obj.arrayMap();
-obj.arrayMapArrowFn();
-```
-
-对于返回的匿名函数（非箭头函数），this 指向却决于当前执行上下文的 this
-
-```javascript
-var obj = {
-  name: 'John',
-};
-
-var obj1 = {
-  name: 'Jack',
-  getThis: function () {
-    console.log(this); // 在浏览器环境中，this指向 obj1 对象
-    return function () {
-      console.log(this); // 当前 this 指向取决于调用的执行上下文
-    };
-  },
-};
-
-var foo = obj1.getThis();
-
-foo(); // 输出：window
-
-obj.foo = obj1.getThis();
-obj.foo(); // 输出：{ name: "John", foo: f() }
 ```
 
 ## 二、bind、call、apply函数改变this指向
