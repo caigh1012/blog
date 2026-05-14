@@ -4,60 +4,6 @@ export default {
     { text: 'TypeScript高级进阶', link: '/coding/typescript/advance/index' },
     { text: 'tsconfig.json配置讲解', link: '/coding/typescript/tsconfig/index' },
   ],
-  '/coding/java/': [
-    { text: 'Java学习路线', link: '/coding/java/index' },
-    { text: 'Java在Window10环境安装', link: '/coding/java/java-window-install/index' },
-    { text: 'Java快速入门', link: '/coding/java/java-se/index' },
-    { text: 'MySQL快速入门', link: '/coding/java/mysql/index' },
-    { text: 'JDBC连接数据库', link: '/coding/java/jdbc/index' },
-    {
-      text: 'Maven构建工具',
-      items: [
-        { text: 'Maven在Window10安装', link: '/coding/java/maven/maven-window-install/index' },
-        { text: 'Maven构建工具使用', link: '/coding/java/maven/maven/index' },
-        { text: 'Maven私服仓库搭建', link: '/coding/java/maven/nexus/index' },
-        { text: '不使用Maven构建jar包', link: '/coding/java/maven/no-maven-build-jar/index' },
-        { text: '不使用Maven构建war包', link: '/coding/java/maven/no-maven-build-war/index' },
-        { text: 'Maven构建jar包', link: '/coding/java/maven/maven-build-jar/index' },
-        { text: 'Maven构建war包', link: '/coding/java/maven/maven-build-war/index' },
-      ],
-    },
-    {
-      text: 'Mybatis',
-      items: [{ text: 'Mybatis快速入门', link: '/coding/java/mybatis/index' }],
-    },
-    {
-      text: 'SSM项目搭建',
-      items: [
-        { text: 'SSM注解方式搭建', link: '/coding/java/ssm/ssm-inn' },
-        { text: 'SSM的XML方式搭建', link: '/coding/java/ssm/ssm-xml' },
-      ],
-    },
-    {
-      text: 'SpringBoot',
-      items: [
-        { text: '三层架构', link: '/coding/java/springboot/three-tier' },
-        { text: 'SpringSession', link: '/coding/java/springboot/session' },
-      ],
-    },
-    {
-      text: 'Redis',
-      items: [{ text: 'Redis@7快速入门', link: '/coding/java/redis/index' }],
-    },
-    {
-      text: '微服务',
-      items: [{ text: '微服务快速入门', link: '/coding/java/microservice/index' }],
-    },
-    {
-      text: '常见字符集',
-      link: '/coding/java/unicode/index',
-    },
-  ],
-  '/coding/flutter/': [
-    { text: 'Win10搭建Flutter项目开发环境', link: '/coding/flutter/flutter-window-dev/index' },
-    { text: 'Dart快速入门', link: '/coding/flutter/dart/index' },
-    { text: 'Flutter开发Android和iOS实战', link: '/coding/flutter/flutter-app-template/index' },
-  ],
   '/coding/javascript/': [
     {
       text: 'JavaScript',
@@ -130,15 +76,78 @@ export default {
         { text: '前端存储Token方案', link: '/coding/javascript/web-security/token/index' },
       ],
     },
+    {
+      text: '模块化发展历程',
+      items: [{ text: '前端模块化发展历程', link: '/coding/javascript/modularization/index' }],
+    },
+    {
+      text: 'Node.js',
+      items: [
+        { text: 'Node.js快速入门', link: '/coding/javascript/node/node/index' },
+        { text: 'require模块加载机制', link: '/coding/javascript/node/require/index' },
+        { text: 'ESM与CJS区别', link: '/coding/javascript/node/esm-cjs/index' },
+        { text: '密码学', link: '/coding/javascript/node/crypto/index' },
+      ],
+    },
   ],
-  '/coding/node/': [
-    { text: 'Node.js快速入门', link: '/coding/node/node/index' },
-    { text: 'require模块加载机制', link: '/coding/node/require/index' },
-    { text: 'ESM与CJS区别', link: '/coding/node/esm-cjs/index' },
-    { text: '密码学', link: '/coding/node/crypto/index' },
+
+  '/coding/flutter/': [
+    { text: 'Win10搭建Flutter项目开发环境', link: '/coding/flutter/flutter-window-dev/index' },
+    { text: 'Dart快速入门', link: '/coding/flutter/dart/index' },
+    { text: 'Flutter开发Android和iOS实战', link: '/coding/flutter/flutter-app-template/index' },
   ],
+
   '/coding/rust/': [
     { text: 'Rust在Win10环境下的安装', link: '/coding/rust/rust-window-install/index' },
+  ],
+  '/coding/java/': [
+    { text: 'Java学习路线', link: '/coding/java/index' },
+    { text: 'Java在Window10环境安装', link: '/coding/java/java-window-install/index' },
+    { text: 'Java快速入门', link: '/coding/java/java-se/index' },
+    { text: 'MySQL快速入门', link: '/coding/java/mysql/index' },
+    { text: 'JDBC连接数据库', link: '/coding/java/jdbc/index' },
+    {
+      text: 'Maven构建工具',
+      items: [
+        { text: 'Maven在Window10安装', link: '/coding/java/maven/maven-window-install/index' },
+        { text: 'Maven构建工具使用', link: '/coding/java/maven/maven/index' },
+        { text: 'Maven私服仓库搭建', link: '/coding/java/maven/nexus/index' },
+        { text: '不使用Maven构建jar包', link: '/coding/java/maven/no-maven-build-jar/index' },
+        { text: '不使用Maven构建war包', link: '/coding/java/maven/no-maven-build-war/index' },
+        { text: 'Maven构建jar包', link: '/coding/java/maven/maven-build-jar/index' },
+        { text: 'Maven构建war包', link: '/coding/java/maven/maven-build-war/index' },
+      ],
+    },
+    {
+      text: 'Mybatis',
+      items: [{ text: 'Mybatis快速入门', link: '/coding/java/mybatis/index' }],
+    },
+    {
+      text: 'SSM项目搭建',
+      items: [
+        { text: 'SSM注解方式搭建', link: '/coding/java/ssm/ssm-inn' },
+        { text: 'SSM的XML方式搭建', link: '/coding/java/ssm/ssm-xml' },
+      ],
+    },
+    {
+      text: 'SpringBoot',
+      items: [
+        { text: '三层架构', link: '/coding/java/springboot/three-tier' },
+        { text: 'SpringSession', link: '/coding/java/springboot/session' },
+      ],
+    },
+    {
+      text: 'Redis',
+      items: [{ text: 'Redis@7快速入门', link: '/coding/java/redis/index' }],
+    },
+    {
+      text: '微服务',
+      items: [{ text: '微服务快速入门', link: '/coding/java/microservice/index' }],
+    },
+    {
+      text: '常见字符集',
+      link: '/coding/java/unicode/index',
+    },
   ],
   '/coding/patterns/': [{ text: '设计模式', link: '/coding/patterns/index' }],
 };

@@ -4,7 +4,6 @@ export default [
     items: [
       { text: 'JavaScript', link: '/coding/javascript/javascript/reference/index' },
       { text: 'TypeScript', link: '/coding/typescript/basic/index' },
-      { text: 'Node', link: '/coding/node/node/index' },
       { text: 'Flutter', link: '/coding/flutter/flutter-window-dev/index' },
       { text: 'Java', link: '/coding/java/index' },
       { text: 'Rust', link: '/coding/rust/rust-window-install/index' },
