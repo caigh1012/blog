@@ -10,8 +10,8 @@ hero:
       text: Quick view
       link: /blog/compile/ast/
   image:
-      src: /code.svg
-      alt: VitePress
+      src: /hero-tech.svg
+      alt: Tsai's Blog
       
 features:
   - icon: 🤔

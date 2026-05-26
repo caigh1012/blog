@@ -1,0 +1,49 @@
+<svg width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="paint0_linear" x1="50" y1="50" x2="350" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#BD34FE" />
+      <stop offset="1" stop-color="#41D1FF" />
+    </linearGradient>
+    <filter id="filter0_f" x="0" y="0" width="400" height="400" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix" />
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+      <feGaussianBlur stdDeviation="30" result="effect1_foregroundBlur" />
+    </filter>
+  </defs>
+  
+  <!-- Background Glow -->
+  <circle cx="200" cy="200" r="120" fill="url(#paint0_linear)" fill-opacity="0.3" filter="url(#filter0_f)">
+    <animate attributeName="r" values="100;140;100" dur="5s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Abstract Shapes -->
+  <rect x="100" y="100" width="200" height="200" rx="40" stroke="url(#paint0_linear)" stroke-width="2" stroke-dasharray="10 5">
+    <animateTransform attributeName="transform" type="rotate" from="0 200 200" to="360 200 200" dur="20s" repeatCount="indefinite" />
+  </rect>
+  
+  <rect x="130" y="130" width="140" height="140" rx="30" stroke="url(#paint0_linear)" stroke-width="4">
+    <animateTransform attributeName="transform" type="rotate" from="360 200 200" to="0 200 200" dur="15s" repeatCount="indefinite" />
+  </rect>
+
+  <!-- Code Symbol -->
+  <path d="M170 180L140 200L170 220" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <animate attributeName="stroke" values="white;#BD34FE;white" dur="3s" repeatCount="indefinite" />
+  </path>
+  <path d="M230 180L260 200L230 220" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+    <animate attributeName="stroke" values="white;#41D1FF;white" dur="3s" repeatCount="indefinite" />
+  </path>
+  <path d="M210 170L190 230" stroke="white" stroke-width="8" stroke-linecap="round">
+    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
+  </path>
+
+  <!-- Floating Particles -->
+  <circle cx="120" cy="120" r="4" fill="#BD34FE">
+    <animate attributeName="cy" values="120;100;120" dur="4s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="280" cy="280" r="4" fill="#41D1FF">
+    <animate attributeName="cy" values="280;300;280" dur="3s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="280" cy="120" r="3" fill="white">
+    <animate attributeName="opacity" values="1;0;1" dur="1.5s" repeatCount="indefinite" />
+  </circle>
+</svg>
