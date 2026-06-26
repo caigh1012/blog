@@ -189,6 +189,12 @@
   transform: translate(40px, 10px);
 }
 
+@media (max-width: 959px) {
+  .VPHero .image-container {
+    transform: none;
+  }
+}
+
 .VPHero .image-src {
   animation: float 6s ease-in-out infinite;
   filter: drop-shadow(0 0 20px rgba(189, 52, 254, 0.3));
