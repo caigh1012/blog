@@ -11,6 +11,9 @@ export default defineConfig({
   outDir: '../dist',
   cleanUrls: false,
   appearance: 'force-dark',
+  vite: {
+    publicDir: '../public',
+  },
 
   head: [
     [

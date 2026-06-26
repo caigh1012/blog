@@ -14,4 +14,11 @@ export default [
       { text: 'DevOps自动化部署实战V2.0', link: '/devops/deploy/blog-v2.0/index' },
     ],
   },
+  {
+    text: 'Nginx前端部署总结',
+    items: [
+      { text: 'Nginx部署单应用相关配置', link: '/devops/single-app-deploy/index' },
+      { text: '微前端部署总结', link: '/devops/micro-app-deploy/index' },
+    ],
+  },
 ];
