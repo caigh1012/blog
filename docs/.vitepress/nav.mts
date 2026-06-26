@@ -21,7 +21,6 @@ export default [
       { text: '常用库源码解析', link: '/blog/source-code-analysis/axios/index' },
       { text: '前端图表', link: '/blog/graphics/svg' },
       { text: '响应式编程', link: '/blog/rxjs/rxjs' },
-      { text: 'DevOps', link: '/blog/devops/devops-blog-v1.0' },
       { text: '其他', link: '/blog/other/picgo' },
     ],
   },

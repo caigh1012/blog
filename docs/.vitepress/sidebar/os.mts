@@ -19,6 +19,7 @@ export default [
   {
     text: 'VMware',
     items: [
+      { text: 'CentOS和ubuntu镜像获取', link: '/os/vmware/linux-system-iso/index' },
       { text: 'VMware安装CentOS系统', link: '/os/vmware/vmware-install-centos/index' },
       { text: 'VMware安装Ubuntu系统', link: '/os/vmware/vmware-install-ubuntu/index' },
     ],
