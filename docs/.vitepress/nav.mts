@@ -1,5 +1,11 @@
 export default [
   {
+    text: 'AI',
+    items: [
+      // { text: 'AI相关学习', link: '/ai/index' },
+    ],
+  },
+  {
     text: '编程',
     items: [
       { text: 'JavaScript', link: '/coding/javascript/javascript/reference/index' },
@@ -14,18 +20,12 @@ export default [
   {
     text: '博客',
     items: [
-      { text: '前端编译原理', link: '/blog/compile/ast/index' },
-      { text: '前端框架使用', link: '/blog/framework/angular/angular16/index' },
-      { text: '前端构建工具', link: '/blog/build/webpack/base/index' },
-      { text: '框架核心原理', link: '/blog/framework-principle/signals' },
-      { text: '常用库源码解析', link: '/blog/source-code-analysis/axios/index' },
-      { text: '前端图表', link: '/blog/graphics/svg' },
-      { text: '响应式编程', link: '/blog/rxjs/rxjs' },
-      { text: '其他', link: '/blog/other/picgo' },
+      // 前端核心原理总结
+      { text: '前端核心原理总结', link: '/blog/fe/compile/ast/index' },
     ],
   },
   { text: 'CI/CD', link: '/devops/podman/index' },
-  // { text: '计算机网络', link: '/network/ip' },
+  { text: '计算机网络', link: '/network/ip' },
   { text: '操作系统', link: '/os/window/win10-os-install' },
   { text: '常用工具', link: '/tools/index' },
   { text: '日常记录', link: '/daily/todo' },
