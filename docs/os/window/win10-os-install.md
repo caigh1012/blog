@@ -25,3 +25,6 @@ convert gpt (重建 GPT 磁盘分区表)
 exit (退出)
 
 点击刷新，然后就继续安装
+
+相关链接：
+- [Win10系统怎么把动态分区转化成基本分区](https://zhidao.baidu.com/question/373633994111493884)

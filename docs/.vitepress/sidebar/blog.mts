@@ -85,4 +85,17 @@ export default {
       ],
     },
   ],
+  /**
+   * 前端项目开发总结
+   */
+  '/blog/fe-summary/': [
+    { text: '前端工具收集', link: '/blog/fe-summary/tools' },
+    // {
+    //   text: '前端项目开发总结',
+    //   items: [
+    //     { text: '中台', link: '/blog/fe-summary/index' },
+    //     { text: 'Flutter', link: '/blog/fe-summary/tools' },
+    //   ],
+    // },
+  ],
 };
